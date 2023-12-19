@@ -1,5 +1,4 @@
 from datetime import date
-from urllib.parse import urljoin
 
 project = "Research Technology Guides"
 author = "Tufts University"
