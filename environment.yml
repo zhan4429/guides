@@ -1,0 +1,15 @@
+name: guides
+channels:
+  - conda-forge
+dependencies:
+  - ghp-import=2.1.0
+  - linkify-it-py=2.0.0
+  - myst-parser=2.0.0
+  - pydata-sphinx-theme=0.14.4
+  - python=3.10.13
+  - sphinx-autobuild=2021.3.14
+  - sphinx-copybutton=0.5.2
+  - sphinx-design=0.5.0
+  - sphinx-tags=0.3.1
+  - sphinx-togglebutton=0.3.2
+  - sphinx=7.2.6
