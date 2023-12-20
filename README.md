@@ -1,7 +1,8 @@
 # Tufts University Research Technology Guides
 
 [![][website-badge]][website-url]&nbsp;
-[![][workflow-badge]](../../actions/workflows/build.yml)
+[![][workflow-badge]](../../actions/workflows/build.yml)&nbsp;
+[![][last-commit-badge]](../../commits/main)
 
 **Please see the [website][website-url] for content.** The following is a development guide intended for staff.
 
@@ -56,3 +57,4 @@ sphinx-build source build
 [website-url]: https://tuftsrt.github.io/guides/
 [website-badge]: https://img.shields.io/website?url=https://tuftsrt.github.io/guides/
 [workflow-badge]: https://img.shields.io/github/actions/workflow/status/tuftsrt/guides/build.yml
+[last-commit-badge]: https://img.shields.io/github/last-commit/tuftsrt/guides
