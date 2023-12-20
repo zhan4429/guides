@@ -12,7 +12,6 @@ extensions = [
     "myst_parser",
     "sphinx_copybutton",
     "sphinx_design",
-    "sphinx_tags",
     "sphinx_togglebutton",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.extlinks",
@@ -57,10 +56,3 @@ myst_enable_extensions = [
     "replacements",
     "substitution",
 ]
-
-tags_create_badges = True
-tags_create_tags = True
-tags_extension = ["md", "rst"]
-tags_overview_title = "Subject Tags"
-tags_page_header = "Pages"
-tags_page_title = "Tag"
