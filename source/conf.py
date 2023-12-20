@@ -57,6 +57,7 @@ html_theme_options = {
     "logo": {"text": project},
     "navbar_align": "left",
     "search_bar_text": "Search the guides...",
+    "use_edit_page_button": True,
 }
 
 myst_enable_extensions = [
@@ -68,3 +69,5 @@ myst_enable_extensions = [
     "replacements",
     "substitution",
 ]
+
+templates_path = ["_templates"]
