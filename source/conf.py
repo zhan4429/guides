@@ -29,10 +29,16 @@ html_baseurl = "https://{}.github.io/{}".format(github_user, github_repo)
 html_favicon = "_static/favicon.ico"
 html_last_updated_fmt = ""
 html_logo = "_static/jumbo.png"
-html_show_sourcelink = False
 html_static_path = ['_static']
 html_theme = "pydata_sphinx_theme"
 html_title = project
+
+html_context = {
+    "github_user": github_user,
+    "github_repo": github_repo,
+    "github_version": "main",
+    "doc_path": "source",
+}
 
 icon_links = [
     {
