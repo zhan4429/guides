@@ -37,7 +37,7 @@ icon_links = [
 ]
 
 html_theme_options = {
-    "announcement": "Under active development. Content may be incomplete.",
+    "announcement": "Incomplete and under active development. Subject to change without notice.",
     "footer_end": ["last-updated"],
     "footer_start": ["copyright"],
     "header_links_before_dropdown": 7,
