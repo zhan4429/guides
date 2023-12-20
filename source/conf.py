@@ -45,9 +45,7 @@ icon_links = [
         "name": "Tags",
         "url": "/tags/index.html",
         "icon": "fa-solid fa-tags",
-        "attributes": {
-            "target": "_self",
-        },
+        "attributes": {"target": "_self"},
     },
     {
         "name": "GitHub",
@@ -57,7 +55,8 @@ icon_links = [
 ]
 
 html_theme_options = {
-    "announcement": "Incomplete and under active development. Subject to change without notice.",
+    "announcement": ("Incomplete and under active development. "
+                     "Subject to change without notice."),
     "footer_end": ["last-updated"],
     "footer_start": ["copyright"],
     "header_links_before_dropdown": 7,
