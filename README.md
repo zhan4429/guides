@@ -28,24 +28,24 @@ conda activate guides
 
 ## Build Locally
 
-Remove the `build` and `source/_tags` directories to ensure a clean build.
+Remove the `build` and `source/tags` directories to ensure a clean build.
 
 ```bash
-rm -r build && rm -r source/_tags
+rm -r build && rm -r source/tags
 ```
 
 ```powershell
-Remove-Item -Recurse build && Remove-Item -Recurse source/_tags
+Remove-Item -Recurse build && Remove-Item -Recurse source/tags
 ```
 
 ```bat
-RMDIR /S /Q build && RMDIR /S /Q source/_tags
+RMDIR /S /Q build && RMDIR /S /Q source/tags
 ```
 
 ### Automatic Build
 
 ```bash
-sphinx-autobuild source build --ignore */_tags/*
+sphinx-autobuild source build --ignore */tags/*
 ```
 
 ### Manual Build
