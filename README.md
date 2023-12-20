@@ -4,7 +4,9 @@
 [![][workflow-badge]](../../actions/workflows/build.yml)&nbsp;
 [![][last-commit-badge]](../../commits/main)
 
-**Please see the [website][website-url] for content.** The following is a development guide intended for staff.
+Source repository for end user documentation developed by the Research Technology department at Tufts University.
+
+⚠️ **Please see the [published website][website-url] for content.** The following is a development guide intended for staff.
 
 ## Environment Setup
 
