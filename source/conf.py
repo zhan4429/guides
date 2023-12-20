@@ -1,3 +1,5 @@
+import os
+import sys
 from datetime import date
 
 project = "Research Technology Guides"
@@ -7,6 +9,8 @@ github_user = "tuftsrt"
 github_repo = "guides"
 
 copyright = "{:04} {}".format(date.today().year, author)
+
+sys.path.append(os.path.abspath("_ext"))
 
 extensions = [
     "myst_parser",
@@ -18,6 +22,7 @@ extensions = [
     "sphinx.ext.extlinks",
     "sphinx.ext.graphviz",
     "sphinx.ext.intersphinx",
+    "tags"
 ]
 
 html_baseurl = "https://{}.github.io/{}".format(github_user, github_repo)
