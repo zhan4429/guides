@@ -42,6 +42,14 @@ html_context = {
 
 icon_links = [
     {
+        "name": "Tags",
+        "url": "/tags/index.html",
+        "icon": "fa-solid fa-tags",
+        "attributes": {
+            "target": "_self",
+        },
+    },
+    {
         "name": "GitHub",
         "url": "https://github.com/{}/{}".format(github_user, github_repo),
         "icon": "fa-brands fa-github",
