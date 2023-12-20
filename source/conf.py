@@ -65,6 +65,12 @@ html_theme_options = {
     "logo": {"text": project},
     "navbar_align": "left",
     "search_bar_text": "Search the guides...",
+    "secondary_sidebar_items": [
+        "page-toc",
+        "tags",
+        "edit-this-page",
+        "sourcelink",
+    ],
     "use_edit_page_button": True,
 }
 
