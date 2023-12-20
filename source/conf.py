@@ -12,6 +12,7 @@ extensions = [
     "myst_parser",
     "sphinx_copybutton",
     "sphinx_design",
+    "sphinx_external_toc",
     "sphinx_togglebutton",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.extlinks",
