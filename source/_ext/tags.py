@@ -58,22 +58,21 @@ def extract_tags(app: Sphinx) -> dict[str, list[str]]:
     extractors = {
         ".ipynb": extract_jupyter_tags,
         ".md": extract_markdown_tags,
-        ".rmd": extract_markdown_tags,
         ".rst": extract_rst_tags,
     }
     suffixes = list(app.config.source_suffix.keys())
     for suffix in suffixes:
-        files = get_matching_files(dirname=app.srcdir,
-                                   include_patterns=["**{}".format(suffix)],
-                                   exclude_patterns=app.config.exclude_patterns)
-        for file in files:
-            tags = extractors[suffix](os.path.join(app.srcdir, file))
-            if type(tags) is list:
-                if tags:
-                    result[file] = tags
-                else:
-                    message = "{}: no valid tags detected". format(file)
-                    raise ExtensionError(message)
+        if suffix in extractors:
+            files = get_matching_files(app.srcdir, ["**{}".format(suffix)],
+                                       app.config.exclude_patterns)
+            for file in files:
+                tags = extractors[suffix](os.path.join(app.srcdir, file))
+                if type(tags) is list:
+                    if tags:
+                        result[file] = tags
+                    else:
+                        message = "{}: no valid tags detected". format(file)
+                        raise ExtensionError(message)
     return result
 
 def invert_dict(dictionary: dict[str, list[str]]) -> dict[str, list[str]]:
