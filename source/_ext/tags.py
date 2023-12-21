@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import shutil
 import frontmatter
@@ -53,6 +54,13 @@ def ensure_dir(parent: str, name: str) -> str:
     os.mkdir(path)
     return path
 
+def validate_tags(file: str, tags: list[str]) -> None:
+    for tag in tags:
+        if not re.match("^[a-z0-9-]+$", tag):
+            message = "{}: invalid tag {}".format(file, tag)
+            raise ExtensionError(message)
+    return None
+
 def extract_tags(app: Sphinx) -> dict[str, list[str]]:
     result = dict()
     extractors = {
@@ -69,6 +77,7 @@ def extract_tags(app: Sphinx) -> dict[str, list[str]]:
                 tags = extractors[suffix](os.path.join(app.srcdir, file))
                 if type(tags) is list:
                     if tags:
+                        validate_tags(file, tags)
                         result[file] = tags
                     else:
                         message = "{}: no valid tags detected". format(file)
