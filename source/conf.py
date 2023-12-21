@@ -65,7 +65,7 @@ html_theme_options = {
                      "Subject to change without notice."),
     "footer_end": ["last-updated"],
     "footer_start": ["copyright"],
-    "header_links_before_dropdown": 7,
+    "header_links_before_dropdown": 8,
     "icon_links": icon_links,
     "logo": {"text": project},
     "navbar_align": "left",
