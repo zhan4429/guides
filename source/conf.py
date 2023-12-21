@@ -13,7 +13,7 @@ copyright = "{:04} {}".format(date.today().year, author)
 sys.path.append(os.path.abspath("_ext"))
 
 extensions = [
-    "myst_parser",
+    "myst_nb",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_external_toc",
@@ -22,7 +22,7 @@ extensions = [
     "sphinx.ext.extlinks",
     "sphinx.ext.graphviz",
     "sphinx.ext.intersphinx",
-    "tags"
+    "tags",
 ]
 
 html_baseurl = "https://{}.github.io/{}".format(github_user, github_repo)
