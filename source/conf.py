@@ -4,6 +4,7 @@ from datetime import date
 
 project = "Research Technology Guides"
 author = "Tufts University"
+email = "tts-research@tufts.edu"
 
 github_user = "tuftsrt"
 github_repo = "guides"
@@ -51,6 +52,11 @@ icon_links = [
         "name": "GitHub",
         "url": "https://github.com/{}/{}".format(github_user, github_repo),
         "icon": "fa-brands fa-github",
+    },
+    {
+        "name": "Email",
+        "url": "mailto:{}".format(email),
+        "icon": "fa-solid fa-envelope",
     },
 ]
 
