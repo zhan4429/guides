@@ -14,6 +14,7 @@ copyright = "{:04} {}".format(date.today().year, author)
 sys.path.append(os.path.abspath("_ext"))
 
 extensions = [
+    "gallery_directive",
     "myst_nb",
     "sphinx_copybutton",
     "sphinx_design",
