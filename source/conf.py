@@ -27,6 +27,8 @@ extensions = [
     "tags",
 ]
 
+autosectionlabel_prefix_document = True
+
 html_baseurl = "https://{}.github.io/{}".format(github_user, github_repo)
 html_favicon = "_static/favicon.ico"
 html_last_updated_fmt = ""
