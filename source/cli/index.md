@@ -1,7 +1,7 @@
 ---
-tags: command-line
+tags: cli
 ---
 
-# Command Line
+# Command Line Interfaces
 
 TODO

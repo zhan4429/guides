@@ -7,7 +7,7 @@ html_theme.sidebar_secondary.remove: true
 ```{gallery-grid}
 :grid-columns: 1 1 2 3
 
-- header: "{fas}`terminal;pst-color-primary` Command Line"
+- header: "{fas}`terminal;pst-color-primary` Command Line Interfaces"
   content: "TODO"
   link: "cli/index.html"
 

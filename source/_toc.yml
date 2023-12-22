@@ -2,10 +2,10 @@ defaults:
   hidden: false
 root: index
 subtrees:
-  - caption: Command Line
+  - caption: Command Line Interfaces
     entries:
       - file: cli/index
-        title: Command Line
+        title: CLI
         subtrees:
           - entries:
             - glob: cli/*
@@ -37,17 +37,17 @@ subtrees:
         subtrees:
           - entries:
             - glob: r/*
-  - caption: Geospatial Analysis and Remote Sensing
+  - caption: Geographical Information Science and Remote Sensing
     entries:
       - file: gis/index
-        title: GIS
+        title: GIS+RS
         subtrees:
           - entries:
             - glob: gis/*
   - caption: Digital Humanities and Natural Language Processing
     entries:
       - file: nlp/index
-        title: NLP
+        title: DH+NLP
         subtrees:
           - entries:
             - glob: nlp/*
