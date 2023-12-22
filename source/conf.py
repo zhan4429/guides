@@ -3,7 +3,7 @@ import sys
 from datetime import date
 from urllib.parse import urljoin
 
-project = "Research Technology Guides"
+project = "Tufts RT Guides"
 author = "Tufts University"
 email = "tts-research@tufts.edu"
 
@@ -74,7 +74,7 @@ html_theme_options = {
     "header_links_before_dropdown": 8,
     "icon_links": icon_links,
     "logo": {"text": project},
-    "navbar_align": "left",
+    "navbar_align": "content",
     "search_bar_text": "Search the guides...",
     "secondary_sidebar_items": [
         "page-toc",
