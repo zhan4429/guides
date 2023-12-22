@@ -14,7 +14,7 @@
     {% if "tags/" in pagename %}
     {% if pagename != "tags/index" %}
     <li class="breadcrumb-item">
-      <a href="/tags/index.html" class="nav-link">{{ _("Tags") }}</a>
+      <a href="{{ pathto('tags/index') }}" class="nav-link">{{ _("Tags") }}</a>
     </li>
     {% endif %}
     {% else %}
