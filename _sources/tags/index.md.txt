@@ -5,7 +5,7 @@ html_theme.sidebar_secondary.remove: true
 ---
 # Tags
 - [bioinformatics (1)](/tags/bioinformatics.md)
-- [command-line (1)](/tags/command-line.md)
+- [cli (1)](/tags/cli.md)
 - [digital-humanities (1)](/tags/digital-humanities.md)
 - [gis (1)](/tags/gis.md)
 - [hpc (1)](/tags/hpc.md)

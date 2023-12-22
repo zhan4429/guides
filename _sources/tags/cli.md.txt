@@ -3,5 +3,5 @@ orphan:
 nosearch:
 html_theme.sidebar_secondary.remove: true
 ---
-# command-line
+# cli
 - [](/cli/index.md)
