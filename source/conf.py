@@ -1,6 +1,7 @@
 import os
 import sys
 from datetime import date
+from urllib.parse import urljoin
 
 project = "Research Technology Guides"
 author = "Tufts University"
@@ -29,7 +30,7 @@ extensions = [
 
 autosectionlabel_prefix_document = True
 
-html_baseurl = "https://{}.github.io/{}".format(github_user, github_repo)
+html_baseurl = "https://{}.github.io/{}/".format(github_user, github_repo)
 html_favicon = "_static/favicon.ico"
 html_last_updated_fmt = ""
 html_logo = "_static/jumbo.png"
@@ -44,10 +45,12 @@ html_context = {
     "doc_path": "source",
 }
 
+print(urljoin(html_baseurl, "tags/index.html"))
+
 icon_links = [
     {
         "name": "Tags",
-        "url": "/tags/index.html",
+        "url": urljoin(html_baseurl, "tags/index.html"),
         "icon": "fa-solid fa-tags",
         "attributes": {"target": "_self"},
     },
