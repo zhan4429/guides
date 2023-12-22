@@ -5,7 +5,7 @@
 <ul class="tocsection tags-list">
     {%- for tag in meta["tags"].split()|sort() %}
     <li class="tag-item">
-        <a href="/tags/{{ tag }}.html" class="tag-link">{{ tag }}</a>
+        <a href="{{ pathto('tags/' ~ tag) }}" class="tag-link">{{ tag }}</a>
     </li>
     {%- endfor %}
 </ul>

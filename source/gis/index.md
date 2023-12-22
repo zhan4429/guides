@@ -2,6 +2,6 @@
 tags: gis remote-sensing
 ---
 
-# Geospatial Analysis and Remote Sensing
+# Geographic Information Science and Remote Sensing
 
 TODO
