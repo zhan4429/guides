@@ -95,6 +95,10 @@ myst_enable_extensions = [
     "substitution",
 ]
 
+nb_custom_formats = {
+    ".Rmd": "rmd.convert",
+}
+
 notfound_urls_prefix = "/{}/".format(github_repo)
 
 templates_path = ["_templates"]
