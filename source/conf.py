@@ -17,6 +17,7 @@ sys.path.append(os.path.abspath("_ext"))
 extensions = [
     "gallery_directive",
     "myst_nb",
+    "notfound.extension",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_external_toc",
@@ -45,12 +46,10 @@ html_context = {
     "doc_path": "source",
 }
 
-print(urljoin(html_baseurl, "tags/index.html"))
-
 icon_links = [
     {
         "name": "Tags",
-        "url": urljoin(html_baseurl, "tags/index.html"),
+        "url": "/{}/tags/index.html".format(github_repo),
         "icon": "fa-solid fa-tags",
         "attributes": {"target": "_self"},
     },
@@ -94,5 +93,7 @@ myst_enable_extensions = [
     "replacements",
     "substitution",
 ]
+
+notfound_urls_prefix = "/{}/".format(github_repo)
 
 templates_path = ["_templates"]
