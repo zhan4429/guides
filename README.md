@@ -61,7 +61,7 @@ conda activate guides
 
 ## Local Development Builds
 
-Local development builds can either be triggered manually via tyhe `sphinx-build` command or automatically by using [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild). The latter continuously scans source files for changes and displays an up-to-date HTML preview using a local web server. Note that URLs relative to the content root will be broken in local builds.
+Local development builds can either be triggered manually via the `sphinx-build` command or automatically by using [`sphinx-autobuild`](https://github.com/executablebooks/sphinx-autobuild). The latter continuously scans source files for changes and displays an up-to-date HTML preview using a local web server. Note that URLs relative to the content root will be broken in local builds.
 
 ### Automatic Build
 
