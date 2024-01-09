@@ -2,6 +2,6 @@
 tags: nlp digital-humanities
 ---
 
-# Digital Humanities and Natural Language Processing
+# Digital Humanities and NLP
 
 TODO
