@@ -10,7 +10,7 @@ Source repository for end user documentation developed by the Research Technolog
 
 ## Repository Overview
 
-Documentation is built from source files using [Sphinx][sphinx-url] and the [PyData Sphinx Theme][theme-url] with content structure managed by the [Sphinx External ToC][toc-url] extension. Key repository contents are as follows:
+Documentation is built from source files using [Sphinx][sphinx-url] and the [PyData Sphinx Theme][theme-url] with documentation structure managed using the [Sphinx External ToC][toc-url] extension. Key repository contents are as follows:
 
 - `/.github/workflows/build.yml` -- action to automatically build and deploy documentation
 - `/environment.yml` -- build environment specification
@@ -27,13 +27,13 @@ All other contents of `source` define the documentation structure and content, w
 
 The build process generates the following git-ignored directories that should not be manually modified:
 
-- `/buid/` -- all build artifacts
+- `/build/` -- all build artifacts
 - `/jupyter_execute/` -- executed Jupyter Notebooks derived from source files
 - `/source/tags/` -- automatically generated source files for the tags index
 
 ## Branching Structure and Workflow
 
-The repository follows a simplified derivative of the [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow with all active development confined to the `develop` branch and designated feature branches (recommended). Documentation is automatically built from the `main` branch and contributions to the `main` branch are only allowed via pull request. HTML build artifacts are stored and served from the `gh-pages` branch. An optional `staging` branch can be used for final review of content before merging to `main`, allowing active development to continuos on the `develop` branch. A designated `hotfix` branch should be used for urgent updates and fixes if needed. See below for a sample schematic of all branches.
+The repository follows a simplified derivative of the [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow with all active development confined to the `develop` branch and designated feature branches (recommended). Documentation is automatically built from the `main` branch and contributions to the `main` branch are only allowed via pull request. HTML build artifacts are stored and served from the `gh-pages` branch. An optional `staging` branch can be used for final review of content before merging to `main`, allowing active development to continue on the `develop` branch. A designated `hotfix` branch should be used for urgent updates and fixes if needed. See below for a sample schematic of all branches.
 
 ![](img/branching.svg)
 
@@ -79,7 +79,7 @@ Open the `/build/index.html` file to display the generated HTML landing page.
 
 ### Ensuring a Clean Build
 
-The build process creates various cached artifacts resulting in subsequent builds only updating pages for which the source files have been updated. This results in changes to the documentation configuration, structure, or extensions not being reflected unless all cached artifacts are removed. A clean build is also required in the case of updated tags and to ensure any executable code is re-run. Results of executable code are cached and code is not re-run by default unless changes to the code are detected. To ensure a clean buiild, the `build`, `jupyter_execute`, and `source/tags` directories should be removed. See below for sample commands.
+The build process creates various cached artifacts resulting in subsequent builds only updating pages for which the source files have been updated. This results in changes to the documentation configuration, structure, or extensions not being reflected unless all cached artifacts are removed. A clean build is also required in the case of updated tags and to ensure any executable code is re-run. Results of executable code are cached and code is not re-run by default unless changes to the code are detected. To ensure a clean build, the `build`, `jupyter_execute`, and `source/tags` directories should be removed. See below for sample commands.
 
 #### Bash and Zsh
 
@@ -99,7 +99,7 @@ RMDIR /S /Q build && RMDIR /S /Q jupyter_execute && RMDIR /S /Q source/tags
 
 ## Structure Configuration
 
-Documentation structure is managed by the [Sphinx External ToC][toc-url] extension and defined by the `/source/_toc.yml` file along with the [natural sort order](https://en.wikipedia.org/wiki/Natural_sort_order) of content source file names. Content is grouped into primary sections with each section appearing in the top navigation bar and having an index file serving as the section root. Primary sections contain content pages which can be further divided into subtrees. Content pages could also have child pages, in which case their structure resembles that of a primary section with an index file serving as the parent page.
+Documentation structure is managed using the [Sphinx External ToC][toc-url] extension and defined by the `/source/_toc.yml` file along with the [natural sort order](https://en.wikipedia.org/wiki/Natural_sort_order) of content source file names. Content is grouped into primary sections with each section appearing in the top navigation bar and having an index file serving as the section root. Primary sections contain content pages which can be further divided into subtrees. Content pages could also have child pages, in which case their structure resembles that of a primary section with an index file serving as the parent page.
 
 ```
 📂source
@@ -119,7 +119,7 @@ Documentation structure is managed by the [Sphinx External ToC][toc-url] extensi
        ┗ 📄32-subtree-page
 ```
 
-The following `/source/_toc.yml` file ensures that the built documentation is structured identically to the directory tree above. Files within each section or subtree are defined via glob pattern and sorted by filename natural order, allowing seamless addition of content to predefined sections without the need to modify the structure configuration file. Only when adding a new section, subtree, or parent page does the `_toc.yml` file need to be updated. The `title` field defines how the name of a primary section is displayed in the navigation bar and the `caption` field defines how the name of a subtree is displayed in the ToC. Content page display names are equivalent to their first-level heading.
+The following `_toc.yml` file ensures that the built documentation is structured identically to the sample directory tree above. Files within each section or subtree are defined via glob pattern and sorted by filename natural order, allowing seamless addition of content to predefined sections without the need to modify the structure configuration. Only when adding a new section, subtree, or parent page does the `_toc.yml` file need to be updated. The `title` field defines how the name of a primary section is displayed in the navigation bar and the `caption` field defines how the name of a subtree is displayed in the ToC. Content page display names are equivalent to their first-level heading.
 
 ```yml
 root: index
