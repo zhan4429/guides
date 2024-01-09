@@ -79,11 +79,11 @@ Navigate to http://127.0.0.1:8000 to display the live-updated HTML preview.
 sphinx-build source build
 ```
 
-Open the [`/build/index.html`](./build/index.html) file to display the generated HTML landing page.
+Open the `/build/index.html` file to display the generated HTML landing page.
 
 ### Ensuring a Clean Build
 
-The build process creates various cached artifacts resulting in subsequent builds only updating pages for which the source files have been updated. This results in changes to the documentation configuration, structure, or extensions not being reflected unless all cached artifacts are removed. A clean build is also required in the case of updated tags and to ensure any executable code is re-run. Results of executable code are also cached and code is not re-run by default unless changes to the code are detected. The `build`, `jupyter_execute`, and `source/tags` directories should be removed if present to ensure a clean build. See below for sample commands.
+The build process creates various cached artifacts resulting in subsequent builds only updating pages for which the source files have been updated. This results in changes to the documentation configuration, structure, or extensions not being reflected unless all cached artifacts are removed. A clean build is also required in the case of updated tags and to ensure any executable code is re-run. Results of executable code are cached and code is not re-run by default unless changes to the code are detected. To ensure a clean buiild, the `build`, `jupyter_execute`, and `source/tags` directories should be removed. See below for sample commands.
 
 #### Bash and Zsh
 
@@ -93,7 +93,7 @@ rm -r build && rm -r jupyter_execute && rm -r source/tags
 #### PowerShell
 
 ```powershell
-Remove-Item -Recurse build && Remove-Item -Recurse jupyter_execute && Remove-Item -Recurse source/tags
+Remove-Item build,source/tags,jupyter_execute -Recurse
 ```
 #### Command Prompt
 
