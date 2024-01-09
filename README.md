@@ -139,6 +139,31 @@ subtrees:
 
 ```
 
+## Subject Tags
+
+Tags can be defined using the `tags` field in the file-wide metadata. The field content must be a single string representing a space-delimited list of tags. Tags can only contain lowercase letters, numbers, and hyphens.
+
+### Markdown/Rmd
+
+```yml
+---
+tags: tag tag2 another-tag
+---
+```
+
+### reStructuredText
+
+```rst
+:tags: tag tag2 another-tag
+```
+
+### Jupyter Notebook
+
+```json
+{
+    "tags": "tag tag2 another-tag"
+}
+```
 
 <!----------------------------------------------------------------------------->
 
