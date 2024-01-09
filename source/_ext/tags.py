@@ -66,6 +66,7 @@ def extract_tags(app: Sphinx) -> dict[str, list[str]]:
     extractors = {
         ".ipynb": extract_jupyter_tags,
         ".md": extract_markdown_tags,
+        ".Rmd": extract_markdown_tags,
         ".rst": extract_rst_tags,
     }
     suffixes = list(app.config.source_suffix.keys())

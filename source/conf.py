@@ -17,6 +17,7 @@ sys.path.append(os.path.abspath("_ext"))
 extensions = [
     "gallery_directive",
     "myst_nb",
+    "notfound.extension",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_external_toc",
@@ -45,12 +46,10 @@ html_context = {
     "doc_path": "source",
 }
 
-print(urljoin(html_baseurl, "tags/index.html"))
-
 icon_links = [
     {
         "name": "Tags",
-        "url": urljoin(html_baseurl, "tags/index.html"),
+        "url": "/{}/tags/index.html".format(github_repo),
         "icon": "fa-solid fa-tags",
         "attributes": {"target": "_self"},
     },
@@ -75,7 +74,8 @@ html_theme_options = {
     "icon_links": icon_links,
     "logo": {"text": project},
     "navbar_align": "content",
-    "search_bar_text": "Search the guides...",
+    "navigation_with_keys": False,
+    "search_bar_text": "",
     "secondary_sidebar_items": [
         "page-toc",
         "tags",
@@ -94,5 +94,11 @@ myst_enable_extensions = [
     "replacements",
     "substitution",
 ]
+
+nb_custom_formats = {
+    ".Rmd": "rmd.convert",
+}
+
+notfound_urls_prefix = "/{}/".format(github_repo)
 
 templates_path = ["_templates"]
