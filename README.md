@@ -95,6 +95,51 @@ Remove-Item -Recurse build && Remove-Item -Recurse jupyter_execute && Remove-Ite
 RMDIR /S /Q build && RMDIR /S /Q jupyter_execute && RMDIR /S /Q source/tags
 ```
 
+## Structure Configuration
+
+Documentation structure is managed by the [Sphinx External ToC][toc-url] extension and defined by the `/source/_toc.yml` file along with the [natural sort order](https://en.wikipedia.org/wiki/Natural_sort_order) of content source file names. Content is grouped into primary sections with each section appearing in the top navigation bar and having an index file serving as the section root. Primary sections contain content pages which can be further divided into subtrees. Content pages could also have child pages, in which case their structure resembles that of a primary section with an index file serving as the parent page.
+
+```
+📂source
+ ┣ 📄index
+ ┗ 📂primary-section
+    ┣ 📄index
+    ┣ 📄01-content-page
+    ┣ 📄02-content-page
+    ┣ 📂10-page-with-children
+    ┃  ┣ 📄index
+    ┃  ┣ 📄11-child-page
+    ┃  ┗ 📄12-child-page
+    ┣ 📄21-content-page
+    ┣ 📄22-content-page
+    ┗ 📂30-section-subtree
+       ┣ 📄31-subtree-page
+       ┗ 📄32-subtree-page
+```
+
+The following `/source/_toc.yml` file ensures that the built documentation is structured identically to the directory tree above. Files within each section or subtree are defined via glob pattern and sorted by filename natural order, allowing seamless addition of content to predefined sections without the need to modify the structure configuration file. Only when adding a new section, subtree, or parent page does the `_toc.yml` file need to be updated. The `title` field defines how the name of a primary section is displayed in the navigation bar and the `caption` field defines how the name of a subtree is displayed in the ToC. Content page display names are equivalent to their first-level heading.
+
+```yml
+root: index
+subtrees:
+  - caption: Primary Section Display Name in ToC
+    entries:
+      - file: primary-section/index
+        title: Primary Section Display Name in Navigation
+        subtrees:
+          - entries:
+            - glob: primary-section/0*
+            - file: primary-section/10-page-with-children/index
+              entries:
+                - glob: primary-section/10-page-with-children/*
+            - glob: primary-section/2*
+            - caption: Section Subtree Display Name
+              entries:
+              - glob: primary-section/30-section-subtree/*
+
+```
+
+
 <!----------------------------------------------------------------------------->
 
 [jinja-url]: https://jinja.palletsprojects.com
