@@ -8,7 +8,7 @@ Source repository for end user documentation developed by the Research Technolog
 
 ⚠️ **Please see the [published website][website-url] for content.** The following is a development guide intended for staff.
 
-## Overview
+## Repository Overview
 
 Documentation is built from source files using [Sphinx][sphinx-url] and the [PyData Sphinx Theme][theme-url] with content structure managed by the [Sphinx External ToC][toc-url] extension. Key repository contents are as follows:
 
@@ -34,6 +34,12 @@ The build process generates the following git-ignored directories that should no
 - `/buid/` -- all build artifacts
 - `/jupyter_execute/` -- executed Jupyter Notebooks derived from source files
 - `/source/tags/` -- automatically generated source files for the tags index
+
+### Branching Structure and Workflow
+
+The repository follows a simplified derivative of the [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow with all active development confined to the `develop` branch or designated feature branches (recommended). Documentation is automatically built from the `main` branch and contributions to the `main` branch are only allowed via pull request. HTML build artifacts are stored and served from the `gh-pages` branch. Releases are not tagged and a `staging` branch is used in lieu of the `release` branch. The `staging` branch is intended for final review of content before merging to `main` if needed in case of active development. Hotfixes are discouraged but a designated `hotfix` branch should be used if needed.
+
+![gitflow branch structure](https://wac-cdn.atlassian.com/dam/jcr:cc0b526e-adb7-4d45-874e-9bcea9898b4a/04%20Hotfix%20branches.svg)
 
 ## Environment Setup
 
