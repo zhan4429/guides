@@ -35,9 +35,9 @@ The build process generates the following git-ignored directories that should no
 - `/jupyter_execute/` -- executed Jupyter Notebooks derived from source files
 - `/source/tags/` -- automatically generated source files for the tags index
 
-### Branching Structure and Workflow
+## Branching Structure and Workflow
 
-The repository follows a simplified derivative of the [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow with all active development confined to the `develop` branch or designated feature branches (recommended). Documentation is automatically built from the `main` branch and contributions to the `main` branch are only allowed via pull request. HTML build artifacts are stored and served from the `gh-pages` branch. Releases are not tagged and a `staging` branch is used in lieu of the `release` branch. The `staging` branch is intended for final review of content before merging to `main` if needed in case of active development. Hotfixes are discouraged but a designated `hotfix` branch should be used if needed.
+The repository follows a simplified derivative of the [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow with all active development confined to the `develop` branch and designated feature branches (recommended). Documentation is automatically built from the `main` branch and contributions to the `main` branch are only allowed via pull request. HTML build artifacts are stored and served from the `gh-pages` branch. An optional `staging` branch can be used for final review of content before merging to `main`, allowing active development to continuos on the `develop` branch. A designated `hotfix` branch should be used for urgent updates and fixes if needed. See below for a sample schematic of all branches.
 
 ![](img/branching.svg)
 
