@@ -14,6 +14,7 @@ Documentation is built from source files using [Sphinx][sphinx-url] and the [PyD
 
 - `/.github/workflows/build.yml` -- action to automatically build and deploy documentation
 - `/environment.yml` -- build environment specification
+- `/img/` -- images used in the README
 - `/source/_ext/` -- custom Sphinx extensions
 - `/source/_static/` -- static HTML content like the website logo and favicon
 - `/source/_templates/` -- custom [Jinja][jinja-url] templates including new templates and default overrides
@@ -22,12 +23,7 @@ Documentation is built from source files using [Sphinx][sphinx-url] and the [PyD
 - `/source/conf.py` -- [Sphinx][sphinx-url] configuration file
 - `/source/index.md` -- documentation/webiste root (default landing page)
 
-Everything else in `/source/` are content source files along with other artifacts like data and images. The following content source file types are supported:
-
-- Jupyter Notebook `.ipynb`
-- Markdown `.md`
-- R Markdown `.Rmd` (restictions apply)
-- reStructuredText `.rst`
+All other contents of `source` define the documentation structure and content, with the directory tree corresponding to the site map and files serving as content sources. See corresponding sections below for more information.
 
 The build process generates the following git-ignored directories that should not be manually modified:
 
