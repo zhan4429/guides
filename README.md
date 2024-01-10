@@ -18,7 +18,7 @@ Documentation is built from source files using [Sphinx][sphinx-url] and the [PyD
 - `source/_ext` -- custom Sphinx extensions
 - `source/_static` -- static HTML content like the website logo and favicon
 - `source/_templates` -- custom [Jinja][jinja-url] templates including new templates and default overrides
-- `source/_toc.yml` -- [Sphinx External ToC][toc-url] site-map structure configuration file
+- `source/_toc.yml` -- [Sphinx External ToC][toc-url] site map configuration file
 - `source/404.md` -- custom 404 page template
 - `source/conf.py` -- [Sphinx][sphinx-url] configuration file
 - `source/index.md` -- documentation/webiste root (default landing page)
@@ -99,7 +99,9 @@ RMDIR /S /Q build && RMDIR /S /Q jupyter_execute && RMDIR /S /Q source/tags
 
 ## Structure Configuration
 
-Documentation structure is managed using the [Sphinx External ToC][toc-url] extension and defined by the `_toc.yml` file along with the [natural sort order](https://en.wikipedia.org/wiki/Natural_sort_order) of content source file names. Content is grouped into primary sections with each section appearing in the top navigation bar and having an index file serving as the section root. Primary sections contain content pages which can be further divided into subtrees. Content pages could also have child pages, in which case their structure resembles that of a primary section with an index file serving as the parent page.
+Documentation structure is managed using the [Sphinx External ToC][toc-url] extension with the `_toc.yml` configuration file written such that the site map mimics the layout of the `source` directory. Content is grouped into primary sections with each section appearing in the top navigation bar and having an index file serving as the section root. Primary sections contain content pages which can be further divided into subtrees. Pages in each subtree are ordered using the [natural sort order](https://en.wikipedia.org/wiki/Natural_sort_order) of the source file names. Content pages could also have child pages, in which case their structure resembles that of a primary section with an index file serving as the parent page.
+
+Content pages can be added to preexisting sections, subtrees, and parent pages without having to modify the site map configuration file. Only when adding a new section, subtree, or parent page does the `_toc.yml` file need to be updated. See the sample `source` directory tree below along with its corresponding site map configuration file for examples on how to define various structures. Note that the `title` field defines how the name of a primary section is displayed in the top navigation bar and the `caption` field defines how the name of a subtree is displayed in the ToC. Content page display names in the secondary sidebar and the ToC are equivalent to their first heading.
 
 ```
 📂source
@@ -118,8 +120,6 @@ Documentation structure is managed using the [Sphinx External ToC][toc-url] exte
        ┣ 📄31-subtree-page
        ┗ 📄32-subtree-page
 ```
-
-The following `_toc.yml` file ensures that the built documentation is structured identically to the sample directory tree above. Files within each section or subtree are defined via glob pattern and sorted by filename natural order, allowing seamless addition of content to predefined sections without the need to modify the structure configuration. Only when adding a new section, subtree, or parent page does the `_toc.yml` file need to be updated. The `title` field defines how the name of a primary section is displayed in the navigation bar and the `caption` field defines how the name of a subtree is displayed in the ToC. Content page display names are equivalent to their first-level heading.
 
 ```yml
 root: index
