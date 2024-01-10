@@ -12,24 +12,24 @@ Source repository for end user documentation developed by the Research Technolog
 
 Documentation is built from source files using [Sphinx][sphinx-url] and the [PyData Sphinx Theme][theme-url] with documentation structure managed using the [Sphinx External ToC][toc-url] extension. Key repository contents are as follows:
 
-- `/.github/workflows/build.yml` -- action to automatically build and deploy documentation
-- `/environment.yml` -- build environment specification
-- `/img/` -- images used in the README
-- `/source/_ext/` -- custom Sphinx extensions
-- `/source/_static/` -- static HTML content like the website logo and favicon
-- `/source/_templates/` -- custom [Jinja][jinja-url] templates including new templates and default overrides
-- `/source/_toc.yml` -- [Sphinx External ToC][toc-url] site-map structure configuration file
-- `/source/404.md` -- custom 404 page template
-- `/source/conf.py` -- [Sphinx][sphinx-url] configuration file
-- `/source/index.md` -- documentation/webiste root (default landing page)
+- `.github/workflows/build.yml` -- action to automatically build and deploy documentation
+- `environment.yml` -- build environment specification
+- `img` -- images used in the README
+- `source/_ext` -- custom Sphinx extensions
+- `source/_static` -- static HTML content like the website logo and favicon
+- `source/_templates` -- custom [Jinja][jinja-url] templates including new templates and default overrides
+- `source/_toc.yml` -- [Sphinx External ToC][toc-url] site-map structure configuration file
+- `source/404.md` -- custom 404 page template
+- `source/conf.py` -- [Sphinx][sphinx-url] configuration file
+- `source/index.md` -- documentation/webiste root (default landing page)
 
 All other contents of `source` define the documentation structure and content, with the directory tree corresponding to the site map and files serving as content sources. See corresponding sections below for more information.
 
 The build process generates the following git-ignored directories that should not be manually modified:
 
-- `/build/` -- all build artifacts
-- `/jupyter_execute/` -- executed Jupyter Notebooks derived from source files
-- `/source/tags/` -- automatically generated source files for the tags index
+- `build` -- all build artifacts
+- `jupyter_execute` -- executed Jupyter Notebooks derived from source files
+- `source/tags` -- automatically generated source files for the tags index
 
 ## Branching Structure and Workflow
 
@@ -61,7 +61,7 @@ Local development builds can either be triggered manually via the `sphinx-build`
 
 ### Automatic Build
 
-The `/source/tags/` directory must be ignored during the automatic build process as its contents are regenerated at the start of every build, which would otherwise result in a continuous rebuild loop.
+The `tags` directory must be ignored during the automatic build process as its contents are regenerated at the start of every build, which would otherwise result in a continuous rebuild loop.
 
 ```bash
 sphinx-autobuild source build --ignore */tags/*
@@ -75,7 +75,7 @@ Navigate to http://127.0.0.1:8000 to display the live-updated HTML preview.
 sphinx-build source build
 ```
 
-Open the `/build/index.html` file to display the generated HTML landing page.
+Open the `build/index.html` file to display the generated HTML landing page.
 
 ### Ensuring a Clean Build
 
@@ -99,7 +99,7 @@ RMDIR /S /Q build && RMDIR /S /Q jupyter_execute && RMDIR /S /Q source/tags
 
 ## Structure Configuration
 
-Documentation structure is managed using the [Sphinx External ToC][toc-url] extension and defined by the `/source/_toc.yml` file along with the [natural sort order](https://en.wikipedia.org/wiki/Natural_sort_order) of content source file names. Content is grouped into primary sections with each section appearing in the top navigation bar and having an index file serving as the section root. Primary sections contain content pages which can be further divided into subtrees. Content pages could also have child pages, in which case their structure resembles that of a primary section with an index file serving as the parent page.
+Documentation structure is managed using the [Sphinx External ToC][toc-url] extension and defined by the `_toc.yml` file along with the [natural sort order](https://en.wikipedia.org/wiki/Natural_sort_order) of content source file names. Content is grouped into primary sections with each section appearing in the top navigation bar and having an index file serving as the section root. Primary sections contain content pages which can be further divided into subtrees. Content pages could also have child pages, in which case their structure resembles that of a primary section with an index file serving as the parent page.
 
 ```
 📂source
