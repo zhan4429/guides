@@ -42,11 +42,11 @@ The repository follows a simplified derivative of the [Gitflow](https://www.atla
 Clone the repository and create the build environment using `mamba` or `conda` and the provided configuration file. Install and configure [Miniforge](https://github.com/conda-forge/miniforge) if you do not already have a Conda distribution present on your system.
 
 ```bash
-mamba env install --file environment.yml
+mamba env create --file environment.yml
 ```
 
 ```bash
-conda env install --file environment.yml
+conda env create --file environment.yml
 ```
 
 Remember to activate the environment before proceeding.
