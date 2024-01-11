@@ -64,7 +64,7 @@ Local development builds can either be triggered manually via the `sphinx-build`
 The `tags` directory must be ignored during the automatic build process as its contents are regenerated at the start of every build, which would otherwise result in a continuous rebuild loop.
 
 ```bash
-sphinx-autobuild source build --ignore */tags/*
+sphinx-autobuild source build --ignore "*/tags/*"
 ```
 
 Navigate to http://127.0.0.1:8000 to display the live-updated HTML preview.
