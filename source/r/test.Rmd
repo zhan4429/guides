@@ -1,0 +1,35 @@
+---
+jupyter:
+  kernelspec:
+    display_name: R
+    language: r
+    name: ir
+  tags: test
+---
+
+# RMarkdown Test
+
+This is just a test.
+
+## A Sample Code Block
+
+```{}
+paste("this", "is", "just", "a", "test")
+```
+
+```{}
+n <- floor(runif(1000)*10)
+t <- table(n)
+```
+
+```{python}
+import this
+```
+
+```{}
+t
+```
+
+```{}
+barplot(t)
+```
