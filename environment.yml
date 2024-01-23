@@ -3,11 +3,11 @@ channels:
   - conda-forge
 dependencies:
   - ghp-import=2.1.0
-  - jupytext=1.16.0
+  - jupytext=1.16.1
   - linkify-it-py=2.0.2
   - myst-nb=1.0.0
   - nb-clean=3.2.0
-  - pydata-sphinx-theme=0.15.1
+  - pydata-sphinx-theme=0.15.2
   - python-frontmatter=1.0.1
   - python=3.10.13
   - r-base=4.1.3
