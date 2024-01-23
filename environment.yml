@@ -6,6 +6,7 @@ dependencies:
   - jupytext=1.16.0
   - linkify-it-py=2.0.2
   - myst-nb=1.0.0
+  - nb-clean=3.2.0
   - pydata-sphinx-theme=0.15.1
   - python-frontmatter=1.0.1
   - python=3.10.13
