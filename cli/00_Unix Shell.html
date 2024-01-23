@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>r &#8212; Tufts RT Guides</title>
+    <title> &#8212; Tufts RT Guides</title>
   
   
   
@@ -52,11 +52,13 @@
     <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tags/r';</script>
-    <link rel="canonical" href="https://tuftsrt.github.io/guides/tags/r.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cli/00_Unix Shell';</script>
+    <link rel="canonical" href="https://tuftsrt.github.io/guides/cli/00_Unix Shell.html" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="High-Performance Computing" href="../hpc/index.html" />
+    <link rel="prev" title="Command Line Interfaces" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
     <meta name="docbuild:last-update" content="Jan 23, 2024"/>
@@ -161,8 +163,8 @@
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../cli/index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
                         CLI
                       </a>
                     </li>
@@ -313,6 +315,10 @@ document.write(`
   
 
   
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
     </div>
@@ -324,9 +330,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -339,8 +343,8 @@ document.write(`
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../cli/index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
                         CLI
                       </a>
                     </li>
@@ -461,6 +465,18 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"></a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -476,39 +492,7 @@ document.write(`
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
-
-
-<nav aria-label="Breadcrumb">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    
-    
-    <li class="breadcrumb-item">
-      <a href="index.html" class="nav-link">Tags</a>
-    </li>
-    
-    
-    <li class="breadcrumb-item active" aria-current="page">r</li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
+              <div class="bd-header-article"></div>
               
               
               
@@ -516,11 +500,127 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="r">
-<h1>r<a class="headerlink" href="#r" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="instructor-notes">
+<h2>Instructor Notes<a class="headerlink" href="#instructor-notes" title="Link to this heading">#</a></h2>
+<p>Windows – Git Bash (Cygwin, PowerShell, Windows Subsystem for Linux (WSL))</p>
+<p>Mac OSX – Terminal</p>
+<p>Linux – Shell</p>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://swcarpentry.github.io/shell-novice/setup.html">https://swcarpentry.github.io/shell-novice/setup.html</a></p>
+<p>Download <a class="reference external" href="https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip">shell-lesson-data.zip</a> and store the file on your <strong>Desktop</strong></p>
+<p>You can follow the lecture writeup, but do focus on the shell (terminal) :)</p>
+</section>
+<section id="introducing-the-shell-10-10">
+<h3>Introducing the Shell (10:10)<a class="headerlink" href="#introducing-the-shell-10-10" title="Link to this heading">#</a></h3>
+<p>GUI vs CLI</p>
+<p>for a literature search, you have to copy the third line of one thousand text files in one thousand different directories and paste it into a single file.</p>
+<p>BASH</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat /etc/shells
+</pre></div>
+</div>
+<p>Change Shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ chsh -s /bin/bash
+</pre></div>
+</div>
+<p>prompt – $ (#, %) – shell is waiting for input/command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ Command + Options + Argument
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
+</pre></div>
+</div>
+<p><strong>senario:</strong></p>
+<p>Nelle, biologist</p>
+<p>She has 1520 samples that she’s run through an assay machine to measure the relative abundance of 300 proteins.</p>
+<p>She needs to run these 1520 files through an imaginary program called <code class="docutils literal notranslate"><span class="pre">goostats.sh</span></code> she inherited.</p>
+<p>write a paper</p>
+<p>use gui is mundane task</p>
+<p>In order to achieve her task, Nelle needs to know how to:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../r/index.html"><span class="std std-doc">R</span></a></p></li>
+<li><p>navigate to a file/directory</p></li>
+<li><p>create a file/directory</p></li>
+<li><p>check the length of a file</p></li>
+<li><p>chain commands together</p></li>
+<li><p>retrieve a set of files</p></li>
+<li><p>iterate over files</p></li>
+<li><p>run a shell script containing her pipeline</p></li>
 </ul>
+</section>
+<section id="navigating-files-and-directories-10-50">
+<h3>Navigating Files and Directories (10:50)<a class="headerlink" href="#navigating-files-and-directories-10-50" title="Link to this heading">#</a></h3>
+<p>file system</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pwd
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
+$ ls -F
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>a trailing <code class="docutils literal notranslate"><span class="pre">/</span></code> indicates that this is a directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;</span></code> indicates a link</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> indicates an executable</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ clear
+</pre></div>
+</div>
+<p>Help!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls --help
+$ man ls
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /path
+$ cd ..
+$ cd
+$ cd -
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -s
+$ ls -S
+$ ls -F /
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tab</span> <span class="n">completion</span>
+</pre></div>
+</div>
+</section>
+<section id="working-with-files-and-directories-11-30">
+<h3>Working With Files and Directories (11:30)<a class="headerlink" href="#working-with-files-and-directories-11-30" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir -p
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -FR 
+</pre></div>
+</div>
+</section>
+<section id="pipes-and-filters">
+<h3>Pipes and Filters<a class="headerlink" href="#pipes-and-filters" title="Link to this heading">#</a></h3>
+</section>
+<section id="loops">
+<h3>Loops<a class="headerlink" href="#loops" title="Link to this heading">#</a></h3>
+</section>
+<section id="shell-scripts">
+<h3>Shell Scripts<a class="headerlink" href="#shell-scripts" title="Link to this heading">#</a></h3>
+</section>
+<section id="finding-things">
+<h3>Finding Things<a class="headerlink" href="#finding-things" title="Link to this heading">#</a></h3>
+<p>Commands:</p>
+<p>$ command + flag/option + argument(s)</p>
+<p>Case Sensitive</p>
+<p>print working directory</p>
+<p><a class="reference external" href="https://librarycarpentry.org/lc-shell/02-navigating-the-filesystem/index.html">https://librarycarpentry.org/lc-shell/02-navigating-the-filesystem/index.html</a></p>
+<p>Wildcard – * or ?</p>
+<p>watch out for – rm</p>
+</section>
+</section>
 </section>
 
 
@@ -533,12 +633,80 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Command Line Interfaces</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../hpc/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">High-Performance Computing</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructor-notes">Instructor Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-the-shell-10-10">Introducing the Shell (10:10)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-files-and-directories-10-50">Navigating Files and Directories (10:50)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-files-and-directories-11-30">Working With Files and Directories (11:30)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipes-and-filters">Pipes and Filters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-scripts">Shell Scripts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-things">Finding Things</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/tuftsrt/guides/edit/main/source/cli/00_Unix Shell.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+  Suggest Edits
+
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/cli/00_Unix Shell.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
               
             
           </div>
