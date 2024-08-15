@@ -1,0 +1,777 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Running R on the HPC cluster &#8212; Tufts RT Guides</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hpc/20_R';</script>
+    <link rel="canonical" href="https://tuftsrt.github.io/guides/hpc/20_R.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GPU Resources on Tufts HPC Cluster" href="GPU%20Resources%20on%20Tufts%20HPC%20Cluster.html" />
+    <link rel="prev" title="File Recovery on Tufts HPC Cluster" href="10_File_Recovery_on_Tufts_HPC_Cluster.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Aug 15, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder=""
+         aria-label=""
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Incomplete and under active development. Subject to change without notice.</div>
+  </div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/jumbo.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../_static/jumbo.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Tufts RT Guides</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cli/index.html">
+                        CLI
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        HPC
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../bio/index.html">
+                        Bioinformatics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../python/index.html">
+                        Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../r/index.html">
+                        R
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../gis/index.html">
+                        GIS+RS
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../nlp/index.html">
+                        DH+NLP
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../stats/index.html">
+                        Statistics
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="/guides/tags/index.html" title="Tags" class="nav-link" rel="noopener" target="_self" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-tags fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Tags</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/tuftsrt/guides" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:tts-research@tufts.edu" title="Email" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Email</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cli/index.html">
+                        CLI
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        HPC
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../bio/index.html">
+                        Bioinformatics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../python/index.html">
+                        Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../r/index.html">
+                        R
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../gis/index.html">
+                        GIS+RS
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../nlp/index.html">
+                        DH+NLP
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../stats/index.html">
+                        Statistics
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="/guides/tags/index.html" title="Tags" class="nav-link" rel="noopener" target="_self" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-tags fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Tags</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/tuftsrt/guides" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:tts-research@tufts.edu" title="Email" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Email</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_Request_Access.html">Request Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_File_Recovery_on_Tufts_HPC_Cluster.html">File Recovery on Tufts HPC Cluster</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Running R on the HPC cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GPU%20Resources%20on%20Tufts%20HPC%20Cluster.html">GPU Resources on Tufts HPC Cluster</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">High-Performance Computing</a></li>
+    
+    
+    <li class="breadcrumb-item active" aria-current="page">Running R on the HPC cluster</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="running-r-on-the-hpc-cluster">
+<h1>Running R on the HPC cluster<a class="headerlink" href="#running-r-on-the-hpc-cluster" title="Link to this heading">#</a></h1>
+<p>**NOTE: **</p>
+<ul>
+<li><p>R version 3.5.0 is no longer usable on the new cluster Pax</p></li>
+<li><p>Please use <strong><code class="docutils literal notranslate"><span class="pre">R/4.0.0</span></code>, <code class="docutils literal notranslate"><span class="pre">R/4.1.1</span></code>, <code class="docutils literal notranslate"><span class="pre">R/4.2.0</span></code>, or <code class="docutils literal notranslate"><span class="pre">R/4.3.0</span></code></strong></p></li>
+<li><p>HPC Tools R package repos:</p>
+<blockquote>
+<div><p>For <code class="docutils literal notranslate"><span class="pre">R/4.0.0</span></code>, use  <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/hpc/tools/R/4.0.0</span></code></p>
+<p>For <code class="docutils literal notranslate"><span class="pre">R/4.1.1</span></code>, use  <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/hpc/tools/R/4.1</span></code></p>
+<p>For <code class="docutils literal notranslate"><span class="pre">R/4.2.0</span></code>, use  <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/hpc/tools/R/4.2.0</span></code></p>
+<p>For <code class="docutils literal notranslate"><span class="pre">R/4.3.0</span></code>, use  <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/hpc/tools/R/4.3.0</span></code></p>
+</div></blockquote>
+<p>———————– <strong>Table of Content</strong> ———————-</p>
+<p>[TOC]</p>
+</li>
+</ul>
+<section id="r-interactive-session">
+<h2>R Interactive Session<a class="headerlink" href="#r-interactive-session" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Login to the HPC cluster (new cluster Pax)</p>
+<p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">your_username&#64;login.pax.tufts.edu</span></code></p>
+</li>
+<li><p>From the login node, load R module (e.g. <code class="docutils literal notranslate"><span class="pre">R/4.0.0</span></code>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">module</span> <span class="pre">load</span> <span class="pre">R/4.0.0</span></code></p>
+</li>
+<li><p>Allocate computing resources. Start an interactive session with your desired number of cores and memory, here we are using 2 cores with 4GB of memory</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">srun</span> <span class="pre">-p</span> <span class="pre">interactive</span> <span class="pre">-n</span> <span class="pre">2</span> <span class="pre">--mem=4g</span> <span class="pre">--pty</span> <span class="pre">bash</span></code></p>
+<p>Note: Interactive partition has a default 4-hour time limit</p>
+<p>For more information on how to allocate resources on Tufts HPC cluster, please reference: <a class="reference external" href="https://tufts.box.com/v/Pax-User-Guide">Pax User Guide</a></p>
+</li>
+<li><p>Within the interactive session, you can start R</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">R</span></code></p>
+</li>
+<li></li>
+</ol>
+<p>In R, you can install the packages you need in your home directory with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">install.packages(&quot;XXX&quot;)</span></code>.</p>
+<p>You can also use the packages installed in HPC Tools R package repo:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">LIB='/cluster/tufts/hpc/tools/R/4.0.0'</span> </code></p>
+<p><code class="docutils literal notranslate"><span class="pre">&gt;.libPaths(c(&quot;&quot;,LIB))</span> </code></p>
+<p>If you are having trouble installing the packages you need, please contact <a class="reference external" href="mailto:tts-research&#37;&#52;&#48;tufts&#46;edu">tts-research<span>&#64;</span>tufts<span>&#46;</span>edu</a>.</p>
+<ol class="arabic" start="6">
+<li><p>Exit from R command line interface:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">q()</span></code></p>
+</li>
+<li><p>To terminate interactive session</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">exit</span></code></p>
+</li>
+</ol>
+</section>
+<section id="r-batch-jobs">
+<h2>R batch jobs<a class="headerlink" href="#r-batch-jobs" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Login to the HPC cluster</p></li>
+<li><p>Upload your R script to the HPC cluster</p></li>
+<li><p>Go to the directory/folder which contains your R script</p></li>
+<li><p>Open your favorite text editor and write a slurm submission script similar to the following one <code class="docutils literal notranslate"><span class="pre">batchjob.sh</span></code> (name your own)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -J myRjob  #job name</span>
+<span class="c1">#SBATCH --time=00-00:20:00 #requested time</span>
+<span class="c1">#SBATCH -p batch  #running on &quot;batch&quot; partition/queue</span>
+<span class="c1">#SBATCH -n 2  #2 cores total</span>
+<span class="c1">#SBATCH --mem=2g #requesting 2GB of RAM total</span>
+<span class="c1">#SBATCH --output=myRjob.%j.out #saving standard output to file</span>
+<span class="c1">#SBATCH --error=myRjob.%j.err  #saving standard error to file</span>
+<span class="c1">#SBATCH --mail-type=ALL  #email optitions</span>
+<span class="c1">#SBATCH --mail-user=Your_Tufts_Email @tufts.edu</span>
+<span class="n">module</span> <span class="n">load</span> <span class="n">R</span><span class="o">/</span><span class="mf">4.0.0</span>
+<span class="n">Rscript</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">save</span> <span class="n">your_rscript_name</span><span class="o">.</span><span class="n">R</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>​	You can find a sample script that you can copy to your own directory in <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/hpc/tools/slurm_scripts/R</span></code></p>
+<ol class="arabic" start="5">
+<li><p>Submit it with</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sbatch</span> <span class="pre">batchjob.sh</span></code></p>
+</li>
+<li><p>If you are submitting multiple batch jobs to run the same script on different datasets, please make sure they are saving results to different files inside of your R script.</p></li>
+</ol>
+</section>
+<section id="rstudio-interactive-app-on-ondemand">
+<h2>RStudio Interactive App on OnDemand<a class="headerlink" href="#rstudio-interactive-app-on-ondemand" title="Link to this heading">#</a></h2>
+<section id="launch-rstudio">
+<h3>Launch RStudio<a class="headerlink" href="#launch-rstudio" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://ondemand.cluster.tufts.edu">OnDemand</a> Login with your username and password</p></li>
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">Apps</span></code> tab and select <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">Pax</span></code></p></li>
+<li><p>Select the time, number of cores, CPU memory you need, as well as the version of R you wish to run.</p></li>
+<li><p>Load the module you need for your packages to run, if no additional modules are needed, leave it blank.</p></li>
+<li><p>Each user can only start one OnDemand RStudio session on one compute node at a time. If you need to start multiple RStudio sessions, please make sure you select a different nodename from your current running session.</p></li>
+<li><p>Click “Launch” and wait for available resources</p></li>
+<li><p>Once it’s ready, click on the <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">RStudio</span></code> button</p></li>
+<li><p>When you finished, exit RStudio properly <code class="docutils literal notranslate"><span class="pre">q()</span></code>, then close the RStudio tab, and go back to the main page click <code class="docutils literal notranslate"><span class="pre">Delete</span></code> to end the session</p></li>
+</ol>
+</section>
+<section id="debug-ondemand-rstudio-pax">
+<h3>Debug OnDemand RStudio Pax<a class="headerlink" href="#debug-ondemand-rstudio-pax" title="Link to this heading">#</a></h3>
+<p>Logs from RStudio could be crupted sometimes which will cause RStudio not lauching from OnDemand. Here are a few things you can try. Make sure all RStudio sessions are deleted before this.</p>
+<ul>
+<li><p>Rename the file <code class="docutils literal notranslate"><span class="pre">/cluster/home/$USER/.local/share/rstudio</span></code></p>
+<p><span class="math notranslate nohighlight">\( `mv /cluster/home/\)</span>USER/.local/share/rstudio /cluster/home/$USER/.local/share/rstudio_bkp`</p>
+</li>
+<li><p>Rename the <code class="docutils literal notranslate"><span class="pre">/cluster/home/$USER/.RData</span></code></p>
+<p><span class="math notranslate nohighlight">\( `mv /cluster/home/\)</span>USER/.RData /cluster/home/$USER/.RData_bkp`</p>
+</li>
+</ul>
+<p>Now you can try relaunch RStudio. If it’s working properly for you, test out your workflow.</p>
+<p>If you get all you need without issues, you can go ahead and delete <code class="docutils literal notranslate"><span class="pre">/cluster/home/$USER/.local/share/rstudio_bkp</span></code> and <code class="docutils literal notranslate"><span class="pre">/cluster/home/$USER/.RData_bkp</span></code></p>
+<p>If you have any questions or need additional assistance, feel free to reach out to us at <a class="reference external" href="mailto:tts-research&#37;&#52;&#48;tufts&#46;edu">tts-research<span>&#64;</span>tufts<span>&#46;</span>edu</a></p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="10_File_Recovery_on_Tufts_HPC_Cluster.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">File Recovery on Tufts HPC Cluster</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="GPU%20Resources%20on%20Tufts%20HPC%20Cluster.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GPU Resources on Tufts HPC Cluster</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-interactive-session">R Interactive Session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-batch-jobs">R batch jobs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rstudio-interactive-app-on-ondemand">RStudio Interactive App on OnDemand</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-rstudio">Launch RStudio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debug-ondemand-rstudio-pax">Debug OnDemand RStudio Pax</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/tuftsrt/guides/edit/main/source/hpc/20_R.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+  Suggest Edits
+
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/hpc/20_R.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 Tufts University.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Aug 15, 2024.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>RMarkdown Test &#8212; Tufts RT Guides</title>
+    <title>File Recovery on Tufts HPC Cluster &#8212; Tufts RT Guides</title>
   
   
   
@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
@@ -36,9 +36,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
@@ -52,18 +52,16 @@
     <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'r/test';</script>
-    <link rel="canonical" href="https://tuftsrt.github.io/guides/r/test.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hpc/10_File_Recovery_on_Tufts_HPC_Cluster';</script>
+    <link rel="canonical" href="https://tuftsrt.github.io/guides/hpc/10_File_Recovery_on_Tufts_HPC_Cluster.html" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="GIS and Remote Sensing" href="../gis/index.html" />
-    <link rel="prev" title="R" href="index.html" />
+    <link rel="next" title="Running R on the HPC cluster" href="20_R.html" />
+    <link rel="prev" title="Modules" href="08_Modules.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jan 23, 2024"/>
+    <meta name="docbuild:last-update" content="Aug 15, 2024"/>
   </head>
   
   
@@ -74,7 +72,6 @@
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -115,15 +112,13 @@
 </form></div>
   </div>
 
-  <header>
-
 
   <div class="bd-header-announcement container-fluid bd-header-announcement">
     <div class="bd-header-announcement__content">Incomplete and under active development. Subject to change without notice.</div>
   </div>
 
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
     <span class="fa-solid fa-bars"></span>
@@ -172,8 +167,8 @@
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../hpc/index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
                         HPC
                       </a>
                     </li>
@@ -193,8 +188,8 @@
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../r/index.html">
                         R
                       </a>
                     </li>
@@ -323,9 +318,8 @@ document.write(`
   
 </div>
 
-    </div>
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -352,8 +346,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../hpc/index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
                         HPC
                       </a>
                     </li>
@@ -373,8 +367,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../r/index.html">
                         R
                       </a>
                     </li>
@@ -473,7 +467,11 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">RMarkdown Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_Request_Access.html">Request Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Modules.html">Modules</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">File Recovery on Tufts HPC Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20_R.html">Running R on the HPC cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GPU%20Resources%20on%20Tufts%20HPC%20Cluster.html">GPU Resources on Tufts HPC Cluster</a></li>
 </ul>
 </div>
 </nav></div>
@@ -512,10 +510,10 @@ document.write(`
     </li>
     
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">R</a></li>
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">High-Performance Computing</a></li>
     
     
-    <li class="breadcrumb-item active" aria-current="page">RMarkdown Test</li>
+    <li class="breadcrumb-item active" aria-current="page">File Recovery on...</li>
   </ul>
 </nav>
 </div>
@@ -532,57 +530,98 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="rmarkdown-test">
-<h1>RMarkdown Test<a class="headerlink" href="#rmarkdown-test" title="Link to this heading">#</a></h1>
-<p>This is just a test.</p>
-<section id="a-sample-code-block">
-<h2>A Sample Code Block<a class="headerlink" href="#a-sample-code-block" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;this&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;is&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;just&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">)</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="file-recovery-on-tufts-hpc-cluster">
+<h1>File Recovery on Tufts HPC Cluster<a class="headerlink" href="#file-recovery-on-tufts-hpc-cluster" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><h2 class="rubric" id="important-note">Important Note</h2>
+<p>This instruction <strong>ONLY</strong> applies to <strong>Tufts HPC cluster</strong>.</p>
+<p>The snapshots are taken daily. The snapshot frequency may vary based on current policies and setups.</p>
+<p>Not all changes and modifications to all files are reflected in the snapshots. If a file is created, modified, and/or deleted within a couple of hours, it may or may not be captured in the snapshots depending on the timing.</p>
+<p><strong>DO NOT</strong> modify or delete any snapshots. There is no snapshot of snapshots.</p>
+<p>The following steps need to be executed in Command Line Interface (shell, terminal, .etc). Users can access also access and recover files from OnDemand interface using the mentioned directory path.</p>
+</div></blockquote>
+<p>Snapshots can be accessed directly from any directories on the cluster now!</p>
+<p>In the following example, the <strong>target directory path</strong> from which directory the files/directories were missing is <code class="docutils literal notranslate"><span class="pre">/cluster/home/tutln01/work</span></code>.</p>
+<p>In your case, it can be any paths such as <code class="docutils literal notranslate"><span class="pre">/cluster/home/$USER/folder1/folder2</span></code> or <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/yourlab/$USER/folder3</span></code></p>
+<section id="find-snapshots">
+<h2>Find Snapshots<a class="headerlink" href="#find-snapshots" title="Link to this heading">#</a></h2>
+<p>Go to <strong>any directory</strong> (project or home, in this example, it’s <code class="docutils literal notranslate"><span class="pre">/cluster/home/tutln01/work</span></code> ) where you need files to be recovered and go to the <code class="docutils literal notranslate"><span class="pre">.snapshot</span></code> of that directory.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 ~]$ cd /cluster/home/tutln01/work
+[tutln01@login-prod-01 work]$ pwd
+/cluster/home/tutln01/work
+[tutln01@login-prod-01 work]$ cd .snapshot
+[tutln01@login-prod-01 .snapshot]$ date
+Mon Apr 24 10:15:59 EDT 2023
+[tutln01@login-prod-01 .snapshot]$ ll
+total 0
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-21_14_38_07_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-22_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-23_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-24_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-25_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-26_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-27_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-28_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-29_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-30_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-03-31_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-01_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-02_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-03_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-04_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-05_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-06_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-07_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-08_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-09_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-10_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-11_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-12_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-13_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-14_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-15_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-16_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-17_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-18_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-19_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-20_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-21_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-22_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-23_07_00_00_UTC
+drwxrwx--- 2 tutln01 facstaff 4096 Feb 24 12:36 homedir_2023-04-24_07_00_00_UTC
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">'this is just a test'</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">floor</span><span class="p">(</span><span class="nf">runif</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span><span class="o">*</span><span class="m">10</span><span class="p">)</span>
-<span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</section>
+<section id="locate-missing-files-directories">
+<h2>Locate Missing Files/Directories<a class="headerlink" href="#locate-missing-files-directories" title="Link to this heading">#</a></h2>
+<p>Choose desired snapshot date.</p>
+<p>For example, assume I accidentally deleted a file from this directory on 2023-04-20, I would check both <code class="docutils literal notranslate"><span class="pre">homedir_2023-04-20_07_00_00_UTC</span></code> from 2023-04-20 as well as <code class="docutils literal notranslate"><span class="pre">homedir_2023-04-19_07_00_00_UTC</span></code> from 2023-04-19 for the desired version of the file. Repeat the following steps for both dates if needed.</p>
+<p>Pick a snapshot date, and list the contents (our target directory is <code class="docutils literal notranslate"><span class="pre">/cluster/home/tutln01/work</span></code> in this case)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 .snapshot]$ cd homedir_2023-04-20_07_00_00_UTC
+[tutln01@login-prod-01 homedir_2023-04-20_07_00_00_UTC]$ pwd
+/cluster/home/tutln01/work/.snapshot/homedir_2023-04-20_07_00_00_UTC
+[tutln01@login-prod-01 homedir_2023-04-20_07_00_00_UTC]$ ll
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">import</span><span class="w"> </span><span class="n">this</span>
+</section>
+<section id="recovery-files-directories">
+<h2>Recovery Files/Directories<a class="headerlink" href="#recovery-files-directories" title="Link to this heading">#</a></h2>
+<p>Find and verify the file/directory you are looking for, then <strong>COPY</strong> it back to your target directory under a different name (to avoid overwriting exisiting files).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 homedir_2023-04-20_07_00_00_UTC]$ pwd
+/cluster/home/tutln01/work/.snapshot/homedir_2023-04-20_07_00_00_UTC
+[tutln01@login-prod-01 homedir_2023-04-20_07_00_00_UTC]$ cp -i myfile ~/work/myfile_recovered
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">parse</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">srcfile</span> <span class="o">=</span> <span class="n">src</span><span class="p">):</span> <span class="o">&lt;</span><span class="n">text</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span> <span class="n">unexpected</span> <span class="n">symbol</span>
-<span class="mi">1</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">this</span>
-           <span class="o">^</span>
-<span class="ne">Traceback</span>:
+<p>If you are recovering directories, copy the directory recursively.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 homedir_2023-04-20_07_00_00_UTC]$ cp -i -r mydir ~/work/mydir_recovered
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">t</span>
+<p>Now you can go back to your target directroy and check if the file/directory has been copied over</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 homedir_2023-04-20_07_00_00_UTC]$ cd /cluster/home/tutln01/work
+[tutln01@login-prod-01 work]$ ls -lrt
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">barplot</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p><strong>If you have multiple files/directoires need to be recovered, repeat the above steps.</strong></p>
 </section>
 </section>
 
@@ -597,20 +636,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="08_Modules.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">R</p>
+        <p class="prev-next-title">Modules</p>
       </div>
     </a>
     <a class="right-next"
-       href="../gis/index.html"
+       href="20_R.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GIS and Remote Sensing</p>
+        <p class="prev-next-title">Running R on the HPC cluster</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -632,26 +671,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-sample-code-block">A Sample Code Block</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-snapshots">Find Snapshots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#locate-missing-files-directories">Locate Missing Files/Directories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recovery-files-directories">Recovery Files/Directories</a></li>
 </ul>
   </nav></div>
-
-  <div class="sidebar-secondary-item">
-<div class="tocsection tags-label">
-    <i class="fa-solid fa-tags"></i> Tags
-</div>
-<ul class="tocsection tags-list">
-    <li class="tag-item">
-        <a href="../tags/test.html" class="tag-link">test</a>
-    </li>
-</ul>
-</div>
 
   <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/tuftsrt/guides/edit/main/source/r/test.Rmd">
+    <a href="https://github.com/tuftsrt/guides/edit/main/source/hpc/10_File_Recovery_on_Tufts_HPC_Cluster.md">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -664,7 +694,7 @@ document.write(`
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/r/test.Rmd.txt">
+    <a href="../_sources/hpc/10_File_Recovery_on_Tufts_HPC_Cluster.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
@@ -683,8 +713,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -708,7 +738,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Jan 23, 2024.
+  Last updated on Aug 15, 2024.
   <br/>
 </p></div>
       

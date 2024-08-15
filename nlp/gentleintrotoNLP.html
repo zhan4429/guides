@@ -1,0 +1,1974 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>A Gentle Introduction to Natural Language Process &#8212; Tufts RT Guides</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'nlp/gentleintrotoNLP';</script>
+    <link rel="canonical" href="https://tuftsrt.github.io/guides/nlp/gentleintrotoNLP.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Statistics" href="../stats/index.html" />
+    <link rel="prev" title="Digital Humanities and NLP" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Aug 15, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder=""
+         aria-label=""
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Incomplete and under active development. Subject to change without notice.</div>
+  </div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/jumbo.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../_static/jumbo.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Tufts RT Guides</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cli/index.html">
+                        CLI
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../hpc/index.html">
+                        HPC
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../bio/index.html">
+                        Bioinformatics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../python/index.html">
+                        Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../r/index.html">
+                        R
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../gis/index.html">
+                        GIS+RS
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        DH+NLP
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../stats/index.html">
+                        Statistics
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="/guides/tags/index.html" title="Tags" class="nav-link" rel="noopener" target="_self" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-tags fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Tags</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/tuftsrt/guides" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:tts-research@tufts.edu" title="Email" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Email</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cli/index.html">
+                        CLI
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../hpc/index.html">
+                        HPC
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../bio/index.html">
+                        Bioinformatics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../python/index.html">
+                        Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../r/index.html">
+                        R
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../gis/index.html">
+                        GIS+RS
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        DH+NLP
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../stats/index.html">
+                        Statistics
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="/guides/tags/index.html" title="Tags" class="nav-link" rel="noopener" target="_self" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-tags fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Tags</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/tuftsrt/guides" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:tts-research@tufts.edu" title="Email" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Email</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">A Gentle Introduction to Natural Language Process</a></li>
+
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Digital Humanities and NLP</a></li>
+    
+    
+    <li class="breadcrumb-item active" aria-current="page">A Gentle Introduction...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="a-gentle-introduction-to-natural-language-process">
+<h1>A Gentle Introduction to Natural Language Process<a class="headerlink" href="#a-gentle-introduction-to-natural-language-process" title="Link to this heading">#</a></h1>
+<p>Today, we will take a text, <em>War and Peace</em> by Leo Tolstoy, and try to get verify or refute the claims of an outside source, <em>Tolstoy’s Phoenix: From Method to Meaning in War and Peace</em> by George R. Clay (1998). This is a very common task both in and outside of the digital humanities and will introduce you to the popular NLP Python package, the Natural Language Toolkit (NLTK), and expose you to common methodologies for wrangling textual data.</p>
+<section id="our-overall-task">
+<h2>Our overall task<a class="headerlink" href="#our-overall-task" title="Link to this heading">#</a></h2>
+<p>We will start by downloading the book and then we will learn how to clean the text, perform basic statistics, create visualizations, and discuss what we found and how to present those results</p>
+</section>
+<section id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Understand the rights we have to access books on Project Gutenberg</p></li>
+<li><p>Read in a text from Project Gutenberg</p></li>
+<li><p>Clean textual data using regular expressions</p></li>
+<li><p>Perform basic word frequency statistics</p></li>
+<li><p>Create visualziations of these statistics</p></li>
+<li><p>Discuss how to communicte thses results</p></li>
+<li><p>Return to our research question</p></li>
+</ul>
+</section>
+<section id="general-methods">
+<h2>General methods<a class="headerlink" href="#general-methods" title="Link to this heading">#</a></h2>
+<section id="read-in-our-data">
+<h3>Read in our data<a class="headerlink" href="#read-in-our-data" title="Link to this heading">#</a></h3>
+<p>We will start with a url from Project Gutenberg. All of the texts from Gutenberg are in the public domain, so we won’t have to worry about rights, but be aware of who own the intellectual property to a text before you scrape it. In this section, we will break the text up by chapter division. Later we’ll do the same but by book division.</p>
+<section id="the-requests-library">
+<h4>The requests library<a class="headerlink" href="#the-requests-library" title="Link to this heading">#</a></h4>
+<p>Here, we are using a library called <code class="docutils literal notranslate"><span class="pre">requests</span></code>. This library is great for HTTP requests, which are like asking for a specific action from the internet.</p>
+<p>More details below:
+<a class="reference external" href="https://pypi.org/project/requests/">https://pypi.org/project/requests/</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.gutenberg.org/cache/epub/2600/pg2600.txt&#39;</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## IMPORTANT: this pipeline will work for all text, but you will need to understand your text</span>
+<span class="c1">## There is no one-size-fits-all for text cleaning, especially for extra information, like tables</span>
+<span class="c1">## of content and disclaimers</span>
+
+<span class="c1"># In this case, we found the first line that states the start of the book. We found this by looking at the actual book.</span>
+<span class="c1"># Link to book: https://www.gutenberg.org/cache/epub/2600/pg2600.txt</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;BOOK ONE: 1805</span><span class="se">\r\n\r\n\r\n\r\n\r\n\r\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">start</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8265
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">end</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;END OF THE PROJECT GUTENBERG EBOOK WAR AND PEACE&#39;</span><span class="p">)</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3274788
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Using the start and end points that we found above, we can filter out all of the text before the start of the book</span>
+<span class="c1">## and after its end.</span>
+
+<span class="c1">## In Python, we can use square brackets to delimit the new start and new end that we want. As we see below:</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have a text that we are confident is nothing but the text of the book, we can begin to dissect it into its component parts. First, let’s break it up into chapters.</p>
+<p>To do so, I am using a very versatile package called <code class="docutils literal notranslate"><span class="pre">re</span></code> or regular expressions (regex) to do some advanced string parsing. This regex function, finditer, takes in a pattern and a text and returns all of the times that pattern occurs in the text. These patterns can look very complicated, but, in this case, it is ‘(Chapter [A-Z]+)’, which means: <em>find all of the times when there is the word ‘CHAPTER’ followed by a space and then any amount of captial letters</em>.
+This pattern fits the roman numeral counting of the chapters (ex. CHAPTER I or CHAPTER XII)
+<br></p>
+<p>Finditer also return the indices where the chapter title begins and ends. So, we can use the ending of one chapter title and the beginning of the next one to get all of the text in between the two chapters. This text is, by definition, the text in that chapter.</p>
+<p>You can read more about regex <a class="reference external" href="https://librarycarpentry.org/lc-data-intro-archives/04-regular-expressions/index.html">here</a> and you can play around with your own regex at <a class="reference external" href="https://regex101.com/">regex101</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">ch_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">ch_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(CHAPTER [A-Z]+)&#39;</span><span class="p">,</span><span class="n">text</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ch_list</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">ch_list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">ch_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Chapter </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">end</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">ch_list</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ch_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Chapter </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">end</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ch_dict</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Chapter 1&#39;: (35, 11716),
+ &#39;Chapter 2&#39;: (11727, 19652),
+ &#39;Chapter 3&#39;: (19664, 28409),
+ &#39;Chapter 4&#39;: (28420, 36599),
+ &#39;Chapter 5&#39;: (36609, 47877),
+ &#39;Chapter 6&#39;: (47888, 55785),
+ &#39;Chapter 7&#39;: (55797, 61618),
+ &#39;Chapter 8&#39;: (61631, 68528),
+ &#39;Chapter 9&#39;: (68539, 80778),
+ &#39;Chapter 10&#39;: (80788, 90636),
+ &#39;Chapter 11&#39;: (90647, 95709),
+ &#39;Chapter 12&#39;: (95721, 103553),
+ &#39;Chapter 13&#39;: (103566, 107749),
+ &#39;Chapter 14&#39;: (107761, 116408),
+ &#39;Chapter 15&#39;: (116419, 125129),
+ &#39;Chapter 16&#39;: (125141, 135663),
+ &#39;Chapter 17&#39;: (135676, 139826),
+ &#39;Chapter 18&#39;: (139840, 153522),
+ &#39;Chapter 19&#39;: (153534, 160235),
+ &#39;Chapter 20&#39;: (160246, 172138),
+ &#39;Chapter 21&#39;: (172150, 187834),
+ &#39;Chapter 22&#39;: (187847, 198012),
+ &#39;Chapter 23&#39;: (198026, 208352),
+ &#39;Chapter 24&#39;: (208365, 217847),
+ &#39;Chapter 25&#39;: (217859, 238302),
+ &#39;Chapter 26&#39;: (238315, 249685),
+ &#39;Chapter 27&#39;: (249699, 258953),
+ &#39;Chapter 28&#39;: (258968, 277450),
+ &#39;Chapter 29&#39;: (277460, 287532),
+ &#39;Chapter 30&#39;: (287543, 303366),
+ &#39;Chapter 31&#39;: (303378, 317732),
+ &#39;Chapter 32&#39;: (317743, 335287),
+ &#39;Chapter 33&#39;: (335297, 342076),
+ &#39;Chapter 34&#39;: (342087, 347628),
+ &#39;Chapter 35&#39;: (347640, 357850),
+ &#39;Chapter 36&#39;: (357863, 376832),
+ &#39;Chapter 37&#39;: (376843, 387567),
+ &#39;Chapter 38&#39;: (387577, 399996),
+ &#39;Chapter 39&#39;: (400007, 405255),
+ &#39;Chapter 40&#39;: (405267, 416777),
+ &#39;Chapter 41&#39;: (416790, 429464),
+ &#39;Chapter 42&#39;: (429476, 436196),
+ &#39;Chapter 43&#39;: (436207, 448576),
+ &#39;Chapter 44&#39;: (448588, 453728),
+ &#39;Chapter 45&#39;: (453741, 464522),
+ &#39;Chapter 46&#39;: (464536, 474352),
+ &#39;Chapter 47&#39;: (474364, 486140),
+ &#39;Chapter 48&#39;: (486151, 499062),
+ &#39;Chapter 49&#39;: (499074, 515816),
+ &#39;Chapter 50&#39;: (515826, 535228),
+ &#39;Chapter 51&#39;: (535239, 554482),
+ &#39;Chapter 52&#39;: (554494, 572446),
+ &#39;Chapter 53&#39;: (572457, 589592),
+ &#39;Chapter 54&#39;: (589602, 601924),
+ &#39;Chapter 55&#39;: (601935, 614563),
+ &#39;Chapter 56&#39;: (614575, 633355),
+ &#39;Chapter 57&#39;: (633368, 643577),
+ &#39;Chapter 58&#39;: (643588, 657352),
+ &#39;Chapter 59&#39;: (657362, 668384),
+ &#39;Chapter 60&#39;: (668395, 677348),
+ &#39;Chapter 61&#39;: (677360, 691174),
+ &#39;Chapter 62&#39;: (691187, 703199),
+ &#39;Chapter 63&#39;: (703211, 714894),
+ &#39;Chapter 64&#39;: (714905, 727688),
+ &#39;Chapter 65&#39;: (727700, 736157),
+ &#39;Chapter 66&#39;: (736170, 747241),
+ &#39;Chapter 67&#39;: (747255, 761993),
+ &#39;Chapter 68&#39;: (762005, 771296),
+ &#39;Chapter 69&#39;: (771306, 788002),
+ &#39;Chapter 70&#39;: (788013, 801020),
+ &#39;Chapter 71&#39;: (801032, 812316),
+ &#39;Chapter 72&#39;: (812327, 823160),
+ &#39;Chapter 73&#39;: (823170, 828195),
+ &#39;Chapter 74&#39;: (828206, 838301),
+ &#39;Chapter 75&#39;: (838313, 845370),
+ &#39;Chapter 76&#39;: (845383, 854584),
+ &#39;Chapter 77&#39;: (854595, 859683),
+ &#39;Chapter 78&#39;: (859693, 867016),
+ &#39;Chapter 79&#39;: (867027, 872301),
+ &#39;Chapter 80&#39;: (872313, 879240),
+ &#39;Chapter 81&#39;: (879253, 885833),
+ &#39;Chapter 82&#39;: (885845, 891870),
+ &#39;Chapter 83&#39;: (891881, 899229),
+ &#39;Chapter 84&#39;: (899241, 906388),
+ &#39;Chapter 85&#39;: (906398, 913648),
+ &#39;Chapter 86&#39;: (913659, 926615),
+ &#39;Chapter 87&#39;: (926627, 941734),
+ &#39;Chapter 88&#39;: (941745, 949937),
+ &#39;Chapter 89&#39;: (949947, 953867),
+ &#39;Chapter 90&#39;: (953878, 963628),
+ &#39;Chapter 91&#39;: (963640, 966960),
+ &#39;Chapter 92&#39;: (966973, 976016),
+ &#39;Chapter 93&#39;: (976027, 987789),
+ &#39;Chapter 94&#39;: (987799, 998043),
+ &#39;Chapter 95&#39;: (998054, 1015627),
+ &#39;Chapter 96&#39;: (1015639, 1023407),
+ &#39;Chapter 97&#39;: (1023420, 1031896),
+ &#39;Chapter 98&#39;: (1031908, 1036698),
+ &#39;Chapter 99&#39;: (1036709, 1046151),
+ &#39;Chapter 100&#39;: (1046163, 1057473),
+ &#39;Chapter 101&#39;: (1057486, 1065212),
+ &#39;Chapter 102&#39;: (1065226, 1071207),
+ &#39;Chapter 103&#39;: (1071219, 1080110),
+ &#39;Chapter 104&#39;: (1080121, 1088277),
+ &#39;Chapter 105&#39;: (1088289, 1098614),
+ &#39;Chapter 106&#39;: (1098627, 1099622),
+ &#39;Chapter 107&#39;: (1099632, 1105115),
+ &#39;Chapter 108&#39;: (1105126, 1110849),
+ &#39;Chapter 109&#39;: (1110861, 1116058),
+ &#39;Chapter 110&#39;: (1116069, 1122794),
+ &#39;Chapter 111&#39;: (1122804, 1134448),
+ &#39;Chapter 112&#39;: (1134459, 1141243),
+ &#39;Chapter 113&#39;: (1141255, 1151007),
+ &#39;Chapter 114&#39;: (1151020, 1157898),
+ &#39;Chapter 115&#39;: (1157909, 1163462),
+ &#39;Chapter 116&#39;: (1163472, 1174306),
+ &#39;Chapter 117&#39;: (1174317, 1182434),
+ &#39;Chapter 118&#39;: (1182446, 1187852),
+ &#39;Chapter 119&#39;: (1187865, 1195693),
+ &#39;Chapter 120&#39;: (1195705, 1203595),
+ &#39;Chapter 121&#39;: (1203606, 1209863),
+ &#39;Chapter 122&#39;: (1209875, 1218066),
+ &#39;Chapter 123&#39;: (1218079, 1222459),
+ &#39;Chapter 124&#39;: (1222473, 1232788),
+ &#39;Chapter 125&#39;: (1232800, 1236768),
+ &#39;Chapter 126&#39;: (1236779, 1243765),
+ &#39;Chapter 127&#39;: (1243777, 1250307),
+ &#39;Chapter 128&#39;: (1250320, 1258390),
+ &#39;Chapter 129&#39;: (1258404, 1270856),
+ &#39;Chapter 130&#39;: (1270869, 1277248),
+ &#39;Chapter 131&#39;: (1277260, 1285069),
+ &#39;Chapter 132&#39;: (1285082, 1292585),
+ &#39;Chapter 133&#39;: (1292595, 1302392),
+ &#39;Chapter 134&#39;: (1302403, 1306648),
+ &#39;Chapter 135&#39;: (1306660, 1312807),
+ &#39;Chapter 136&#39;: (1312818, 1325196),
+ &#39;Chapter 137&#39;: (1325206, 1335367),
+ &#39;Chapter 138&#39;: (1335378, 1350083),
+ &#39;Chapter 139&#39;: (1350095, 1368974),
+ &#39;Chapter 140&#39;: (1368987, 1375976),
+ &#39;Chapter 141&#39;: (1375987, 1384187),
+ &#39;Chapter 142&#39;: (1384197, 1402209),
+ &#39;Chapter 143&#39;: (1402220, 1410852),
+ &#39;Chapter 144&#39;: (1410864, 1417337),
+ &#39;Chapter 145&#39;: (1417350, 1424143),
+ &#39;Chapter 146&#39;: (1424153, 1435423),
+ &#39;Chapter 147&#39;: (1435434, 1443815),
+ &#39;Chapter 148&#39;: (1443827, 1456028),
+ &#39;Chapter 149&#39;: (1456039, 1461442),
+ &#39;Chapter 150&#39;: (1461452, 1471642),
+ &#39;Chapter 151&#39;: (1471653, 1478639),
+ &#39;Chapter 152&#39;: (1478651, 1486770),
+ &#39;Chapter 153&#39;: (1486783, 1495198),
+ &#39;Chapter 154&#39;: (1495209, 1506519),
+ &#39;Chapter 155&#39;: (1506529, 1513793),
+ &#39;Chapter 156&#39;: (1513804, 1519102),
+ &#39;Chapter 157&#39;: (1519114, 1526244),
+ &#39;Chapter 158&#39;: (1526257, 1532999),
+ &#39;Chapter 159&#39;: (1533011, 1539464),
+ &#39;Chapter 160&#39;: (1539475, 1550543),
+ &#39;Chapter 161&#39;: (1550555, 1561717),
+ &#39;Chapter 162&#39;: (1561730, 1566915),
+ &#39;Chapter 163&#39;: (1566929, 1573960),
+ &#39;Chapter 164&#39;: (1573972, 1581957),
+ &#39;Chapter 165&#39;: (1581968, 1588633),
+ &#39;Chapter 166&#39;: (1588645, 1597177),
+ &#39;Chapter 167&#39;: (1597190, 1603512),
+ &#39;Chapter 168&#39;: (1603522, 1613939),
+ &#39;Chapter 169&#39;: (1613950, 1622742),
+ &#39;Chapter 170&#39;: (1622754, 1631118),
+ &#39;Chapter 171&#39;: (1631129, 1640271),
+ &#39;Chapter 172&#39;: (1640281, 1645270),
+ &#39;Chapter 173&#39;: (1645281, 1661005),
+ &#39;Chapter 174&#39;: (1661017, 1668134),
+ &#39;Chapter 175&#39;: (1668147, 1681915),
+ &#39;Chapter 176&#39;: (1681926, 1698654),
+ &#39;Chapter 177&#39;: (1698664, 1706589),
+ &#39;Chapter 178&#39;: (1706600, 1718176),
+ &#39;Chapter 179&#39;: (1718188, 1727716),
+ &#39;Chapter 180&#39;: (1727729, 1734132),
+ &#39;Chapter 181&#39;: (1734144, 1741147),
+ &#39;Chapter 182&#39;: (1741158, 1748429),
+ &#39;Chapter 183&#39;: (1748441, 1755235),
+ &#39;Chapter 184&#39;: (1755248, 1763140),
+ &#39;Chapter 185&#39;: (1763154, 1775008),
+ &#39;Chapter 186&#39;: (1775020, 1783412),
+ &#39;Chapter 187&#39;: (1783423, 1796121),
+ &#39;Chapter 188&#39;: (1796133, 1808030),
+ &#39;Chapter 189&#39;: (1808043, 1820752),
+ &#39;Chapter 190&#39;: (1820766, 1824958),
+ &#39;Chapter 191&#39;: (1824968, 1837385),
+ &#39;Chapter 192&#39;: (1837396, 1846970),
+ &#39;Chapter 193&#39;: (1846982, 1852552),
+ &#39;Chapter 194&#39;: (1852563, 1875958),
+ &#39;Chapter 195&#39;: (1875968, 1891721),
+ &#39;Chapter 196&#39;: (1891732, 1901053),
+ &#39;Chapter 197&#39;: (1901065, 1908516),
+ &#39;Chapter 198&#39;: (1908529, 1927307),
+ &#39;Chapter 199&#39;: (1927318, 1938576),
+ &#39;Chapter 200&#39;: (1938586, 1949815),
+ &#39;Chapter 201&#39;: (1949826, 1955504),
+ &#39;Chapter 202&#39;: (1955516, 1960165),
+ &#39;Chapter 203&#39;: (1960178, 1968513),
+ &#39;Chapter 204&#39;: (1968525, 1979128),
+ &#39;Chapter 205&#39;: (1979139, 1993246),
+ &#39;Chapter 206&#39;: (1993258, 2000801),
+ &#39;Chapter 207&#39;: (2000814, 2010415),
+ &#39;Chapter 208&#39;: (2010429, 2021112),
+ &#39;Chapter 209&#39;: (2021124, 2032585),
+ &#39;Chapter 210&#39;: (2032596, 2040742),
+ &#39;Chapter 211&#39;: (2040754, 2050948),
+ &#39;Chapter 212&#39;: (2050961, 2058827),
+ &#39;Chapter 213&#39;: (2058841, 2062981),
+ &#39;Chapter 214&#39;: (2062994, 2069063),
+ &#39;Chapter 215&#39;: (2069075, 2086019),
+ &#39;Chapter 216&#39;: (2086032, 2094717),
+ &#39;Chapter 217&#39;: (2094731, 2102215),
+ &#39;Chapter 218&#39;: (2102230, 2108511),
+ &#39;Chapter 219&#39;: (2108524, 2114563),
+ &#39;Chapter 220&#39;: (2114575, 2121489),
+ &#39;Chapter 221&#39;: (2121502, 2138539),
+ &#39;Chapter 222&#39;: (2138553, 2142699),
+ &#39;Chapter 223&#39;: (2142714, 2150076),
+ &#39;Chapter 224&#39;: (2150090, 2160598),
+ &#39;Chapter 225&#39;: (2160611, 2169695),
+ &#39;Chapter 226&#39;: (2169709, 2181032),
+ &#39;Chapter 227&#39;: (2181047, 2187682),
+ &#39;Chapter 228&#39;: (2187698, 2195247),
+ &#39;Chapter 229&#39;: (2195261, 2201533),
+ &#39;Chapter 230&#39;: (2201543, 2209307),
+ &#39;Chapter 231&#39;: (2209318, 2216996),
+ &#39;Chapter 232&#39;: (2217008, 2223189),
+ &#39;Chapter 233&#39;: (2223200, 2231358),
+ &#39;Chapter 234&#39;: (2231368, 2237418),
+ &#39;Chapter 235&#39;: (2237429, 2245212),
+ &#39;Chapter 236&#39;: (2245224, 2254116),
+ &#39;Chapter 237&#39;: (2254129, 2258748),
+ &#39;Chapter 238&#39;: (2258759, 2265657),
+ &#39;Chapter 239&#39;: (2265667, 2273244),
+ &#39;Chapter 240&#39;: (2273255, 2278030),
+ &#39;Chapter 241&#39;: (2278042, 2286957),
+ &#39;Chapter 242&#39;: (2286970, 2294811),
+ &#39;Chapter 243&#39;: (2294823, 2301093),
+ &#39;Chapter 244&#39;: (2301104, 2308533),
+ &#39;Chapter 245&#39;: (2308545, 2319288),
+ &#39;Chapter 246&#39;: (2319301, 2329361),
+ &#39;Chapter 247&#39;: (2329375, 2336641),
+ &#39;Chapter 248&#39;: (2336653, 2346282),
+ &#39;Chapter 249&#39;: (2346293, 2351634),
+ &#39;Chapter 250&#39;: (2351646, 2357547),
+ &#39;Chapter 251&#39;: (2357560, 2362664),
+ &#39;Chapter 252&#39;: (2362678, 2371927),
+ &#39;Chapter 253&#39;: (2371940, 2380747),
+ &#39;Chapter 254&#39;: (2380759, 2401423),
+ &#39;Chapter 255&#39;: (2401436, 2413736),
+ &#39;Chapter 256&#39;: (2413750, 2422780),
+ &#39;Chapter 257&#39;: (2422795, 2429139),
+ &#39;Chapter 258&#39;: (2429152, 2451042),
+ &#39;Chapter 259&#39;: (2451054, 2454769),
+ &#39;Chapter 260&#39;: (2454782, 2464557),
+ &#39;Chapter 261&#39;: (2464571, 2478191),
+ &#39;Chapter 262&#39;: (2478206, 2492662),
+ &#39;Chapter 263&#39;: (2492676, 2502383),
+ &#39;Chapter 264&#39;: (2502393, 2510871),
+ &#39;Chapter 265&#39;: (2510882, 2516536),
+ &#39;Chapter 266&#39;: (2516548, 2522656),
+ &#39;Chapter 267&#39;: (2522667, 2534007),
+ &#39;Chapter 268&#39;: (2534017, 2541217),
+ &#39;Chapter 269&#39;: (2541228, 2550621),
+ &#39;Chapter 270&#39;: (2550633, 2560555),
+ &#39;Chapter 271&#39;: (2560568, 2569428),
+ &#39;Chapter 272&#39;: (2569439, 2574361),
+ &#39;Chapter 273&#39;: (2574371, 2582900),
+ &#39;Chapter 274&#39;: (2582911, 2591361),
+ &#39;Chapter 275&#39;: (2591373, 2603577),
+ &#39;Chapter 276&#39;: (2603590, 2610037),
+ &#39;Chapter 277&#39;: (2610049, 2621780),
+ &#39;Chapter 278&#39;: (2621791, 2630559),
+ &#39;Chapter 279&#39;: (2630571, 2642981),
+ &#39;Chapter 280&#39;: (2642991, 2650259),
+ &#39;Chapter 281&#39;: (2650270, 2655080),
+ &#39;Chapter 282&#39;: (2655092, 2661472),
+ &#39;Chapter 283&#39;: (2661483, 2665803),
+ &#39;Chapter 284&#39;: (2665813, 2669053),
+ &#39;Chapter 285&#39;: (2669064, 2676866),
+ &#39;Chapter 286&#39;: (2676878, 2681741),
+ &#39;Chapter 287&#39;: (2681754, 2686389),
+ &#39;Chapter 288&#39;: (2686400, 2694508),
+ &#39;Chapter 289&#39;: (2694518, 2702171),
+ &#39;Chapter 290&#39;: (2702182, 2711476),
+ &#39;Chapter 291&#39;: (2711488, 2717734),
+ &#39;Chapter 292&#39;: (2717747, 2725063),
+ &#39;Chapter 293&#39;: (2725075, 2735213),
+ &#39;Chapter 294&#39;: (2735224, 2740707),
+ &#39;Chapter 295&#39;: (2740719, 2746541),
+ &#39;Chapter 296&#39;: (2746554, 2753110),
+ &#39;Chapter 297&#39;: (2753124, 2757166),
+ &#39;Chapter 298&#39;: (2757178, 2761937),
+ &#39;Chapter 299&#39;: (2761947, 2768946),
+ &#39;Chapter 300&#39;: (2768957, 2774372),
+ &#39;Chapter 301&#39;: (2774384, 2780726),
+ &#39;Chapter 302&#39;: (2780737, 2788496),
+ &#39;Chapter 303&#39;: (2788506, 2796405),
+ &#39;Chapter 304&#39;: (2796416, 2801417),
+ &#39;Chapter 305&#39;: (2801429, 2809444),
+ &#39;Chapter 306&#39;: (2809457, 2814587),
+ &#39;Chapter 307&#39;: (2814598, 2821733),
+ &#39;Chapter 308&#39;: (2821743, 2830641),
+ &#39;Chapter 309&#39;: (2830652, 2837084),
+ &#39;Chapter 310&#39;: (2837096, 2844273),
+ &#39;Chapter 311&#39;: (2844286, 2851082),
+ &#39;Chapter 312&#39;: (2851094, 2854450),
+ &#39;Chapter 313&#39;: (2854461, 2859825),
+ &#39;Chapter 314&#39;: (2859837, 2863545),
+ &#39;Chapter 315&#39;: (2863558, 2867438),
+ &#39;Chapter 316&#39;: (2867452, 2871291),
+ &#39;Chapter 317&#39;: (2871303, 2881724),
+ &#39;Chapter 318&#39;: (2881734, 2890648),
+ &#39;Chapter 319&#39;: (2890659, 2895611),
+ &#39;Chapter 320&#39;: (2895623, 2901600),
+ &#39;Chapter 321&#39;: (2901611, 2908666),
+ &#39;Chapter 322&#39;: (2908676, 2916155),
+ &#39;Chapter 323&#39;: (2916166, 2922637),
+ &#39;Chapter 324&#39;: (2922649, 2927977),
+ &#39;Chapter 325&#39;: (2927990, 2936152),
+ &#39;Chapter 326&#39;: (2936163, 2941344),
+ &#39;Chapter 327&#39;: (2941354, 2953701),
+ &#39;Chapter 328&#39;: (2953712, 2957335),
+ &#39;Chapter 329&#39;: (2957347, 2963825),
+ &#39;Chapter 330&#39;: (2963838, 2975628),
+ &#39;Chapter 331&#39;: (2975640, 2980768),
+ &#39;Chapter 332&#39;: (2980779, 2987775),
+ &#39;Chapter 333&#39;: (2987787, 2993311),
+ &#39;Chapter 334&#39;: (2993324, 3004375),
+ &#39;Chapter 335&#39;: (3004389, 3015383),
+ &#39;Chapter 336&#39;: (3015395, 3019531),
+ &#39;Chapter 337&#39;: (3019542, 3022806),
+ &#39;Chapter 338&#39;: (3022816, 3029539),
+ &#39;Chapter 339&#39;: (3029550, 3033720),
+ &#39;Chapter 340&#39;: (3033732, 3043990),
+ &#39;Chapter 341&#39;: (3044001, 3049520),
+ &#39;Chapter 342&#39;: (3049530, 3056726),
+ &#39;Chapter 343&#39;: (3056737, 3065865),
+ &#39;Chapter 344&#39;: (3065877, 3073225),
+ &#39;Chapter 345&#39;: (3073238, 3081182),
+ &#39;Chapter 346&#39;: (3081193, 3093226),
+ &#39;Chapter 347&#39;: (3093236, 3104287),
+ &#39;Chapter 348&#39;: (3104298, 3111479),
+ &#39;Chapter 349&#39;: (3111491, 3121881),
+ &#39;Chapter 350&#39;: (3121894, 3129357),
+ &#39;Chapter 351&#39;: (3129369, 3140886),
+ &#39;Chapter 352&#39;: (3140897, 3151252),
+ &#39;Chapter 353&#39;: (3151264, 3162117),
+ &#39;Chapter 354&#39;: (3162127, 3172699),
+ &#39;Chapter 355&#39;: (3172710, 3182727),
+ &#39;Chapter 356&#39;: (3182739, 3187844),
+ &#39;Chapter 357&#39;: (3187855, 3202014),
+ &#39;Chapter 358&#39;: (3202024, 3208550),
+ &#39;Chapter 359&#39;: (3208561, 3216644),
+ &#39;Chapter 360&#39;: (3216656, 3224192),
+ &#39;Chapter 361&#39;: (3224205, 3234131),
+ &#39;Chapter 362&#39;: (3234142, 3246514),
+ &#39;Chapter 363&#39;: (3246524, 3257927),
+ &#39;Chapter 364&#39;: (3257938, 3261527),
+ &#39;Chapter 365&#39;: (3261539, 3266522)}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we have all the text extracted! But… dictionaries are not the most useful data structure. They can be difficult to query and to get basic statisics from. So we will convert our dictionary into a more robust data structure, a dataframe from the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> package.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1">## You will almost always see pandas imported this way.</span>
+<span class="c1">## Let&#39;s see what happens when we input the dictionary directly</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ch_dict</span><span class="p">)</span>
+<span class="c1">## it&#39;s close but not quite what we wanted</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1">## You will almost always see pandas imported this way.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1">## Let&#39;s see what happens when we input the dictionary directly</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ch_dict</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## pandas is programmed to look for numerical indices, which dictionaries (because they&#39;re an unordered data type) do not have</span>
+<span class="c1">## we can coerse it though to accept string values as the index with the &#39;from_dict&#39; method and the &#39;orient&#39; keyword argument</span>
+<span class="c1">## the &#39;reset_index&#39; method will then turn our index into a column and give us an index for the rows</span>
+<span class="n">ch_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">ch_dict</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">ch_df</span> <span class="o">=</span> <span class="n">ch_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">ch_df</span> <span class="o">=</span> <span class="n">ch_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span><span class="s1">&#39;chapter&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;start_idx&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;end_idx&#39;</span><span class="p">})</span>
+<span class="n">ch_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chapter</th>
+      <th>start_idx</th>
+      <th>end_idx</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Chapter 1</td>
+      <td>35</td>
+      <td>11716</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Chapter 2</td>
+      <td>11727</td>
+      <td>19652</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chapter 3</td>
+      <td>19664</td>
+      <td>28409</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Chapter 4</td>
+      <td>28420</td>
+      <td>36599</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Chapter 5</td>
+      <td>36609</td>
+      <td>47877</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>360</th>
+      <td>Chapter 361</td>
+      <td>3224205</td>
+      <td>3234131</td>
+    </tr>
+    <tr>
+      <th>361</th>
+      <td>Chapter 362</td>
+      <td>3234142</td>
+      <td>3246514</td>
+    </tr>
+    <tr>
+      <th>362</th>
+      <td>Chapter 363</td>
+      <td>3246524</td>
+      <td>3257927</td>
+    </tr>
+    <tr>
+      <th>363</th>
+      <td>Chapter 364</td>
+      <td>3257938</td>
+      <td>3261527</td>
+    </tr>
+    <tr>
+      <th>364</th>
+      <td>Chapter 365</td>
+      <td>3261539</td>
+      <td>3266518</td>
+    </tr>
+  </tbody>
+</table>
+<p>365 rows × 3 columns</p>
+</div></div></div>
+</div>
+<p>Now that the dataframe is in the correct orientation, let’s use the indices that we got to select the texts of each chapter. All we need to do is input <code class="docutils literal notranslate"><span class="pre">start_idx:end_idx</span></code> into square brackets next to the <code class="docutils literal notranslate"><span class="pre">text</span></code> object. Below is an example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">ch_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;start_idx&#39;</span><span class="p">]</span> <span class="c1">## .iloc[0] gives us the first element of the dataframe</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">ch_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;end_idx&#39;</span><span class="p">]</span>
+<span class="n">text</span><span class="p">[</span><span class="n">s</span><span class="p">:</span><span class="n">e</span><span class="p">]</span>
+<span class="c1">## the first full chapter of War and Peace</span>
+<span class="c1">## you can change the number after iloc to change which chapter you see</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\r\n\r\n“Well, Prince, so Genoa and Lucca are now just family estates of the\r\nBuonapartes. But I warn you, if you don’t tell me that this means war,\r\nif you still try to defend the infamies and horrors perpetrated by that\r\nAntichrist—I really believe he is Antichrist—I will have nothing\r\nmore to do with you and you are no longer my friend, no longer my\r\n‘faithful slave,’ as you call yourself! But how do you do? I see I\r\nhave frightened you—sit down and tell me all the news.”\r\n\r\nIt was in July, 1805, and the speaker was the well-known Anna Pávlovna\r\nSchérer, maid of honor and favorite of the Empress Márya Fëdorovna.\r\nWith these words she greeted Prince Vasíli Kurágin, a man of high\r\nrank and importance, who was the first to arrive at her reception. Anna\r\nPávlovna had had a cough for some days. She was, as she said, suffering\r\nfrom la grippe; grippe being then a new word in St. Petersburg, used\r\nonly by the elite.\r\n\r\nAll her invitations without exception, written in French, and delivered\r\nby a scarlet-liveried footman that morning, ran as follows:\r\n\r\n“If you have nothing better to do, Count (or Prince), and if the\r\nprospect of spending an evening with a poor invalid is not too terrible,\r\nI shall be very charmed to see you tonight between 7 and 10—Annette\r\nSchérer.”\r\n\r\n“Heavens! what a virulent attack!” replied the prince, not in the\r\nleast disconcerted by this reception. He had just entered, wearing an\r\nembroidered court uniform, knee breeches, and shoes, and had stars on\r\nhis breast and a serene expression on his flat face. He spoke in that\r\nrefined French in which our grandfathers not only spoke but thought, and\r\nwith the gentle, patronizing intonation natural to a man of importance\r\nwho had grown old in society and at court. He went up to Anna Pávlovna,\r\nkissed her hand, presenting to her his bald, scented, and shining head,\r\nand complacently seated himself on the sofa.\r\n\r\n“First of all, dear friend, tell me how you are. Set your friend’s\r\nmind at rest,” said he without altering his tone, beneath the\r\npoliteness and affected sympathy of which indifference and even irony\r\ncould be discerned.\r\n\r\n“Can one be well while suffering morally? Can one be calm in times\r\nlike these if one has any feeling?” said Anna Pávlovna. “You are\r\nstaying the whole evening, I hope?”\r\n\r\n“And the fete at the English ambassador’s? Today is Wednesday. I\r\nmust put in an appearance there,” said the prince. “My daughter is\r\ncoming for me to take me there.”\r\n\r\n“I thought today’s fete had been canceled. I confess all these\r\nfestivities and fireworks are becoming wearisome.”\r\n\r\n“If they had known that you wished it, the entertainment would have\r\nbeen put off,” said the prince, who, like a wound-up clock, by force\r\nof habit said things he did not even wish to be believed.\r\n\r\n“Don’t tease! Well, and what has been decided about Novosíltsev’s\r\ndispatch? You know everything.”\r\n\r\n“What can one say about it?” replied the prince in a cold, listless\r\ntone. “What has been decided? They have decided that Buonaparte has\r\nburnt his boats, and I believe that we are ready to burn ours.”\r\n\r\nPrince Vasíli always spoke languidly, like an actor repeating a stale\r\npart. Anna Pávlovna Schérer on the contrary, despite her forty years,\r\noverflowed with animation and impulsiveness. To be an enthusiast had\r\nbecome her social vocation and, sometimes even when she did not\r\nfeel like it, she became enthusiastic in order not to disappoint the\r\nexpectations of those who knew her. The subdued smile which, though it\r\ndid not suit her faded features, always played round her lips expressed,\r\nas in a spoiled child, a continual consciousness of her charming defect,\r\nwhich she neither wished, nor could, nor considered it necessary, to\r\ncorrect.\r\n\r\nIn the midst of a conversation on political matters Anna Pávlovna burst\r\nout:\r\n\r\n“Oh, don’t speak to me of Austria. Perhaps I don’t understand\r\nthings, but Austria never has wished, and does not wish, for war. She\r\nis betraying us! Russia alone must save Europe. Our gracious sovereign\r\nrecognizes his high vocation and will be true to it. That is the one\r\nthing I have faith in! Our good and wonderful sovereign has to perform\r\nthe noblest role on earth, and he is so virtuous and noble that God will\r\nnot forsake him. He will fulfill his vocation and crush the hydra of\r\nrevolution, which has become more terrible than ever in the person of\r\nthis murderer and villain! We alone must avenge the blood of the just\r\none.... Whom, I ask you, can we rely on?... England with her commercial\r\nspirit will not and cannot understand the Emperor Alexander’s\r\nloftiness of soul. She has refused to evacuate Malta. She wanted to\r\nfind, and still seeks, some secret motive in our actions. What answer\r\ndid Novosíltsev get? None. The English have not understood and cannot\r\nunderstand the self-abnegation of our Emperor who wants nothing for\r\nhimself, but only desires the good of mankind. And what have they\r\npromised? Nothing! And what little they have promised they will not\r\nperform! Prussia has always declared that Buonaparte is invincible, and\r\nthat all Europe is powerless before him.... And I don’t believe a\r\nword that Hardenburg says, or Haugwitz either. This famous Prussian\r\nneutrality is just a trap. I have faith only in God and the lofty\r\ndestiny of our adored monarch. He will save Europe!”\r\n\r\nShe suddenly paused, smiling at her own impetuosity.\r\n\r\n“I think,” said the prince with a smile, “that if you had been\r\nsent instead of our dear Wintzingerode you would have captured the King\r\nof Prussia’s consent by assault. You are so eloquent. Will you give me\r\na cup of tea?”\r\n\r\n“In a moment. À propos,” she added, becoming calm again, “I am\r\nexpecting two very interesting men tonight, le Vicomte de Mortemart, who\r\nis connected with the Montmorencys through the Rohans, one of the best\r\nFrench families. He is one of the genuine émigrés, the good ones. And\r\nalso the Abbé Morio. Do you know that profound thinker? He has been\r\nreceived by the Emperor. Had you heard?”\r\n\r\n“I shall be delighted to meet them,” said the prince. “But\r\ntell me,” he added with studied carelessness as if it had only just\r\noccurred to him, though the question he was about to ask was the chief\r\nmotive of his visit, “is it true that the Dowager Empress wants\r\nBaron Funke to be appointed first secretary at Vienna? The baron by all\r\naccounts is a poor creature.”\r\n\r\nPrince Vasíli wished to obtain this post for his son, but others were\r\ntrying through the Dowager Empress Márya Fëdorovna to secure it for\r\nthe baron.\r\n\r\nAnna Pávlovna almost closed her eyes to indicate that neither she nor\r\nanyone else had a right to criticize what the Empress desired or was\r\npleased with.\r\n\r\n“Baron Funke has been recommended to the Dowager Empress by her\r\nsister,” was all she said, in a dry and mournful tone.\r\n\r\nAs she named the Empress, Anna Pávlovna’s face suddenly assumed an\r\nexpression of profound and sincere devotion and respect mingled with\r\nsadness, and this occurred every time she mentioned her illustrious\r\npatroness. She added that Her Majesty had deigned to show Baron Funke\r\nbeaucoup d’estime, and again her face clouded over with sadness.\r\n\r\nThe prince was silent and looked indifferent. But, with the womanly and\r\ncourtierlike quickness and tact habitual to her, Anna Pávlovna\r\nwished both to rebuke him (for daring to speak as he had done of a man\r\nrecommended to the Empress) and at the same time to console him, so she\r\nsaid:\r\n\r\n“Now about your family. Do you know that since your daughter came\r\nout everyone has been enraptured by her? They say she is amazingly\r\nbeautiful.”\r\n\r\nThe prince bowed to signify his respect and gratitude.\r\n\r\n“I often think,” she continued after a short pause, drawing nearer\r\nto the prince and smiling amiably at him as if to show that political\r\nand social topics were ended and the time had come for intimate\r\nconversation—“I often think how unfairly sometimes the joys of life\r\nare distributed. Why has fate given you two such splendid children?\r\nI don’t speak of Anatole, your youngest. I don’t like him,” she\r\nadded in a tone admitting of no rejoinder and raising her eyebrows.\r\n“Two such charming children. And really you appreciate them less than\r\nanyone, and so you don’t deserve to have them.”\r\n\r\nAnd she smiled her ecstatic smile.\r\n\r\n“I can’t help it,” said the prince. “Lavater would have said I\r\nlack the bump of paternity.”\r\n\r\n“Don’t joke; I mean to have a serious talk with you. Do you know\r\nI am dissatisfied with your younger son? Between ourselves” (and her\r\nface assumed its melancholy expression), “he was mentioned at Her\r\nMajesty’s and you were pitied....”\r\n\r\nThe prince answered nothing, but she looked at him significantly,\r\nawaiting a reply. He frowned.\r\n\r\n“What would you have me do?” he said at last. “You know I did all\r\na father could for their education, and they have both turned out fools.\r\nHippolyte is at least a quiet fool, but Anatole is an active one. That\r\nis the only difference between them.” He said this smiling in a way\r\nmore natural and animated than usual, so that the wrinkles round\r\nhis mouth very clearly revealed something unexpectedly coarse and\r\nunpleasant.\r\n\r\n“And why are children born to such men as you? If you were not a\r\nfather there would be nothing I could reproach you with,” said Anna\r\nPávlovna, looking up pensively.\r\n\r\n“I am your faithful slave and to you alone I can confess that my\r\nchildren are the bane of my life. It is the cross I have to bear. That\r\nis how I explain it to myself. It can’t be helped!”\r\n\r\nHe said no more, but expressed his resignation to cruel fate by a\r\ngesture. Anna Pávlovna meditated.\r\n\r\n“Have you never thought of marrying your prodigal son Anatole?” she\r\nasked. “They say old maids have a mania for matchmaking, and though I\r\ndon’t feel that weakness in myself as yet, I know a little person who\r\nis very unhappy with her father. She is a relation of yours, Princess\r\nMary Bolkónskaya.”\r\n\r\nPrince Vasíli did not reply, though, with the quickness of memory and\r\nperception befitting a man of the world, he indicated by a movement of\r\nthe head that he was considering this information.\r\n\r\n“Do you know,” he said at last, evidently unable to check the sad\r\ncurrent of his thoughts, “that Anatole is costing me forty thousand\r\nrubles a year? And,” he went on after a pause, “what will it be in\r\nfive years, if he goes on like this?” Presently he added: “That’s\r\nwhat we fathers have to put up with.... Is this princess of yours\r\nrich?”\r\n\r\n“Her father is very rich and stingy. He lives in the country. He is\r\nthe well-known Prince Bolkónski who had to retire from the army under\r\nthe late Emperor, and was nicknamed ‘the King of Prussia.’ He is\r\nvery clever but eccentric, and a bore. The poor girl is very unhappy.\r\nShe has a brother; I think you know him, he married Lise Meinen lately.\r\nHe is an aide-de-camp of Kutúzov’s and will be here tonight.”\r\n\r\n“Listen, dear Annette,” said the prince, suddenly taking Anna\r\nPávlovna’s hand and for some reason drawing it downwards. “Arrange\r\nthat affair for me and I shall always be your most devoted slave-slafe\r\nwith an f, as a village elder of mine writes in his reports. She is rich\r\nand of good family and that’s all I want.”\r\n\r\nAnd with the familiarity and easy grace peculiar to him, he raised the\r\nmaid of honor’s hand to his lips, kissed it, and swung it to and fro\r\nas he lay back in his armchair, looking in another direction.\r\n\r\n“Attendez,” said Anna Pávlovna, reflecting, “I’ll speak to\r\nLise, young Bolkónski’s wife, this very evening, and perhaps the\r\nthing can be arranged. It shall be on your family’s behalf that I’ll\r\nstart my apprenticeship as old maid.”\r\n\r\n\r\n\r\n\r\n\r&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is great, but now how do we do it with the whole column?</p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">.apply</span></code> method from <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, which allows us to cast a single function to every cell in a column. In this case, we need to use two different columns, so we will use a <code class="docutils literal notranslate"><span class="pre">lambda</span></code> expression. <code class="docutils literal notranslate"><span class="pre">lambda</span></code> expressions are a way to build very simple functions in Python. They are very flexible and support a lot of different features like flow control and regular expressions. <a class="reference external" href="https://www.w3schools.com/python/python_lambda.asp">Here</a> is a useful starter guide to <code class="docutils literal notranslate"><span class="pre">lambda</span></code> from W3Schools.</p>
+<p>For us, we need <code class="docutils literal notranslate"><span class="pre">lambda</span></code> expression that will pull a value for each column and return the text between those two values. Note the <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> keyword parameter. This tells <code class="docutils literal notranslate"><span class="pre">pandas</span></code> that we want to go through the columns not the rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ch_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">text</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;start_idx&#39;</span><span class="p">]:</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;end_idx&#39;</span><span class="p">]],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ch_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="c1">## using lambda again for some simple cleaning with the replace and lower methods</span>
+<span class="n">ch_df</span> <span class="o">=</span> <span class="n">ch_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;start_idx&#39;</span><span class="p">,</span><span class="s1">&#39;end_idx&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">## and now we can drop our indices just so they don&#39;t clutter up our dataframe</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ch_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chapter</th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Chapter 1</td>
+      <td>“well, prince, so genoa and lucca are now jus...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Chapter 2</td>
+      <td>anna pávlovna’s drawing room was gradually fi...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chapter 3</td>
+      <td>anna pávlovna’s reception was in full swing. ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Chapter 4</td>
+      <td>just then another visitor entered the drawing...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Chapter 5</td>
+      <td>“and what do you think of this latest comedy,...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>360</th>
+      <td>Chapter 361</td>
+      <td>if history dealt only with external phenomena...</td>
+    </tr>
+    <tr>
+      <th>361</th>
+      <td>Chapter 362</td>
+      <td>for the solution of the question of free will...</td>
+    </tr>
+    <tr>
+      <th>362</th>
+      <td>Chapter 363</td>
+      <td>thus our conception of free will and inevitab...</td>
+    </tr>
+    <tr>
+      <th>363</th>
+      <td>Chapter 364</td>
+      <td>history examines the manifestations of man’s ...</td>
+    </tr>
+    <tr>
+      <th>364</th>
+      <td>Chapter 365</td>
+      <td>from the time the law of copernicus was disco...</td>
+    </tr>
+  </tbody>
+</table>
+<p>365 rows × 2 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="tokenization">
+<h3>Tokenization<a class="headerlink" href="#tokenization" title="Link to this heading">#</a></h3>
+<p>Now that we have read in our data and began some cleaning, we will tokenize our text. Tokenization is a process by which we can split up the chapter we got into relevent units. There are two main types of tokenization:</p>
+<ul class="simple">
+<li><p>Sentence-level tokenization: splitting up the text into sentences</p></li>
+<li><p>Word-level tokenization: splitting up the text into words</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## The Natural Language Toolkit (NLTK) provides a lot of very useful utilities for cleaning and analyzing textual data.</span>
+<span class="c1">## It requires this &#39;punkt&#39; download for us to be able to tokenize</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /Users/pnadel01/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<section id="sentence-level-tokenization">
+<h4>Sentence-level tokenization<a class="headerlink" href="#sentence-level-tokenization" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ch_df</span><span class="p">[</span><span class="s1">&#39;sents&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch_df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">ch_df</span><span class="p">[</span><span class="s1">&#39;sents&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">## each element of the &#39;sents&#39; column is a list of sentences in eahc chapter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Now we can &#39;explode&#39; these lists, so that each sentence has its own cell in the &#39;sents&#39; column.</span>
+<span class="n">sent_explode</span> <span class="o">=</span> <span class="n">ch_df</span><span class="o">.</span><span class="n">explode</span><span class="p">(</span><span class="s1">&#39;sents&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;text&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sent_explode</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chapter</th>
+      <th>sents</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Chapter 1</td>
+      <td>“well, prince, so genoa and lucca are now jus...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Chapter 1</td>
+      <td>but i warn you, if you don’t tell me that this...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chapter 1</td>
+      <td>but how do you do?</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Chapter 1</td>
+      <td>i see i have frightened you—sit down and tell ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Chapter 1</td>
+      <td>with these words she greeted prince vasíli kur...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>26256</th>
+      <td>Chapter 365</td>
+      <td>as in the question of astronomy then, so in th...</td>
+    </tr>
+    <tr>
+      <th>26257</th>
+      <td>Chapter 365</td>
+      <td>in astronomy it was the immovability of the ea...</td>
+    </tr>
+    <tr>
+      <th>26258</th>
+      <td>Chapter 365</td>
+      <td>as with astronomy the difficulty of recognizin...</td>
+    </tr>
+    <tr>
+      <th>26259</th>
+      <td>Chapter 365</td>
+      <td>but as in astronomy the new view said: “it is ...</td>
+    </tr>
+    <tr>
+      <th>26260</th>
+      <td>Chapter 365</td>
+      <td>***</td>
+    </tr>
+  </tbody>
+</table>
+<p>26261 rows × 2 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="word-level-tokenization">
+<h4>Word-level tokenization<a class="headerlink" href="#word-level-tokenization" title="Link to this heading">#</a></h4>
+<p>To conduct word-level tokenization, we’ll be using regex again but this time, we’ll use a useful function in NLTK that takes in a regular expression and will split words on that pattern. This is opposition to so-called ‘white-space tokenization’ where words are delimited by spaces. This type of tokenization can be useful in some cases, but in most natural language will be insufficient. That’s why this NLTK function is so helpful. All we need to do is input the pattern below and we will get very good English tokenization</p>
+<p>Note that tokenization is language dependent. This means that just because a certain method works for English it will not neccesarily work for other languages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">RegexpTokenizer</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">RegexpTokenizer</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?x)\w+(?:[-’]\w+)*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex_sentence</span> <span class="o">=</span> <span class="n">sent_explode</span><span class="o">.</span><span class="n">sents</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ex_sentence</span><span class="p">)</span>
+<span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">ex_sentence</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>anna pávlovna had had a cough for some days.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;anna&#39;, &#39;pávlovna&#39;, &#39;had&#39;, &#39;had&#39;, &#39;a&#39;, &#39;cough&#39;, &#39;for&#39;, &#39;some&#39;, &#39;days&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sent_explode</span><span class="p">[</span><span class="s1">&#39;word_tokenized&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sent_explode</span><span class="p">[</span><span class="s1">&#39;sents&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">)</span>
+<span class="n">sent_explode</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>chapter</th>
+      <th>sents</th>
+      <th>word_tokenized</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Chapter 1</td>
+      <td>“well, prince, so genoa and lucca are now jus...</td>
+      <td>[well, prince, so, genoa, and, lucca, are, now...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Chapter 1</td>
+      <td>but i warn you, if you don’t tell me that this...</td>
+      <td>[but, i, warn, you, if, you, don’t, tell, me, ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chapter 1</td>
+      <td>but how do you do?</td>
+      <td>[but, how, do, you, do]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Chapter 1</td>
+      <td>i see i have frightened you—sit down and tell ...</td>
+      <td>[i, see, i, have, frightened, you, sit, down, ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Chapter 1</td>
+      <td>with these words she greeted prince vasíli kur...</td>
+      <td>[with, these, words, she, greeted, prince, vas...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>26256</th>
+      <td>Chapter 365</td>
+      <td>as in the question of astronomy then, so in th...</td>
+      <td>[as, in, the, question, of, astronomy, then, s...</td>
+    </tr>
+    <tr>
+      <th>26257</th>
+      <td>Chapter 365</td>
+      <td>in astronomy it was the immovability of the ea...</td>
+      <td>[in, astronomy, it, was, the, immovability, of...</td>
+    </tr>
+    <tr>
+      <th>26258</th>
+      <td>Chapter 365</td>
+      <td>as with astronomy the difficulty of recognizin...</td>
+      <td>[as, with, astronomy, the, difficulty, of, rec...</td>
+    </tr>
+    <tr>
+      <th>26259</th>
+      <td>Chapter 365</td>
+      <td>but as in astronomy the new view said: “it is ...</td>
+      <td>[but, as, in, astronomy, the, new, view, said,...</td>
+    </tr>
+    <tr>
+      <th>26260</th>
+      <td>Chapter 365</td>
+      <td>***</td>
+      <td>[]</td>
+    </tr>
+  </tbody>
+</table>
+<p>26261 rows × 3 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="visualization">
+<h3>Visualization<a class="headerlink" href="#visualization" title="Link to this heading">#</a></h3>
+<p>We can now create a general function to visualize word use over the course of the book. For this task, we are more interested in general trends, so let’s zoom back out to the book-level.</p>
+<p>For more information on how to create visualization in Python, please go through <a class="reference external" href="https://tuftsdatalab.github.io/uep239-data-analysis/">this training</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## creating a new dataframe organized by book</span>
+<span class="c1">## this is the same code as above</span>
+<span class="n">book_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">book_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(BOOK [A-Z]+:)&#39;</span><span class="p">,</span><span class="n">text</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">book_list</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">book_list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">book_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Book </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">end</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">book_list</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">book_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Book </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">end</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">book_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">book_dict</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span><span class="s1">&#39;book&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;start_idx&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;end_idx&#39;</span><span class="p">})</span>
+
+<span class="n">book_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">book_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">text</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;start_idx&#39;</span><span class="p">]:</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;end_idx&#39;</span><span class="p">]],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">book_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">book_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">book_df</span> <span class="o">=</span> <span class="n">book_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;start_idx&#39;</span><span class="p">,</span><span class="s1">&#39;end_idx&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">book_df</span><span class="p">[</span><span class="s1">&#39;word_tokenized&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">book_df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">search</span> <span class="o">=</span> <span class="s1">&#39;napoleon&#39;</span>
+<span class="n">book_df</span><span class="p">[</span><span class="s1">&#39;search_count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">book_df</span><span class="p">[</span><span class="s1">&#39;word_tokenized&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+<span class="n">book_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;book&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;search_count&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;book&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/9829fcf729569cb6f16c7a09174d5d453c75eeb745ef5bf2794330a4911d63b1.png" src="../_images/9829fcf729569cb6f16c7a09174d5d453c75eeb745ef5bf2794330a4911d63b1.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="generalizing">
+<h2>Generalizing<a class="headerlink" href="#generalizing" title="Link to this heading">#</a></h2>
+<p>Once I am happy with how my pipeline is functioning, I like to then try to write a function that is as general as possible. In this case, we started with a Gutenberg URL to a <code class="docutils literal notranslate"><span class="pre">txt</span></code> file, so let’s take that as the starting place for our general function. Please take some time to develop a function which will return a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> which we can use to generate a similar visualization as above from any Gutenbery URL. Be careful to note where, in the code above, some methods are specific to <em>War and Peace</em> and which are general.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_gutenberg_data</span><span class="p">(</span>
+    <span class="n">url</span><span class="p">,</span> <span class="c1"># the Gutenberg URL</span>
+    <span class="c1"># you may need more arguments for your function </span>
+    <span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Takes in a Gutenberg URL </span>
+<span class="sd">    Returns a DataFrame of relevant information</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">## GET TEXT FROM URL WITH A REQUEST</span>
+    
+    <span class="c1">## TRIM YOUR TEXT BASED ON SUBSTRINGS</span>
+
+    <span class="n">content_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">content_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;YOUR REGEX HERE!!&#39;</span><span class="p">),</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="c1">## CREATE A DICTIONARY FOR THE INDEX POSITONS YOUR CONTENT</span>
+    
+    <span class="c1">## CONVERT YOUR DICTIONARY INTO A DATAFRAME</span>
+
+    <span class="c1">## CREATE A TEXT COLUMN IN YOUR DATAFRAME</span>
+
+    <span class="c1">## CLEAN YOUR TEXT</span>
+
+    <span class="c1">## TOKENIZE (SENTENCE AND WORD LEVEL)</span>
+
+    <span class="c1">## RETURN YOUR DATAFRAME</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">search</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c1">## INPUT SEARCH TERM HERE</span>
+
+<span class="c1">## ADD A COUNTS COLUMN </span>
+
+<span class="c1">## PLOT A GRAPH</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="specific-application">
+<h2>Specific Application<a class="headerlink" href="#specific-application" title="Link to this heading">#</a></h2>
+<p>From <em>Tolstoy’s Phoenix: From Method to Meaning in War and Peace</em> by George R. Clay (1998), page 7:
+<br></p>
+<blockquote>
+<div><p>In the most direct use of Tolstoy’s technqiues, he categorizes in his own voice. Instead of “The princess smiled, thinking she know more abou the subject than Prince Vasili,” he will write: “The princess smiled, <em>as people do</em> who think they know more about the subject under discussion than those they are talking with” (1:2, p.77; emphasis added). The first version expresses a private thought, but the one Tolstoy used implies (as R. F. Christian phrased it) that “there is a basic denominator of human experience” – a sameness about our pattern of behavior, so that we all know what kind of smile it is… By writing “as people do,” Tolstoy isn’t telling us what this smile is like, he is assuming that we <em>know</em> what it is like: that we have seen it many times before…</p>
+</div></blockquote>
+<p>Let’s try to find more examples and see if they fall in line with Clay’s analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the phrases Clay identifies as relevent</span>
+<span class="n">phrases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;as people do&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;of one who&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;peculiar to&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;as with everyone&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;as one who&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;only used by persons who&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;of a man who&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;which a man has&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;in the way&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;as is usually the case&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;such as often occurs&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;which usually follows&#39;</span>
+<span class="p">]</span>
+<span class="k">def</span> <span class="nf">printExcerpt</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;chapter&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;sents&#39;</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">phrases</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">phrase</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+    <span class="n">sub_df</span> <span class="o">=</span> <span class="n">sent_explode</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sent_explode</span><span class="p">[</span><span class="s1">&#39;sents&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">phrase</span><span class="p">)]</span>
+    <span class="n">sub_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">printExcerpt</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AS PEOPLE DO
+Chapter 21	do you understand that in consideration of the count’s services, his request would be granted?...” the princess smiled as people do who think they know more about the subject under discussion than those they are talking with.
+
+
+-----
+OF ONE WHO
+Chapter 6	he put on the air of one who finds it impossible to reply to such nonsense, but it would in fact have been difficult to give any other answer than the one prince andrew gave to this naïve question.
+
+
+Chapter 10	“i can just imagine what a funny figure that policeman cut!” and as he waved his arms to impersonate the policeman, his portly form again shook with a deep ringing laugh, the laugh of one who always eats well and, in particular, drinks well.
+
+
+Chapter 21	she had the air of one who has suddenly lost faith in the whole human race.
+
+
+Chapter 113	when he had joined the freemasons he had experienced the feeling of one who confidently steps onto the smooth surface of a bog.
+
+
+Chapter 150	but in spite of that she seemed to be disillusioned about everything and told everyone that she did not believe either in friendship or in love, or any of the joys of life, and expected peace only “yonder.” she adopted the tone of one who has suffered a great disappointment, like a girl who has either lost the man she loved or been cruelly deceived by him.
+
+
+Chapter 170	the emperor, with the agitation of one who has been personally affronted, was finishing with these words: “to enter russia without declaring war!
+
+
+-----
+PECULIAR TO
+Chapter 1	she is rich and of good family and that’s all i want.” and with the familiarity and easy grace peculiar to him, he raised the maid of honor’s hand to his lips, kissed it, and swung it to and fro as he lay back in his armchair, looking in another direction.
+
+
+Chapter 51	prince vasíli frowned, twisting his mouth, his cheeks quivered and his face assumed the coarse, unpleasant expression peculiar to him.
+
+
+Chapter 75	i will follow.” when princess mary returned from her father, the little princess sat working and looked up with that curious expression of inner, happy calm peculiar to pregnant women.
+
+
+Chapter 150	julie on the contrary accepted his attentions readily, though in a manner peculiar to herself.
+
+
+-----
+AS WITH EVERYONE
+Chapter 18	berg, oblivious of irony or indifference, continued to explain how by exchanging into the guards he had already gained a step on his old comrades of the cadet corps; how in wartime the company commander might get killed and he, as senior in the company, might easily succeed to the post; how popular he was with everyone in the regiment, and how satisfied his father was with him.
+
+
+Chapter 25	as with everyone, her face assumed a forced unnatural expression as soon as she looked in a glass.
+
+
+-----
+AS ONE WHO
+Chapter 8	halfway through supper prince andrew leaned his elbows on the table and, with a look of nervous agitation such as pierre had never before seen on his face, began to talk—as one who has long had something on his mind and suddenly determines to speak out.
+
+
+-----
+ONLY USED BY PERSONS WHO
+Chapter 17	hey, who’s there?” he called out in a tone only used by persons who are certain that those they call will rush to obey the summons.
+
+
+-----
+OF A MAN WHO
+Chapter 5	“if buonaparte remains on the throne of france a year longer,” the vicomte continued, with the air of a man who, in a matter with which he is better acquainted than anyone else, does not listen to others but follows the current of his own thoughts, “things will have gone too far.
+
+
+Chapter 10	as soon as he had seen a visitor off he returned to one of those who were still in the drawing room, drew a chair toward him or her, and jauntily spreading out his legs and putting his hands on his knees with the air of a man who enjoys life and knows how to live, he swayed to and fro with dignity, offered surmises about the weather, or touched on questions of health, sometimes in russian and sometimes in very bad but self-confident french; then again, like a man weary but unflinching in the fulfillment of duty, he rose to see some visitors off and, stroking his scanty gray hairs over his bald patch, also asked them to dinner.
+
+
+Chapter 37	reviewing his impressions of the recent battle, picturing pleasantly to himself the impression his news of a victory would create, or recalling the send-off given him by the commander in chief and his fellow officers, prince andrew was galloping along in a post chaise enjoying the feelings of a man who has at length begun to attain a long-desired happiness.
+
+
+Chapter 37	his face took on the stupid artificial smile (which does not even attempt to hide its artificiality) of a man who is continually receiving many petitioners one after another.
+
+
+Chapter 43	“now what does this mean, gentlemen?” said the staff officer, in the reproachful tone of a man who has repeated the same thing more than once.
+
+
+Chapter 46	it expressed the concentrated and happy resolution you see on the face of a man who on a hot day takes a final run before plunging into the water.
+
+
+Chapter 72	he was entirely absorbed by two considerations: his wife’s guilt, of which after his sleepless night he had not the slightest doubt, and the guiltlessness of dólokhov, who had no reason to preserve the honor of a man who was nothing to him.... “i should perhaps have done the same thing in his place,” thought pierre.
+
+
+Chapter 177	he said a few words to prince andrew and chernýshev about the present war, with the air of a man who knows beforehand that all will go wrong, and who is not displeased that it should be so.
+
+
+Chapter 258	i must tell you, mon cher,” he continued in the sad and measured tones of a man who intends to tell a long story, “that our name is one of the most ancient in france.” and with a frenchman’s easy and naïve frankness the captain told pierre the story of his ancestors, his childhood, youth, and manhood, and all about his relations and his financial and family affairs, “ma pauvre mère” playing of course an important part in the story.
+
+
+Chapter 358	the replies this theory gives to historical questions are like the replies of a man who, watching the movements of a herd of cattle and paying no attention to the varying quality of the pasturage in different parts of the field, or to the driving of the herdsman, should attribute the direction the herd takes to what animal happens to be at its head.
+
+
+Chapter 363	so that if we examine the case of a man whose connection with the external world is well known, where the time between the action and its examination is great, and where the causes of the action are most accessible, we get the conception of a maximum of inevitability and a minimum of free will.
+
+
+-----
+WHICH A MAN HAS
+Chapter 173	napoleon was in that state of irritability in which a man has to talk, talk, and talk, merely to convince himself that he is in the right.
+
+
+Chapter 334	now that he was telling it all to natásha he experienced that pleasure which a man has when women listen to him—not clever women who when listening either try to remember what they hear to enrich their minds and when opportunity offers to retell it, or who wish to adopt it to some thought of their own and promptly contribute their own clever comments prepared in their little mental workshop—but the pleasure given by real women gifted with a capacity to select and absorb the very best a man shows of himself.
+
+
+-----
+IN THE WAY
+Chapter 18	he was in the way and was the only one who did not notice the fact.
+
+
+Chapter 56	berg put on the cleanest of coats, without a spot or speck of dust, stood before a looking glass and brushed the hair on his temples upwards, in the way affected by the emperor alexander, and, having assured himself from the way rostóv looked at it that his coat had been noticed, left the room with a pleasant smile.
+
+
+Chapter 128	sónya was afraid to leave natásha and afraid of being in the way when she was with them.
+
+
+Chapter 130	the old countess sighed as she looked at them; sónya was always getting frightened lest she should be in the way and tried to find excuses for leaving them alone, even when they did not wish it.
+
+
+Chapter 152	she knew what she ought to have said to natásha, but she had been unable to say it because mademoiselle bourienne was in the way, and because, without knowing why, she felt it very difficult to speak of the marriage.
+
+
+Chapter 208	the stout man rose, frowned, shrugged his shoulders, and evidently trying to appear firm began to pull on his jacket without looking about him, but suddenly his lips trembled and he began to cry, in the way full-blooded grown-up men cry, though angry with himself for doing so.
+
+
+Chapter 221	once or twice he was shouted at for being in the way.
+
+
+Chapter 234	those who went away, taking what they could and abandoning their houses and half their belongings, did so from the latent patriotism which expresses itself not by phrases or by giving one’s children to save the fatherland and similar unnatural exploits, but unobtrusively, simply, organically, and therefore in the way that always produces the most powerful results.
+
+
+Chapter 282	in all these plottings the subject of intrigue was generally the conduct of the war, which all these men believed they were directing; but this affair of the war went on independently of them, as it had to go: that is, never in the way people devised, but flowing always from the essential attitude of the masses.
+
+
+-----
+AS IS USUALLY THE CASE
+Chapter 95	as is usually the case with people meeting after a prolonged separation, it was long before their conversation could settle on anything.
+
+
+-----
+SUCH AS OFTEN OCCURS
+Chapter 139	after a casual pause, such as often occurs when receiving friends for the first time in one’s own house, “uncle,” answering a thought that was in his visitors’ minds, said: “this, you see, is how i am finishing my days... death will come.
+
+
+-----
+WHICH USUALLY FOLLOWS
+Chapter 334	they all three of them now experienced that feeling of awkwardness which usually follows after a serious and heartfelt talk.
+
+
+-----
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great! Now we can see all of the times that Tolstoy uses these particular phrases and we can begin to see what Clay is saying. In this lines, Tolstoy is not giving us a direct characterization or description of a person or thing. Instead he is telling us about the type of person or thing it is. The next step would be then to see if there is a trend in the people or things he refers to in this manner or if this is, as Clay contends, is a general feature of Tolstoy’s prose. At every step in that process, we must make sure to compare our results with Clay and Tolstoy himself. It can be easy to trick yourself into a discovery and the only way to avoid that is to have a close connection to the data itself. Always spend time to play around with your data, even after you think it’s 100% clean, to see what it hides.</p>
+</section>
+<section id="reviewing-what-we-learned">
+<h2>Reviewing what we learned<a class="headerlink" href="#reviewing-what-we-learned" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>How to take advantage of free repositories of text like Project Gutenberg</p></li>
+<li><p>Taking a url to a text and reading it into our Python runtime</p></li>
+<li><p>Cleaning our data so that we can find some general statisics</p></li>
+<li><p>How to create visualizations of these statisics</p></li>
+<li><p>Applying simple methodologies to a complex question</p></li>
+<li><p>Outlining a method we could use to answer such a question</p></li>
+</ul>
+<p>As a challenge, now that we have a good baseline for picking out the phrases Clay points us too, can you create dataframe that stores the sentence, what phrase from Clay it uses, and what chapter it is in? Be sure to start with a dictionary, as we did when we created a dataframe together and then convert it into a dataframe using <code class="docutils literal notranslate"><span class="pre">from_dict</span></code>. When you’re done, you can then export it as a .csv file, so you can use it later with the method <code class="docutils literal notranslate"><span class="pre">whatever_your_df_is_called.to_csv('name_of_file.csv')</span></code>. This way you can share your work with other scholars and later can deploy it to a website or another publication. If you have trouble or just want to show off how you did it, feel free to reach out and let me know at <a class="reference external" href="mailto:peter&#46;nadel&#37;&#52;&#48;tufts&#46;edu">peter<span>&#46;</span>nadel<span>&#64;</span>tufts<span>&#46;</span>edu</a></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="thanks-for-reading">
+<h1>Thanks for reading<a class="headerlink" href="#thanks-for-reading" title="Link to this heading">#</a></h1>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Digital Humanities and NLP</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../stats/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Statistics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A Gentle Introduction to Natural Language Process</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-overall-task">Our overall task</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-methods">General methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-in-our-data">Read in our data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-requests-library">The requests library</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenization">Tokenization</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sentence-level-tokenization">Sentence-level tokenization</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#word-level-tokenization">Word-level tokenization</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization">Visualization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizing">Generalizing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-application">Specific Application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reviewing-what-we-learned">Reviewing what we learned</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#thanks-for-reading">Thanks for reading</a></li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/tuftsrt/guides/edit/main/source/nlp/gentleintrotoNLP.ipynb">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+  Suggest Edits
+
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/nlp/gentleintrotoNLP.ipynb.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 Tufts University.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Aug 15, 2024.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

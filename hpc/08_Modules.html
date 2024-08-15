@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Modules &#8212; Tufts RT Guides</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hpc/08_Modules';</script>
+    <link rel="canonical" href="https://tuftsrt.github.io/guides/hpc/08_Modules.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="File Recovery on Tufts HPC Cluster" href="10_File_Recovery_on_Tufts_HPC_Cluster.html" />
+    <link rel="prev" title="Request Access" href="00_Request_Access.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Aug 15, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder=""
+         aria-label=""
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Incomplete and under active development. Subject to change without notice.</div>
+  </div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/jumbo.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../_static/jumbo.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Tufts RT Guides</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cli/index.html">
+                        CLI
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        HPC
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../bio/index.html">
+                        Bioinformatics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../python/index.html">
+                        Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../r/index.html">
+                        R
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../gis/index.html">
+                        GIS+RS
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../nlp/index.html">
+                        DH+NLP
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../stats/index.html">
+                        Statistics
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="/guides/tags/index.html" title="Tags" class="nav-link" rel="noopener" target="_self" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-tags fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Tags</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/tuftsrt/guides" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:tts-research@tufts.edu" title="Email" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Email</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../cli/index.html">
+                        CLI
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        HPC
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../bio/index.html">
+                        Bioinformatics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../python/index.html">
+                        Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../r/index.html">
+                        R
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../gis/index.html">
+                        GIS+RS
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../nlp/index.html">
+                        DH+NLP
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../stats/index.html">
+                        Statistics
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="/guides/tags/index.html" title="Tags" class="nav-link" rel="noopener" target="_self" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-tags fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Tags</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/tuftsrt/guides" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="mailto:tts-research@tufts.edu" title="Email" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Email</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_Request_Access.html">Request Access</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_File_Recovery_on_Tufts_HPC_Cluster.html">File Recovery on Tufts HPC Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20_R.html">Running R on the HPC cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GPU%20Resources%20on%20Tufts%20HPC%20Cluster.html">GPU Resources on Tufts HPC Cluster</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">High-Performance Computing</a></li>
+    
+    
+    <li class="breadcrumb-item active" aria-current="page">Modules</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Link to this heading">#</a></h1>
+<section id="what-are-modules">
+<h2>What are modules?<a class="headerlink" href="#what-are-modules" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A tool that <strong>simplify</strong> shell initialization and lets users easily modify their environment during the session with modulefiles</p></li>
+<li><p>Each modulefile contains the <strong>information</strong> needed to configure the shell for an application. (PATH, LD_LIBRARY_PATH, CPATH, etc.)</p></li>
+<li><p>Modules are useful in managing <strong>different versions</strong> of applications.</p></li>
+<li><p>Modules can also be bundled into metamodules that will load an entire <strong>set of different applications</strong>.</p></li>
+</ul>
+</section>
+<section id="how-to-use-modules">
+<h2>How to use modules?<a class="headerlink" href="#how-to-use-modules" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Module Cheat Sheet</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">av</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">av</span> <span class="pre">&lt;software&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">&lt;software&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">unload</span> <span class="pre">&lt;software&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">swap</span> <span class="pre">&lt;loaded_software&gt;</span> <span class="pre">&lt;new_software&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">purge</span></code></p>
+</div></blockquote>
+<p>To <strong>check available modules</strong> installed on the cluster:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 ~]$ module av
+</pre></div>
+</div>
+<p>Upon login, environment variable <strong><code class="docutils literal notranslate"><span class="pre">PATH</span></code></strong> is set for the system to search executables along these paths:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 ~]$ echo $PATH
+/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/tutln01/bin:/cluster/home/tutln01/.local/bin
+</pre></div>
+</div>
+<p>For example, I would like to use <code class="docutils literal notranslate"><span class="pre">gcc</span></code> compiler, to check what versions of gcc compiler is available, load the version I would like to use, and use it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 ~]$ module av gcc
+
+----------------------------------------------------------- /opt/shared/Modules/modulefiles-rhel6 ------------------------------------------------------------
+gcc/4.7.0 gcc/4.9.2 gcc/5.3.0 gcc/7.3.0
+
+-------------------------------------------------------------- /cluster/tufts/hpc/tools/module ---------------------------------------------------------------
+gcc/8.4.0 gcc/9.3.0 gcc/11.2.0
+</pre></div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code> to <strong>check loaded modules</strong> in current environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 ~]$ module load gcc/7.3.0
+[tutln01@login-prod-01 ~]$ module list
+Currently Loaded Modulefiles:
+  1) use.own     2) gcc/7.3.0
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 ~]$ which gcc
+/opt/shared/gcc/7.3.0/bin/gcc
+[tutln01@login-prod-01 ~]$ echo $PATH
+/opt/shared/gcc/7.3.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/tutln01/bin:/cluster/home/tutln01/.local/bin
+[tutln01@login-prod-01 ~]$ gcc --version
+gcc (GCC) 7.3.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+</pre></div>
+</div>
+<p><strong>swap a module for another</strong> (doesn’t have to be the same software):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 ~]$ module swap gcc/7.3.0 gcc/9.3.0 
+[tutln01@login-prod-01 ~]$ module list
+Currently Loaded Modulefiles:
+  1) use.own     2) gcc/9.3.0
+</pre></div>
+</div>
+<p><strong>unload loaded modules</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 ~]$ module unload gcc
+[tutln01@login-prod-01 ~]$ echo $PATH
+/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/cluster/home/tutln01/bin:/cluster/home/tutln01/.local/bin
+</pre></div>
+</div>
+<p><strong>unload ALL</strong> of the loaded modules:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[tutln01@login-prod-01 ~]$ module purge
+</pre></div>
+</div>
+</section>
+<section id="install-software-packages">
+<h2>Install Software/Packages<a class="headerlink" href="#install-software-packages" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tufts.box.com/s/qximkv5ke2y4k0vbg6m04m6fc6exh88h">R</a> (R command line recommanded), packages need to be reinstalled for each version of R</p>
+<ul>
+<li><p>R/4.0.0</p>
+<ul>
+<li><p>HPC R repo <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/hpc/tools/R/4.0.0</span></code></p></li>
+</ul>
+</li>
+<li><p>R/4.1.1</p>
+<ul>
+<li><p>HPC R repo <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/hpc/tools/R/4.1</span></code></p></li>
+</ul>
+</li>
+<li><p>R/4.2.0</p>
+<ul>
+<li><p>HPC R repo <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/hpc/tools/R/4.2.0</span></code></p></li>
+</ul>
+</li>
+<li><p>R/4.3.0</p>
+<ul>
+<li><p>HPC R repo <code class="docutils literal notranslate"><span class="pre">/cluster/tufts/hpc/tools/R/4.3.0</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://tufts.box.com/v/CondaEnvonHPC">Python</a> (Conda env recommanded)</p>
+<ul>
+<li><p>anaconda/3 (older version, source activate)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anaconda/2021.05</span></code>, <code class="docutils literal notranslate"><span class="pre">anaconda/2021.11</span></code>, <code class="docutils literal notranslate"><span class="pre">anaconda/2023.07</span></code> (newer version, <strong>source activate</strong>)</p></li>
+<li><p>Use the same version of conda on one conda env every time</p></li>
+</ul>
+</li>
+<li><p>Other software compiled from <strong>source</strong></p>
+<ul>
+<li><p>gcc</p></li>
+<li><p>cmake</p></li>
+<li><p>… any <strong>dependencies</strong>, load if available, install if not. Some environment variables may need to be set manually.</p></li>
+<li><p><strong>Follow instructions</strong> (read it through first)</p></li>
+<li><p>Use <strong>“–prefix=”</strong> to install in non-standard locations</p></li>
+<li><p>Modify the environment variables !!! (such as PATH, LD_LIBRARY_PATH, CPATH, .etc)</p></li>
+<li><p>You can make a private module for your locally installed software. Here is <a class="reference external" href="https://tufts.box.com/s/fewt978g2hmmmhskm1n5dg4bj6xt0cdd">HOW</a></p></li>
+<li><p>OR you can submit a request to <a class="reference external" href="mailto:tts-research&#37;&#52;&#48;tufts&#46;edu">tts-research<span>&#64;</span>tufts<span>&#46;</span>edu</a> for the software to be installed globally on the cluster.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00_Request_Access.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Request Access</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10_File_Recovery_on_Tufts_HPC_Cluster.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">File Recovery on Tufts HPC Cluster</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-modules">What are modules?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-modules">How to use modules?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-software-packages">Install Software/Packages</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/tuftsrt/guides/edit/main/source/hpc/08_Modules.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+  Suggest Edits
+
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/hpc/08_Modules.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024 Tufts University.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Aug 15, 2024.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

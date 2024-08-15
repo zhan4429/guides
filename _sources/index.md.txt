@@ -16,7 +16,7 @@ html_theme.sidebar_secondary.remove: true
   link: "hpc/index.html"
 
 - header: "{fas}`dna;pst-color-primary` Bioinformatics"
-  content: "Discover Bioinformatics: Applications & Tutorials"
+  content: "Discover Bioinformatics applications and tutorials"
   link: "bio/index.html"
 
 - header: "{fab}`python;pst-color-primary` Python"
@@ -28,7 +28,7 @@ html_theme.sidebar_secondary.remove: true
   link: "r/index.html"
 
 - header: "{fas}`globe;pst-color-primary` GIS and Remote Sensing"
-  content: "TODO"
+  content: "Get started with GIS, mapping, remote sensing, and drones"
   link: "gis/index.html"
 
 - header: "{fas}`book;pst-color-primary` Digital Humanities and NLP"
@@ -36,10 +36,10 @@ html_theme.sidebar_secondary.remove: true
   link: "nlp/index.html"
 
 - header: "{fas}`chart-simple;pst-color-primary` Statistics"
-  content: "Getting started with statistics "
+  content: "Getting started with statistics"
   link: "stats/index.html"
 
 - header: "{fas}`tags;pst-color-primary` Subject Tags"
-  content: "TODO"
+  content: "Want to sort by tag? Click here"
   link: "tags/index.html"
 ```

@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
@@ -36,9 +36,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
@@ -60,7 +60,7 @@
     <link rel="next" title="Command Line Interfaces" href="cli/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jan 23, 2024"/>
+    <meta name="docbuild:last-update" content="Aug 15, 2024"/>
   </head>
   
   
@@ -71,7 +71,6 @@
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -112,15 +111,13 @@
 </form></div>
   </div>
 
-  <header>
-
 
   <div class="bd-header-announcement container-fluid bd-header-announcement">
     <div class="bd-header-announcement__content">Incomplete and under active development. Subject to change without notice.</div>
   </div>
 
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
     <span class="fa-solid fa-bars"></span>
@@ -316,9 +313,8 @@ document.write(`
   
 </div>
 
-    </div>
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -515,7 +511,7 @@ document.write(`
 <p class="sd-card-text"><span class="fas fa-dna pst-color-primary"></span> Bioinformatics</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">Discover Bioinformatics: Applications &amp; Tutorials</p>
+<p class="sd-card-text">Discover Bioinformatics applications and tutorials</p>
 </div>
 <a class="sd-stretched-link reference external" href="bio/index.html"></a></div>
 </div>
@@ -545,7 +541,7 @@ document.write(`
 <p class="sd-card-text"><span class="fas fa-globe pst-color-primary"></span> GIS and Remote Sensing</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">TODO</p>
+<p class="sd-card-text">Get started with GIS, mapping, remote sensing, and drones</p>
 </div>
 <a class="sd-stretched-link reference external" href="gis/index.html"></a></div>
 </div>
@@ -575,7 +571,7 @@ document.write(`
 <p class="sd-card-text"><span class="fas fa-tags pst-color-primary"></span> Subject Tags</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">TODO</p>
+<p class="sd-card-text">Want to sort by tag? Click here</p>
 </div>
 <a class="sd-stretched-link reference external" href="tags/index.html"></a></div>
 </div>
@@ -606,7 +602,42 @@ document.write(`
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">High-Performance Computing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="hpc/index.html">HPC</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="hpc/index.html">HPC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/index.html#getting-help">Getting help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/index.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/00_Request_Access.html">Request Access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc/00_Request_Access.html#cluster-account-request">Cluster Account Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/00_Request_Access.html#cluster-storage-request">Cluster Storage Request</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/08_Modules.html">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc/08_Modules.html#what-are-modules">What are modules?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/08_Modules.html#how-to-use-modules">How to use modules?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/08_Modules.html#install-software-packages">Install Software/Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/10_File_Recovery_on_Tufts_HPC_Cluster.html">File Recovery on Tufts HPC Cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc/10_File_Recovery_on_Tufts_HPC_Cluster.html#find-snapshots">Find Snapshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/10_File_Recovery_on_Tufts_HPC_Cluster.html#locate-missing-files-directories">Locate Missing Files/Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/10_File_Recovery_on_Tufts_HPC_Cluster.html#recovery-files-directories">Recovery Files/Directories</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/20_R.html">Running R on the HPC cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc/20_R.html#r-interactive-session">R Interactive Session</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/20_R.html#r-batch-jobs">R batch jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/20_R.html#rstudio-interactive-app-on-ondemand">RStudio Interactive App on OnDemand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc/20_R.html#launch-rstudio">Launch RStudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc/20_R.html#debug-ondemand-rstudio-pax">Debug OnDemand RStudio Pax</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc/GPU%20Resources%20on%20Tufts%20HPC%20Cluster.html">GPU Resources on Tufts HPC Cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc/GPU%20Resources%20on%20Tufts%20HPC%20Cluster.html#gpus">GPUs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc/GPU%20Resources%20on%20Tufts%20HPC%20Cluster.html#id1"></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -630,11 +661,7 @@ document.write(`
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">R</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="r/index.html">R</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="r/test.html">RMarkdown Test</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="r/test.html#a-sample-code-block">A Sample Code Block</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="r/index.html">R</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -650,7 +677,29 @@ document.write(`
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Digital Humanities and Natural Language Processing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="nlp/index.html">DH+NLP</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="nlp/index.html">DH+NLP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nlp/gentleintrotoNLP.html">A Gentle Introduction to Natural Language Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nlp/gentleintrotoNLP.html#our-overall-task">Our overall task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nlp/gentleintrotoNLP.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nlp/gentleintrotoNLP.html#general-methods">General methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nlp/gentleintrotoNLP.html#read-in-our-data">Read in our data</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="nlp/gentleintrotoNLP.html#the-requests-library">The requests library</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="nlp/gentleintrotoNLP.html#tokenization">Tokenization</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="nlp/gentleintrotoNLP.html#sentence-level-tokenization">Sentence-level tokenization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nlp/gentleintrotoNLP.html#word-level-tokenization">Word-level tokenization</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="nlp/gentleintrotoNLP.html#visualization">Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nlp/gentleintrotoNLP.html#generalizing">Generalizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nlp/gentleintrotoNLP.html#specific-application">Specific Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nlp/gentleintrotoNLP.html#reviewing-what-we-learned">Reviewing what we learned</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/gentleintrotoNLP.html#thanks-for-reading">Thanks for reading</a></li>
 </ul>
 </li>
 </ul>
@@ -702,8 +751,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -727,7 +776,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Jan 23, 2024.
+  Last updated on Aug 15, 2024.
   <br/>
 </p></div>
       
