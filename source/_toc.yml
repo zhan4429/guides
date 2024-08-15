@@ -1,5 +1,5 @@
 defaults:
-  hidden: true #this is to control if the main page have table of 
+  hidden: false #this is to control if the main page have table of 
   #content for all the tutorials at the bottom of the page
 
 root: index
