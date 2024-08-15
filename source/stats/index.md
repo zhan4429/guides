@@ -1,7 +1,0 @@
----
-tags: stats
----
-
-# Statistics
-
-TODO

@@ -1,0 +1,782 @@
+,author,created_utc,id,num_comments,score,selftext,title,url,date
+0,LeYGrec,1714599117,1chxw8d,1,1,"Salvēte Latīnistae omnēs,
+
+I wonder what are the phonetical differences between Classical Latin, Late Latin and Medieval Latin (Vulgar Latin non included). Or did Medieval Latin have any specific pronuncation at all, or did it just depend on the speaker's accent ?
+
+Grātiās vōbīs !","Classical Latin, Late Latin Medieval Latin Phonology",https://www.reddit.com/r/latin/comments/1chxw8d/classical_latin_late_latin_medieval_latin/,2024-05-01 17:31:57
+1,chmendez,1714594619,1chw2n9,0,1,,"The start phrase of the ""The First Catilinarian""",/r/ancientrome/comments/1chw0hn/todays_roman_quote_quo_usque_tandem_abutere/,2024-05-01 16:16:59
+2,pacemqueamorem,1714594094,1chvuy0,0,1,"Hello,
+my best friend's birthday is coming up in the coming days. I wonder if there's a nice latin quote about a good friend or friendship. I would really appreciate it, if someone knows a nice quote.",Quote about friendship?,https://www.reddit.com/r/latin/comments/1chvuy0/quote_about_friendship/,2024-05-01 16:08:14
+3,nondescriptredditer1,1714585634,1chscrw,0,1,"Hello,
+
+Can someone please type out for me, in Latin (and, if possible in English), **the few words before and after the highlighted word ""Vilna""?** In 1323 the Grand Duke of Lithuania, Mindaugas, wrote this letter and a few others. I understand the context of this letter and I know in later letters Vilna is referred to as a ""royal city"" etc, thanks to other historians' typing out the text.
+
+However, I don't read Latin and can't decipher the text to even understand what the words are in this letter to begin deciphering. **I'm just concerned with how Vilna is described**.
+
+THANK YOU!
+
+If the image is not displayed correctly, it's pulled from [wikipedia](https://en.m.wikipedia.org/wiki/Letters_of_Gediminas) which is, oddly, the only place I can really find a clear image of the artifact. 
+
+https://preview.redd.it/fm1uztk2ruxc1.jpg?width=1500&amp;format=pjpg&amp;auto=webp&amp;s=5909642604b365f00fb5533152daac16634aa4f2
+
+",Transcription Request re a letter from 1323,https://www.reddit.com/r/latin/comments/1chscrw/transcription_request_re_a_letter_from_1323/,2024-05-01 13:47:14
+4,Robastion404,1714583448,1chrgtn,0,1,"I’m getting my first tattoo in August and I need the phrase “The axe forgets, the tree remembers”. Google translate gave me “securis obliviscitur, arbor meminit” but I don’t trust it. Thanks in advance!",Need this translated for a tattoo,https://www.reddit.com/r/latin/comments/1chrgtn/need_this_translated_for_a_tattoo/,2024-05-01 13:10:48
+5,benjamin-crowell,1714578071,1chp9yq,0,1,"I've written some open-source software called Ifthimos ([1](https://bitbucket.org/ben-crowell/ifthimos), [2](https://bitbucket.org/ben-crowell/lemming), [3](https://bitbucket.org/ben-crowell/ransom)) for Greek morphology. It's basically meant to be a modern replacement for the Greek portion of the old Morpheus code. (Morpheus is no longer viable IMO.) On the Latin side, there are two open-source programs I'm aware of that can be used for Morpheus's functionality, which are Whitaker's Words and Collatinus. Words is old but has a healthy community of competent people maintaining it. Collatinus is newer and also seems like solid work. My Greek code is working fairly well now as a replacement for Perseus's Hopper or Scaife, and I'm continuing to debug and improve it through the process of reading Xenophon.
+
+One thing that was really nice about Morpheus, and technically impressive, was that it handled Greek, Latin, and Italian all under one roof. The other projects I've mentioned are language-specific, which is why, for example, NoDictionaries (which is based on Words) only does Latin and not Greek. I've been looking at the source code of Words and Collatinus and thinking about whether there is any reasonable way to make both Greek and Latin functionality available through a consistent interface. There are technical issues involved, such as the fact that Ifthimos, Words, and Collatinus are all written in different computer programming languages, but I don't think those are insuperable. As I try to think of what would work, one thing that is holding me back is that I know zero Latin, and in particular I don't have any insight yet into whether the algorithms used by the Latin code could be applied to Greek or vice versa. I'm not wedded to all my own methods of parsing Greek words, and it could be that I should switch over some of my methods to be more like the ones used by the Latin codes.
+
+Can anyone help me out with some insight into how the morphologies of Greek and Latin compare? Some obvious trivial points is that they're both Indo-European, and the way they inflect nouns and verbs is broadly similar, but Greek has a much more complex writing system.
+
+Greek verbs have pretty complicated morphology, which is not particularly easy to program a computer  to understand. For instance, the machine has to be able to make some kind of good guess as to whether a certain verb is a compound, add and remove augments (which come after any prefix), know that ἵστημι actually has an alpha hidden in its stem, and recognize contracted verbs. Do Latin verbs have this much going on?
+
+Casually looking through the documentation for Words, I see that while Whitaker was still alive, he seemed to feel that his work was lacking in terms of vowel lengths, and he was working on improving that. Is the situation similar to the one in Greek, where endings have predictable vowel lengths, but stem vowels don't, and vowel length can affect the written form of the word? I don't mean macronization, which is just a modern textbook thing, but, e.g., the fact that in Greek you may not be able to figure out what kind of accent to put on a vowel without knowing its length based on a dictionary.
+
+For Greek, a computer parser's job is made more difficult by the fact that there were many different dialects, and they often used different inflections. E.g., the augment is optional in Homer but not in classical Greek, and Herodotus writes ἀπικομένος rather than Attic ἀφικομένος. Only once you get into the koine era is there more of a global standard. Is literary Latin any more or less standardized than Greek in terms of morphology?
+
+","Latin morphology compared to Greek, from the point of view of machine parsing",https://www.reddit.com/r/latin/comments/1chp9yq/latin_morphology_compared_to_greek_from_the_point/,2024-05-01 11:41:11
+6,Loveforgoths,1714576509,1chonz8,0,1,"  Im unsure if the sentence ""Ut tunc te amabam, ita etiam nunc te amo"" means that the subject still loves the person, or if the subject loves the person in the same intensity as they did in the past. Also, what would the translation of this sentence look like? 
+
+  Thank you in advance for the help!",doubts regarding the meaning of this sentence,https://www.reddit.com/r/latin/comments/1chonz8/doubts_regarding_the_meaning_of_this_sentence/,2024-05-01 11:15:09
+7,takaji10,1714572461,1chn2sp,1,1,"First time I've ever seen a death entry in metrical records of this type, and it sounds like an interesting story. Can anyone complete my transcription?
+
+&amp;#x200B;
+
+https://preview.redd.it/moc9uu2yntxc1.png?width=1501&amp;format=png&amp;auto=webp&amp;s=31c254be74777151182d31b876eaab92b1d70e90
+
+&gt;*Anno eodem die 12 Augusti ego qui supra sepelivi hominem advenam, vayum, de quo non constat an si Catholicus, v ali ... addictus, idem sub conditione absolutus, sepeltus est extra cometerium in sepultura militum etatis sua proter alter*
+
+&amp;#x200B;
+
+[Link to the full page](https://www.portafontium.eu/iipimage/30067316/pobezovice-02_1790-z?x=-78&amp;y=299&amp;w=761&amp;h=321)","Some guy was buried and nobody knew if he was Catholic - 1743, Bohemia",https://www.reddit.com/r/latin/comments/1chn2sp/some_guy_was_buried_and_nobody_knew_if_he_was/,2024-05-01 10:07:41
+8,mr_ching_chong69420,1714561710,1chjgl5,0,1,I found this old document in my cupboard and i have no idea whats writen on it,Can sumone please translate?,https://i.redd.it/g6w1czr8ssxc1.jpeg,2024-05-01 07:08:30
+9,[deleted],1714561280,1chjbzs,5,0,[removed],Simplified Latin for children,,2024-05-01 07:01:20
+10,Comfortable_World_69,1714561280,1chjbzs,0,1,"&amp;#x200B;
+
+|simplified latin|consonant vowel structure|
+|:-|:-|
+|prefixes:|CV|
+|content words:|CVC|
+|suffixes:|VC|
+
+noun declension is trivial
+
+|case|argument|ending|
+|:-|:-|:-|
+|nominative|subject|\-o (optional)|
+|accusative|direct object|\-os|
+|dative|indirect object|\-om|
+
+adjectives are verbs (it is green = it greening)
+
+verb conjugation begins with
+
+|case|ending|
+|:-|:-|
+|past|\-u|
+|present|\-i|
+|future|\-ibi|
+|infinitive|bare|
+
+followed by one of the following
+
+|part of speech|ending|
+|:-|:-|
+|adjective (participle)|bare (no adjective agreement)|
+|verb|\+ verb ending|
+|noun (act of)|\+ noun ending|
+|noun (doer)|\+ r + noun ending|
+
+verb ending
+
+|person|ending|
+|:-|:-|
+|me|\-n|
+|you|\-s|
+|other|\-t|
+|me &amp; you|\-nus|
+|me &amp; other|\-nt?|
+|you &amp; other|\-tis?|
+|me &amp; you &amp; other|\-ntis|
+
+prepositions
+
+|prefix|nominative case|accusative case|dative case|
+|:-|:-|:-|:-|
+||at|around||
+||upon|over|upward|
+|la-|to||toward|
+|ma-|from||fromward|
+|ya-|of|||
+|ba-|in||inward|
+|ex-|out||outward|
+|ka-|like|||
+|for-||before|forward|
+|intra-|during|||
+|post-|after|||
+|cum|with||using|
+
+preposition + verb ending: to me (La-n), to me and you (La-nus)
+
+prepositional verb phrase: throw up
+
+|negative prefix|verb modifiers|
+|:-|:-|
+|meaning|list|
+|meaning|causative|
+|a–|make, let, want to, able to|
+|causative: make, let, want to, able to|modal auxiliary verbs|
+|not|must (caused to), should, supposed to, might (allowed to), could (able to), would,  try to, want to|
+|ab–|?|
+|away, from, from off, down|start to, continue to, cease to, finish,|
+|anti– (un-)|against, opposed to, opposite of, instead|
+|de|down, off, away, from among, down from,"" but also ""down to the bottom, totally"" hence ""completely""|
+|dis–|apart, asunder, in a different direction, between|
+|in-(il-, im-, ir-)|not|
+|mis-|bad, wrong|
+|non–|not, lack of|
+|un–|not|
+
+&amp;#x200B;",Simplified Latin for children,https://www.reddit.com/r/latin/comments/1chjbzs/simplified_latin_for_children/,2024-05-01 07:01:20
+11,Complex-Scale-1544,1714534738,1chce3v,0,1,"""I'm struggling to find Latin music that I like because most of the search results are for Mexican music, which is not what I'm looking for. Can you suggest some specific words or phrases that I can use to refine my search?""",Music search problems ,https://www.reddit.com/r/latin/comments/1chce3v/music_search_problems/,2024-04-30 23:38:58
+12,Redeyz,1714526473,1ch9nis,0,1,"Like ok I can look at an accusative noun and 3/5 times be like yep that’s an accusative or some such but I don’t feel like I actually know any of the language. I studied Spanish for two years and by the end of the first semester I felt like I actually knew more of the language than I do with Latin right now. I don’t know if it’s just how the language is taught or if it’s something not clicking with me but it’s frustrating and I just kind of wish I knew more. 
+But to keep this from just being a whine fest if anybody has any good advice or maybe some book recommendations that would be lovely. I have made it through Wheelocks now and also have a copy of Lingua Latina that I’m hoping to start reading at some point too. 
+Thanks and I hope you all are having a lovely day!",Just finished a year of accelerated Latin and I don’t feel like I actually know anything,https://www.reddit.com/r/latin/comments/1ch9nis/just_finished_a_year_of_accelerated_latin_and_i/,2024-04-30 21:21:13
+13,Designer-Gas2629,1714525555,1ch9bun,0,1,"Hello all, I am a bit confused about the scansion in line 414 here. It is as follows:
+
+hīs magnum Alcīden contrā stetit, hīs ego suētus
+
+  
+I figured the scansion was as follows:
+
+ -      -       /       -   - / -    - /   -    u u  /  -   u u  u/ - -
+
+hīs magn(um) Alcīden contrā stetit, hīs ego suētus
+
+  
+Is there a synaeresis I am missing in the fifth foot? The fifth foot seems wrong to me.",Aeneid Book 5 line 414 Scansion,https://www.reddit.com/r/latin/comments/1ch9bun/aeneid_book_5_line_414_scansion/,2024-04-30 21:05:55
+14,paterkleos,1714524316,1ch8vzu,0,1,"Salvete omnes!
+
+I’m a highschool student who has just started taking Latin this year and I’m absolutely in love with it.
+
+ The best part, at least in my opinion, is discovering different words/phrases with interesting meanings or origins, or Latin/Roman terms that have found their way into other languages such as English or Romance languages. I think ‘heliogábalo’ making its way into Spanish as a word meaning glutton is one of my absolute favourites. 
+
+
+So, if you have any favourites please let me know!! 
+
+Thank you! (I don’t know how to properly thank a group of people yet… all in due time, I guess.)
+",what is your favourite latin word/phrase?,https://www.reddit.com/r/latin/comments/1ch8vzu/what_is_your_favourite_latin_wordphrase/,2024-04-30 20:45:16
+15,Deathhhh___,1714523064,1ch8g56,0,1,"Salvete,
+
+I was wondering, as someone who wants to study classics and is at the age of applying to college, what colleges have spoken Latin curriculum? 
+
+I’ve tried to search online but my attempts have been fruitless.
+
+I want to know what places not only have good classics and Latin, but also incorporate aspects of spoken Latin into their courses.
+
+vobis gratias ago",Spoken Latin At Colleges/Universities,https://www.reddit.com/r/latin/comments/1ch8g56/spoken_latin_at_collegesuniversities/,2024-04-30 20:24:24
+16,a_postmodern_poem,1714678910,1ciorfn,0,1,"I am self taught so I've been noticing a pattern which might be trite or overstated in a more academic correspondence. 
+What I've noticed is a common trait in Romance languages, whereby nouns generally evolve from the same declension. 
+For example, man in Portuguese (homem), Spanish (hombre), French (homme), Italian (uomo), all come form the accusative form ""hominem"". 
+
+At first I thought this might have been due to word frequency; it makes sense that hominem would have been used more often than homo. However it appears that actually MOST nouns in the Romance arsenal come from the accusative only. Is there are reason for that? What about words that are direct descendants from the dative, genitive or ablative form? And so on..",An evolutionary pattern in Romance languages [from Latin],https://www.reddit.com/r/latin/comments/1ciorfn/an_evolutionary_pattern_in_romance_languages_from/,2024-05-02 15:41:50
+17,Inderastein,1714677478,1cio5vw,0,1,"Is OG Latin counted as dead or alive?(Not counting Reformed/Ecclesiastical Latin or French or Spanish or ETC)  
+(In a scale of 1 to 10, 10 being complete same):  
+Is the German language back in Rome's time the same German as now?  
+Is the Hebrew language back in Rome's time the same Hebrew as now?  
+Is the Greek language back in Rome's time the same Greek as now?  
+If all of them have high scores of being the same as back then, why can't we find the OG Latin now?  
+(If all of them have low scores, I'd just assume that time just made Latin rare.)  
+
+
+And can the OG Latin in the modern world can be used as a language? Or do we have a lot of missing pronunciations to the point we cannot? Or missing elements rather.  
+
+
+Rome's time can be any spanning from Carthage's Augustus' Crisis' Fall's, your pick.  
+
+
+Also if there were to be a language close to sounding like OG Latin that is widely used today, can you list top 10? Even for the rare ones.",Several questions in my mind about Latin and the history of Rome.,https://www.reddit.com/r/latin/comments/1cio5vw/several_questions_in_my_mind_about_latin_and_the/,2024-05-02 15:17:58
+18,Creatusss,1714672345,1cim1wh,0,1,[removed],Salve! Ego sum vultus por lingua socium!,https://www.reddit.com/r/latin/comments/1cim1wh/salve_ego_sum_vultus_por_lingua_socium/,2024-05-02 13:52:25
+19,Loveforgoths,1714671192,1cillnj,0,1,"  I have seen the word ""adolescens"" declined a few times in familia romana. Its mostly used as ""teenager"". Wouldn't it then be considered a noun? But supposedly its a verb. If so, would it be translated as ""being a teenager""? Im really not understanding it. ","Is the word ""adolescens"" a present participle? If so, how?",https://www.reddit.com/r/latin/comments/1cillnj/is_the_word_adolescens_a_present_participle_if_so/,2024-05-02 13:33:12
+20,Reinarrlorenzofanbas,1714667689,1cik6ir,0,1,"https://on.soundcloud.com/t3wwwaiJx55FUPN97 
+",Reinarr Lorenzo release,https://i.redd.it/u5l33zodj1yc1.jpeg,2024-05-02 12:34:49
+21,sourmilk4sale,1714665011,1cij2az,0,1,"Annales, paragraph 34, book 1 (I think). context: the mutiny of the legions has just blown over, and the higher ups visit the camp(s) for inspection.
+
+
+postquam vallum iniit dissoni questus audiri coepere. et quidam prensa manu eius per speciem exosculandi inseruerunt digitos ut vacua dentibus ora contingeret; alii curvata senio membra ostendebant.
+
+this is what I make of it: 
+
+when he entered the rampart, he began hearing confused complaints. and some, having taken his hand in the appearance of kissing it, inserted his fingers into their mouths so that he may feel that they were toothless. others showed limbs crooked from old age.
+
+so what's happening here? 🤣 is it the soldiers who are toothless and old, or who are these people inside the camp? ",what's happening here?,https://www.reddit.com/r/latin/comments/1cij2az/whats_happening_here/,2024-05-02 11:50:11
+22,nomenmeum,1714664420,1ciitfv,9,9,"As the i in ""Hi.""",Is there what we call in English a long i sound in Latin?,https://www.reddit.com/r/latin/comments/1ciitfv/is_there_what_we_call_in_english_a_long_i_sound/,2024-05-02 11:40:20
+23,ComfortableRecent578,1714662303,1cihyf7,0,1,"This post is basically what it says on the tin. Which do you prefer and why?
+
+Personally, I prefer Greek but I’d mostly put that down to the fact that I learned Latin mostly in school and I’m learning Greek as a passion project, so there’s less pressure and structure and more flexibility for me to find what works for me and what doesn’t. Plus because I have no teacher or tutor, I’m having to get creative with my resources, which has led me to a lot of apps that I find really helpful. 
+
+ I also like Greek because I learned Hebrew as a kid and Greek has a lot of similar concepts (musical accents, final letters, not being the Roman alphabet) and it makes me kind of nostalgic. 
+
+Of course I also adore Latin and wouldn’t have studied it for the past 6 years if I didn’t. 
+
+What do y’all think?","If you also learn Greek, which do you prefer?",https://www.reddit.com/r/latin/comments/1cihyf7/if_you_also_learn_greek_which_do_you_prefer/,2024-05-02 11:05:03
+24,Adventurous_Laugh_47,1714656052,1cifidv,0,1,So to my mind this sentence should read - 'we killed the guards \[who\] had tried to escape'. But my latin grammar book says 'having tried to escape we killed the guards' - surely that can't be right with conatos in the accusative? ,custodes fugere conatos necavimus,https://www.reddit.com/r/latin/comments/1cifidv/custodes_fugere_conatos_necavimus/,2024-05-02 09:20:52
+25,MachiToons,1714651701,1cie167,1,1,"I am aware of various scribal abbreviations, such as the ""ꝯ"" for ""c\[o/u\]\[n/m\]"" or, relevant to my question, contraction-type abbr. such as n͞r for noster.  
+Now, does vs for versus originate as such a scribal abbr., or does it have later/different origins? The fact it is the first and last letter of the original word fits the bill, but I have little knowledge about these things and the also common ""vs."" with a dot throws me off. Perhaps people in this sub-reddit would know more, thanks in advance!  
+
+(also apologies if the flair isn't correct, I thought it was the best fit, since it *relates* to scribal abbreviations)","origins of ""vs""",https://www.reddit.com/r/latin/comments/1cie167/origins_of_vs/,2024-05-02 08:08:21
+26,Quirky_Web7845,1714648946,1cid5vx,1,1,"On Instagram there is a page called gratinforkids which has excellent free resources for kids and beginners interested in Latin, Ancient Greek.  Also great for pre Uni student planning to study Classics but without access to Latin and/or Ancient Greek",Kids and Beginners resources - Latin and Ancient Greek,https://www.reddit.com/r/latin/comments/1cid5vx/kids_and_beginners_resources_latin_and_ancient/,2024-05-02 07:22:26
+27,daffy-burke,1714648487,1cid0y8,3,3,"In this sentence from Ørberg's Fabellae Latinae,
+
+""Hispānum, cuius sagittae scūta tantum hostium tangunt, nōn hostēs ipsōs, alter Germānōrum in rīvum, quī per campum fluit, hastā suā iacit""
+
+it seems that ""Hispānum"", being in the accusative case, is lacking a preposition or something.
+""Alter Germānōrum hastā suā iacit ad Hispanum"" would seem to mean he throws, with his spear, *at* the Spaniard.
+
+whereas without the preposition, it seems to me that it says the German, with his spear, is throwing the Spaniard.
+
+am i not making proper sense of it? 
+
+it seems like the passage would make more sense it it read ""occidit"" instead of ""iacit""",Fabellae Latinae 31,https://www.reddit.com/r/latin/comments/1cid0y8/fabellae_latinae_31/,2024-05-02 07:14:47
+28,Siduch,1714644005,1cibrvi,0,1,"I came up with this as a motto. It has much meaning, but basically, it means, “from shepherds we search”.
+
+“Search” to mean the following:
+- seek
+- discover
+- descend/stem from (in reference to origin)
+
+I chose “expiscamur” over other synonyms as I wanted some symmetry in the motto. (*Ex P*astoribus *Exp*iscamur)",Is “Ex Pastoribus Expiscamur” proper Latin?,https://www.reddit.com/r/latin/comments/1cibrvi/is_ex_pastoribus_expiscamur_proper_latin/,2024-05-02 06:00:05
+29,RSamant2004,1714628365,1ci7yg7,0,1,"Is it okay in prose composition (or even good) to use the supernatural representations of certain things in nature as coterminous with those things? For example, can I write “having crossed the river, we destroyed the bridge” as “Naiadem transgressi, pontem delevimus”? Or is this not done. Asking because I was just curious of whether a professor would appreciate it or not.
+",Prose composition question,https://www.reddit.com/r/latin/comments/1ci7yg7/prose_composition_question/,2024-05-02 01:39:25
+30,Economy-Gene-1484,1714625676,1ci77g6,0,1,"Hello. I am currently looking at the Latin text of *Leviathan* by Thomas Hobbes. This is a paragraph from Chapter 47:
+
+""Ecclesiastici virtute Aquae Benedictae in quocunque loco posuissent Ecclesias suas, locum illum fecerunt ut esset Urbs, id est, Imperii Sedes. Ita quoque in fabula est habuisse Lemures Castella sua quaedam Incantata, &amp; Spiritus quosdam Gigantéos qui in Regionibus circumvicinis dominabantur.""
+
+It seems to me that the word ""circumvicinis"" is not a classical Latin word. I have not been able to find it in any dictionaries. It seems to be an adjective describing ""Regionibus"", and I think it is a Neo-Latin coinage. Can somebody confirm this for me? What would the nominative form of this word be?","Question about word ""circumvicinis"" in Hobbes's Leviathan",https://www.reddit.com/r/latin/comments/1ci77g6/question_about_word_circumvicinis_in_hobbess/,2024-05-02 00:54:36
+31,ktfdoesreddit,1714612010,1ci2uuk,0,1,,"Well, that’s annoying 🥴",https://i.redd.it/oqshitdtxwxc1.jpeg,2024-05-01 21:06:50
+32,Fabianzzz,1714608847,1ci1q9z,3,7,"Alright, when one talks about the Bible books in English, they often say 'The Book of \_\_\_\_\_\_\_', etc. So I naturally assumed most books would be some thing like 'Liber (Genitive)'.
+
+This seems to be the case for some books, like 'Liber Tobiae', the book of Tobias, but seemingly not others, like 'Liber Ruth', (is Ruth also genitive for Ruth?). Does anyone know why?
+
+&amp;#x200B;",When do 'Books of' take the genitive in the Latin Vulgate?,https://www.reddit.com/r/latin/comments/1ci1q9z/when_do_books_of_take_the_genitive_in_the_latin/,2024-05-01 20:14:07
+33,LatinitasAnimiCausa,1714777055,1cjlogo,0,1,,A brief video for y'all all about Spring and the myth of Proserpina in simple Latin! Utinam placeat!,https://youtu.be/ytmH8Rr4Igw?si=uNmx15OGN6lXnEjw,2024-05-03 18:57:35
+34,PamPapadam,1714774966,1cjkx4b,10,7,"I'm currently looking to get myself a copy of *A New Latin Syntax* by Woodcock, but I'm worried it might be a little dated because it was published way back in the 1950s. Does anybody have any experience with this book? And what are some others that you might suggest? Thanks!",Can anybody recommend a Latin syntax book in English?,https://www.reddit.com/r/latin/comments/1cjkx4b/can_anybody_recommend_a_latin_syntax_book_in/,2024-05-03 18:22:46
+35,ConfusedByQuibus,1714772575,1cjk04l,0,1,"Here’s what I’m thinking:
+
+I’m reading LLPSI and I have the 2nd edition of the companion book but I am struggling big time with grammar 
+
+Would it be a good idea to learn what I can through the Natural Method, and then supplement my shotty grammar with a traditional grammar textbook?
+
+The companion book is a big help but it only gives like one sentence explaining what you’re supposed to learn, I’m thinking something more focused on traditional grammar study would benefit me greatly.
+
+Thoughts?",LLPSI plus traditional grammar techniques?,https://www.reddit.com/r/latin/comments/1cjk04l/llpsi_plus_traditional_grammar_techniques/,2024-05-03 17:42:55
+36,OrangeRaspberrySheep,1714771491,1cjjl1m,0,1,"Hey r/latin, I was asked to do a short reading in Latin for Pentecost and I have experiences with other languages, just not one that seems so.. case based? as Latin. I tried to use a dictionary and then a conjugator then plugging it in to Google Translate Latin to English. First is what I came up with, second is what i'm trying to say:
+
+Dona nobis anima et unitas inter nationes
+confrontare difficultatis, violencia, injustitita, et belli;
+et ob totas qui elargio hoc doni spiritus per amor et munus.
+Dominus oremus.
+
+I was asked to translate this:
+For a spirit of peace and unity among nations to confront the urgent problems of violence,
+injustice, and war; and for all who share the gifts of Spirit by their love and service.
+We pray to the Lord.
+
+I'm just going for the gist of the meaning as I don't think I can really get an exact translation of the English, I changed a little bit of the English meaning in attempt to make it easier to translate.
+
+Thank you all very much!",Translation Attempt Check,https://www.reddit.com/r/latin/comments/1cjjl1m/translation_attempt_check/,2024-05-03 17:24:51
+37,[deleted],1714769458,1cjirxp,2,0,[removed],Born from fire,,2024-05-03 16:50:58
+38,Spiritual_Meat_2966,1714769458,1cjirxp,0,1,"So im thinking of doing a phoenix tattoo, and i want to make sure that ""ex igni natusa"" is the correct form for ""born from fire"". I also saw some people spell it as ""in igne natusa"" and im confused which is the correct form. Google also shows me the form ""natus ab igne"" and i am confused (I am female and i want it to be in female form)",Born from fire,https://www.reddit.com/r/latin/comments/1cjirxp/born_from_fire/,2024-05-03 16:50:58
+39,Celoriwest,1714764269,1cjh3ui,0,1,,Can someone help me translate this?,https://i.redd.it/wmz29pkfi9yc1.jpeg,2024-05-03 15:24:29
+40,leaf1234567890,1714759464,1cjf855,0,1,"How long does it take you to fully understand all the text and memorize all the new vocabulary and grammar?
+I'm currently on chapter 41 of LLPSI (Roma Aeterna) and I have to read one chapter at least twice to understand what's going on, and then 2-3 times to memorize all the new words.
+Am I dumb or am I just doing it wrong?",Those Reading FR and RA; How Many Times Do You Repeat a Chapter Before Moving on to the Next One?,https://www.reddit.com/r/latin/comments/1cjf855/those_reading_fr_and_ra_how_many_times_do_you/,2024-05-03 14:04:24
+41,imanunbrokenfangirl,1714752619,1cjch3t,0,1,"I had my final Latin class today. After 5 long semesters (English majors in my university are required to do 4 semesters of a foreign language instead of 2 or opting out), I decided for my final presentation I would compare poet Catullus to Taylor Swift. I included music, lyric comparisons, and we discussed thematic similarities across both catalogs. ",I did a presentation comparing Catullus and Taylor Swift,https://i.redd.it/lhjp5t5xj8yc1.jpeg,2024-05-03 12:10:19
+42,Wungus_Bungus,1714749848,1cjbdle,0,1,"If you wanted to say “I want to fight”, would you say “pugno volo”,“pugnat volo” or “pugnare volo”?
+",Action context,https://www.reddit.com/r/latin/comments/1cjbdle/action_context/,2024-05-03 11:24:08
+43,Tll6,1714748006,1cjan8h,0,1,"Hi folks
+
+One of my favorite book series is built on the myth of a lost Roman legion developing their own pseudo Roman Empire. The ruling family is Gaius and their naming convention is to name their heirs numerically. Throughout the history of this nation, the names end in us. Gaius Primus, Secondus, Tertius, Quartus, Quintus, Sextus, Septimus. Eventually, the main character is revealed to be Octavian, the eighth ruler of the nation. Is there a reason or meaning behind his name ending in an instead of us like the rest of the rulers? I know Octavius and Octavian were both names used in Ancient Rome but google searches haven’t revealed the difference to me. 
+
+Thanks for helping solve this mystery! ",Is there a difference between a name ending in an vs us?,https://www.reddit.com/r/latin/comments/1cjan8h/is_there_a_difference_between_a_name_ending_in_an/,2024-05-03 10:53:26
+44,CuthbertAndEphraim,1714747362,1cjae4l,0,1,"Hi,
+
+  
+I've been studying Latin for some years, and last year I managed to massively accelerate this by reading and listening to a massive amount of Latin (somewhere between 25-35 novels worth, or 1.5-2 million words). I'm pretty able to figure out what a lot of Medieval Latin and Renaissance Latin says, but not perfectly. I've also found, after some very cursory reading of Seneca and Cornelius Nepos, that I'm finding it very difficult to read these authors due to their sentence structure being quite different from what I am used to. 
+
+I'm looking at trying to grasp these sorts of sentence structures and grammatical nuances. Would it be better for me to read Roma Aeterna to grasp these structures, or would it be better for me to grab some Loeb classics and work that way?",Would it be beneficial for me to read Roma Aeterna?,https://www.reddit.com/r/latin/comments/1cjae4l/would_it_be_beneficial_for_me_to_read_roma_aeterna/,2024-05-03 10:42:42
+45,Future_Visit_5184,1714734499,1cj5yxx,0,1,"Of course there's no nominative gerund, so that's a difference, but what about the other inflections? For example, how does the ablative ""vocante"" differ from ""vocandō""? I know one functions as an adjective and the other as a noun, but is that it? No real difference in meaning?",How does the gerund differ from the present participle?,https://www.reddit.com/r/latin/comments/1cj5yxx/how_does_the_gerund_differ_from_the_present/,2024-05-03 07:08:19
+46,Sad-Wonder9804,1714732815,1cj5htc,1,1,"Just went to do some Latin on Duolingo and it says they've synced my progress with an updated and improved version of the course, does anyone know if anything significant got added because from a quick glance I didn't see anything.",Duolingo update ,https://www.reddit.com/r/latin/comments/1cj5htc/duolingo_update/,2024-05-03 06:40:15
+47,CharcoFrio,1714723713,1cj3b3b,0,1,"I speak decent, if rusty, Spanish. I can read short stories by Borges, understand Spanish audio, and have basic conversations.  
+  
+I'd like to learn Latin for fun.  
+  
+Here's what I'm thinking.  
+  
+I want to learn to express myself simply with a small core vocabulary.  
+  
+I would like to start out basically imitating Spanish, speaking a simple style of Spanish with Latin words, just to get used to the declensions and conjugations. Once I can do that, I'll try to gradually speak a bit more polished and idiomatically.
+
+I'll also keep redundant vocab small, to start with, in my own compositions: so if you can say ""and"" with et, -que, ac, atque, et cetera -- I'll just use ""et"" and maybe ""-que"" and not worry about the others. If ""or"" can be ""vel"" or ""aut"", I'll just pick one to use in every case, at first.
+
+IDIOMATIC CORE CONNECTIVE VOCABULARY
+
+The stuff that connects all the nouns, verbs, and adjectives in Spanish is generally of a fixed form and just needs to be memorized. Lots of books list nouns and verbs, but are there any good lists of this sort of stuff in Latin?
+
+e.g.
+
+con tal de que, siempre que  
+mientras, mientras tanto  
+tal, tales  
+aunque, a pesar de que
+
+tener que, hay que, es necesario que  
+ir a
+
+VERBS
+
+I'll simplify at first: e.g. poner and tener in Spanish texts will be teneo and pono in Latin, even if there is a more accurate, more idiomatic option.
+
+I might even, at first, use Spanish idioms until I learn the Latin ones: e.g. use teneo + infinitive perhaps to express obligation and necessity, before I learn how to properly do it in Latin.
+
+NOUNS and ADJECTIVES
+
+There are five noun declensions, right? and adjectives show case, gender, and number (up to 36 word forms).
+
+I think to get myself used to all the changes, I'll pick noun - adjective pairs and practice listing the forms.
+
+e.g.
+
+puer parvus, vir fortis, pila caerulea, virgo pulcher, gladius acer
+
+I am a strong man. vir fortis
+
+I threw a blue ball. pilam caeruleam
+
+The next step would be to translate the sentences entirely.
+
+After that, I would translate short passages from Spanish into simple Latin.
+
+TENSES
+
+I plan to follow Spanish use at first, i.e. imperfect narrates or describes the past, preterite interrupts the action. I think that there are less tenses in Spanish than Latin, as they were simplified. Any guidance here would be welcome.  
+ ",Using Spanish to Learn Latin,https://www.reddit.com/r/latin/comments/1cj3b3b/using_spanish_to_learn_latin/,2024-05-03 04:08:33
+48,ConfusedByQuibus,1714721992,1cj2wqp,0,1,"The first sentence of Chap. 13 reads as follows: “Annus in duodecim mēnsēs dīviditur, quibus haec sunt nomina:…”
+
+Is this “quibus” dative?
+
+And is that “haec” neuter plural nominative? 
+
+If so would that make “A year is divided into twelve months, for which there are these names?” a fair translation, right?
+
+As you can tell by my username i literally made this account just for the question lol 
+
+Any help would be greatly appreciated!",Does the first sentence of the chapter “ANNVS ET MENSES” (Chap 13) use the dative of possession?,https://www.reddit.com/r/latin/comments/1cj2wqp/does_the_first_sentence_of_the_chapter_annvs_et/,2024-05-03 03:39:52
+49,laidbacknazi,1714716690,1cj1mcu,0,1,I saw a quote that I swore I saved and am drawing a complete blank. The quote was along the lines above. ,No one became wise without misfortune ,https://www.reddit.com/r/latin/comments/1cj1mcu/no_one_became_wise_without_misfortune/,2024-05-03 02:11:30
+50,chmendez,1714698519,1ciw5i8,0,1,,Another one from Seneca,/r/ancientrome/comments/1ciw4es/romans_quote_of_the_day_mundus_ipse_est_ingens/,2024-05-02 21:08:39
+51,FreshPresence,1714862792,1ckcowk,0,1,"My brain is having a moment.
+
+What is the verb tense that is being at Point A thinking about being at Point C remembering Point B?
+
+  
+Example: Right now (for simplicity's sake let's pretend it's Monday)(Point A) thinking about remembering Tuesday (Point B) on Friday (Point C).
+
+  
+A Thinking about C thinking about B.",What is the verb tense that is being at Point A thinking about being at Point C remembering Point B?,https://www.reddit.com/r/latin/comments/1ckcowk/what_is_the_verb_tense_that_is_being_at_point_a/,2024-05-04 18:46:32
+52,catloverrr007,1714860357,1ckbtnl,0,1,"Hi-- I saw a post before of a beginner in latin asking if it was possible to self study for the AP latin exam, and people shut it down and called him crazy. I know the exam is extremely difficult and hard to prepare for, but I wanted to explain my situation and ask what my chances are for doing well on the AP exam in May 2025.
+
+I'm at the end of my sophomore year right now, took a year of latin in school but have to drop it next year to take the IB program. My teacher was great and we finished the first two books of cambridge latin course. Not to sound cocky, but I found the first year of latin really easy and my teacher offered for me to skip a year or two, which I had to turn down since I'm dropping the class. I'm nearly fluent in french (taken classes for 9 years) and find that a lot of the grammar and vocabulary translates over. So far, this has made learning latin a whole lot easier for me and I hope it will continue to be. My mom took latin in college and can tutor me with grammar but is also willing to do some of the AP reading along with me. I've also already read the Aeneid in english and Book 1 of the Gallic wars in latin (though I used a dictionary along the way), if that's worth mentioning. 
+
+  
+Before you say anything, I completely understand the time commitment this will take and I'm motivated and willing to work every day at it. My tentative plan is to spend this summer working extensively on my vocabulary and grammar with CLC Book 3 and Wheelock's latin and then to start the AP readings next fall in alignment with the class. Although I won't be in his class, the latin teacher at my school is willing to help me and point me towards resources for the exam. 
+
+  
+So, all of this being said, am I crazy? What are my chances of getting a 5 in 12 months? ",AP latin selfstudy,https://www.reddit.com/r/latin/comments/1ckbtnl/ap_latin_selfstudy/,2024-05-04 18:05:57
+53,Loveforgoths,1714859097,1ckbd25,0,1,"  The sentence is ""Si mater infantem suum alere non potest sive non vult, infans ab alia mulier alitur, quae ei in loco matris est"". My doubt is about the ""ei"" in this sentence. Would it be translated as ""who is in the place of the mother for him""? It doesn't make a lot of sense.","Im not understanding why ""ei"" is in this sentence and how it would be translated alongside the phrase it is in",https://www.reddit.com/r/latin/comments/1ckbd25/im_not_understanding_why_ei_is_in_this_sentence/,2024-05-04 17:44:57
+54,[deleted],1714845899,1ck6fud,0,1,[deleted],'Eheu' is latin for the Achoo.,,2024-05-04 14:04:59
+55,bowmando421,1714845899,1ck6fud,0,1,Gazundheit. For those who know of the roman for what it is.,'Eheu' is latin for the Achoo.,https://www.reddit.com/r/latin/comments/1ck6fud/eheu_is_latin_for_the_achoo/,2024-05-04 14:04:59
+56,tallyho82,1714843243,1ck5g7e,0,1,"My dad just retired after 50 years and wants to know how to say “I am Retired” or  “I have stoped working” in Latin. He’s thinking something along the line of the iconic Veni Vidi Vici that he can include in his announcement.
+
+My high school Latin (from 25 years ago) is not up to this challenge. Can anyone help?",How to say “I am Retired” in Latin?,https://www.reddit.com/r/latin/comments/1ck5g7e/how_to_say_i_am_retired_in_latin/,2024-05-04 13:20:43
+57,Both_Caregiver_2681,1714840654,1ck4h9y,0,1,"We have managed to decipher a few but my father and I cannot seem to figure out the script on the bottom left or the top right. Can anyone help us out? 
+
+We are also trying to work out what the word in the red boxes are. I imagine it’s supposed to be abbreviated? 
+
+Thank you in advance! ",Can you help me decipher the following Latin script?,https://i.redd.it/343ac6xotfyc1.jpeg,2024-05-04 12:37:34
+58,Ok_Neighborhood_2426,1714837640,1ck3bt0,0,1,,Found this in my Latin textbook,https://i.redd.it/2ej3eg7qkfyc1.jpeg,2024-05-04 11:47:20
+59,Celoriwest,1714837209,1ck35xz,0,1,,Can someone help me translate this?,https://i.redd.it/wmz29pkfi9yc1.jpeg,2024-05-04 11:40:09
+60,MaldororShark,1714828490,1ck02uj,0,1,"Hi, I'm entirely self-taught in Latin and one consequence of that is that I don't personally know anyone else who's into learning the language. (I've read all of Wheelock's, Familia Romana, a big chunk of Roma Aeterna, a few of the LLPSI off-shoot books like the adaptation of Caesar, and am now working my way through Peter Jones' ""Reading Ovid"" selections, to give you an idea of my level.) Would anyone in New York City be into meeting up and talking about our interest in Latin, or maybe going through some poems together or something?",Any Latinists in NYC into hanging out?,https://www.reddit.com/r/latin/comments/1ck02uj/any_latinists_in_nyc_into_hanging_out/,2024-05-04 09:14:50
+61,carnilmacil,1714826684,1cjzhwa,0,1,"I know this is a simple translation. I tried some online translators for it, but some translated it as Gladius Martius, and some translated it as Gladius Martius or Gladius Mars. Which one is correct?","Translation of ""Sword of Mars""?",https://www.reddit.com/r/latin/comments/1cjzhwa/translation_of_sword_of_mars/,2024-05-04 08:44:44
+62,Yellowapple1000,1714822767,1cjyawb,0,1,,Latin language speakers in 230 in the Roman Empire (roughly estimated) Is this reliable?,https://i.redd.it/00il4878ceyc1.png,2024-05-04 07:39:27
+63,Manu261201,1714819837,1cjxizy,0,1,"Hi guys. 
+Because I am very into Ovid, Vergil, Martial, Tibull, Terence... basically all poets my ""classical"" Latin came way to short. 
+So I wanted to ask you which is in your opinion the best book from Cicer (besides de re publica), because I think this is an Opus everyone had ever translated. 
+Thanks for your Answers and suggestions.",Cicero,https://www.reddit.com/r/latin/comments/1cjxizy/cicero/,2024-05-04 06:50:37
+64,emswrites,1714816881,1cjwtjs,0,1,"Hii! I'm looking for a person to write with (in latin). It could be physical penpalling, e-mails or anything else.
+
+About me: I'm 17 and from Germany. My interests also include learning, movies, reading and writing.
+
+I don't care where you're from or how old you are, I just want to practice conversations in Latin :) If youre interested, just pm me or reply to this. Byee!!",Latin Penpal ?,https://www.reddit.com/r/latin/comments/1cjwtjs/latin_penpal/,2024-05-04 06:01:21
+65,justastuma,1714812580,1cjvubt,0,1,"Hodiē, quārtō Maiī, quārtō nōnās eiusdem mēnsīs mōre Rōmānōrum, diēs Star Wars celebrātur, quia hunc diem Anglicē vocant ""May the fourth"" Americānī, quod ""May the Force be with you"" dictō simile sonat. Hoc interpretātur ""Vīs tēcum"" vel ""Vīs vōbīscum"" et in pelliculīs Star Wars persaepe dīcitur.  
+  
+Hae Geōrgiī Lūcae pelliculae ab ortū Darth Vader ad eius redēmptiōne referunt historiam galaxiae remōtae. Nārrant et dē Palpatīnō, ultimō Reīpūblicae cancellāriō ūnicōque Imperiī imperātōre, quī Galacticam Rempūblicam perfidē ūsūrpāvit et in Imperium vertit, dēque Lūcā, Anakinī fīliō, quī patrem suum invēnit ab Imperātōre corruptum et in Vader versum. Vader dēnique, ā Lūcā salvātus, Palpatīnum tyrannum interfēcit, sed, ab hōc vulnerātus, paulō post mortuus est. Imperiō cum Imperātōre perītō Lūcās Rempūblicam cum sodālibus restaurāvit.  
+  
+Vīs vōbīscum!",Vīs vōbīscum! Hodiē est diēs Star Wars,https://www.reddit.com/r/latin/comments/1cjvubt/vīs_vōbīscum_hodiē_est_diēs_star_wars/,2024-05-04 04:49:40
+66,carnilmacil,1714810684,1cjvel7,0,1,"What does -arius mean in Latin? I want to add it to my name to create a nickname. My name is Aybars. When we combine it, it sounds like Aybarsius, and I really liked the sound of it, but if it translates into something inappropriate, I wouldn't want to use it. I wanted to ask r/Latin before doing that. Thanks for the help.",What does -arius mean in Latin?,https://www.reddit.com/r/latin/comments/1cjvel7/what_does_arius_mean_in_latin/,2024-05-04 04:18:04
+67,[deleted],1714805732,1cju8hf,0,1,[removed],Soy Dominicana,,2024-05-04 02:55:32
+68,rumpherclitskin,1714805732,1cju8hf,0,1,,Soy Dominicana,https://i.redd.it/c5m1kqkuxcyc1.jpeg,2024-05-04 02:55:32
+69,Hailmidnight,1714786533,1cjotjm,0,1,"I'm halfway through writing a story about the myth of Ianus in hexameter and would love some feedback as to whether I've gone wrong anywhere! (Which I undoubtedly have)
+
+  
+**Ianum collicolam, referunt, regemque fuisse. (SDDS)**
+
+**Olim urbi Latii induperavit more benigno (SDDS)**
+
+**Ut populus tamquam frumentum ex agro aleretur. (DSSS)**
+
+**Interea praecepto atroci Iuppiter Almus (DSSS)**
+
+**Saturnum e sede astrifera se evellere iussit. (SSDS)**
+
+**Vulgivagus circum terras, usquam ille petivit (DSSS)**
+
+**(Nequiquam) quo aedem ingeneraret. Navicula arta (SSDS)**
+
+**Oceanos transivit ubique alienus ab oris (DSDD)**
+
+**Denique Ianiculum conspexit et ancoram iecit. (DDSD)**
+
+**Litora harenosa ingrediens... (DSD...)** 
+
+(Where I'm up to)
+
+They say Janus was once a hill-dweller and a king...
+
+Once upon he time he ruled the city of Latium in a benevolent way
+
+That his people would be nurtured as crops from the field.
+
+Meanwhile, by a savge decree, Jupiter the nourisher
+
+Demanded Saturn uproot himself from his starry seat.
+
+Roving around the lands, he searched for any place
+
+(In vain) where he might implant a heavenly dwelling. With a small, scanty ship
+
+He crossed the oceans, a foreigner to every coast
+
+At last he sighted Janiculum and dropped the anchor.
+
+Setting foot on the sandy shore...
+
+
+
+",Hexameter help,https://www.reddit.com/r/latin/comments/1cjotjm/hexameter_help/,2024-05-03 21:35:33
+70,OrangeRaspberrySheep,1714784649,1cjo8j8,0,1,"Hello everyone, this is my first attempt at creating a short blurb or passage in Latin. i'm hoping to get corrections to it as i will be reading it at an upcoming mass. I've dabbled in other languages but not much with a case system like Latin.
+
+Here's what I came up with:
+
+Dona nobis anima et unitas inter nationes confrontare difficultatis, violencia, injustitita, et belli; et ob totas qui elargio hoc doni spiritus per amor et munus. Dominus oremus.
+
+Here's what i'm trying to say (roughly):
+
+For a spirit of peace and unity among nations to confront the urgent problems of violence, injustice, and war; and for all who share the gifts of Spirit by their love and service. We pray to the Lord.
+
+Thank you so much!
+
+",Help Correcting my Latin Please,https://www.reddit.com/r/latin/comments/1cjo8j8/help_correcting_my_latin_please/,2024-05-03 21:04:09
+71,Street-Treacle3778,1714949485,1cl3wgc,0,1,"In his *Institutiones*, Cassiodorus refers to Dionysius Exiguus as “qui mecum dialecticam lēgit” (1.23). I’m wondering about the meaning of *mecum* *lēgit* here. “Studied with me” seems the most obvious, but is there any possibility it could mean “taught me”? We seem to have incorporated both senses into modern English: to read history at university is to study it, but a lector or lecturer is a teacher.",Legō legere ,https://www.reddit.com/r/latin/comments/1cl3wgc/legō_legere/,2024-05-05 18:51:25
+72,Expensive_Break4238,1714944310,1cl1wsh,0,1,"Hello!
+
+Can anyone tell me where these lyrics are from? The composition is from the 1980s. I read an interview blurb where the composer mentions the librettos they're singing are from Dante's Inferno but I cannot for the life of me figure out which Canto this is from. If anyone can help me, you will be a hero in my book.
+
+[https://www.youtube.com/watch?v=H9mmmJJJmAw&amp;ab\_channel=JosefKaufka](https://www.youtube.com/watch?v=H9mmmJJJmAw&amp;ab_channel=JosefKaufka)",Which Canto from Dante's Inferno is this song from??,https://www.reddit.com/r/latin/comments/1cl1wsh/which_canto_from_dantes_inferno_is_this_song_from/,2024-05-05 17:25:10
+73,Future_Visit_5184,1714936696,1ckyzrm,0,1,"I am currently reading the ""Fabulae Syrae"" supplement to LLPSI and I came across this sentence: ""Dum igitur Coronis et amicus eius in silvis errant atque inter se oscula dant,..."" (Cap. 27, 5.) The ""eius"" refers to Coronis' friend, not anybody else's. But I though ""suus"" was the reflexive one? Isn't ""eius"" meant to be used when the one in ""possession"" of something is not the subject of the sentence?","Is this correct use of ""eius""?",https://www.reddit.com/r/latin/comments/1ckyzrm/is_this_correct_use_of_eius/,2024-05-05 15:18:16
+74,[deleted],1714935465,1ckyik2,0,1,[deleted],"While reading “Against Nature” by J.-K. Huysmans, stumbled upon this fragment with protagonist’s musings on latin authors. What do think of his taste? Do you agree with some of his sentiments?",,2024-05-05 14:57:45
+75,lameleyy,1714935465,1ckyik2,0,1,[removed],"While reading “Against Nature” by J.-K. Huysmans, stumbled upon this fragment with protagonist’s musings on latin authors. What do think of his taste? Do you agree with some of his sentiments?",https://www.reddit.com/r/latin/comments/1ckyik2/while_reading_against_nature_by_jk_huysmans/,2024-05-05 14:57:45
+76,[deleted],1714933183,1ckxn86,2,1,[deleted],Is this sentence correct?,,2024-05-05 14:19:43
+77,Future_Visit_5184,1714933183,1ckxn86,0,1,"I am currently reading the ""Fabulae Syrae"" supplement to LLPSI. I've come across this sentence where, even though I get what it is trying to say, the structure doesn't quite make sense to me: ""oro vos, propter quas talia a domino meo patior, ut me a morte servetis horrenda"" (Cap. 27, 4.) Specifically ""...quas talia..."" where ""quas"" is in the feminine accusative plural and ""talia"" in the neuter accusative/nominative plural. surely the author meant to use ""quae"" (neuter plural) in instead of ""quas"", right?",Is this sentence correct?,https://www.reddit.com/r/latin/comments/1ckxn86/is_this_sentence_correct/,2024-05-05 14:19:43
+78,Lamiya44,1714926963,1ckvb1w,0,1,Can someone translate this ? ,Translate,https://i.redd.it/2zguk8xbymyc1.jpeg,2024-05-05 12:36:03
+79,Loveforgoths,1714921981,1ckth0b,0,1,"  So, I was studying latin and conjugating the verb ""dicere"". In the passive voice of the present tense, 2nd person singular, it supposedly is ""diceris"" and not ""diciris"". I thought it was ""diciris"", since the vowel ""-i"" is used in 3rd conjugation verbs. Is this an exception or is it a rule for the 2nd person singular of the passive voice of the present tense of a 3rd conjugation verb to have the vowel ""-e"" instead of ""-i""?
+
+  
+  Thank you in advance for the help, and sorry for the confusing way I wrote this post. ","Why is it ""diceris"" and not ""diciris""?",https://www.reddit.com/r/latin/comments/1ckth0b/why_is_it_diceris_and_not_diciris/,2024-05-05 11:13:01
+80,WATEROVATE,1714918766,1cksb5b,0,1,"If I want to write ""I think, therefore I am miserable"" in Latin, 
+Should it be ""Cogito ergo miser sum""? Or ""Cogito ergo sum miser""?",Can someone help me to translate?,https://www.reddit.com/r/latin/comments/1cksb5b/can_someone_help_me_to_translate/,2024-05-05 10:19:26
+81,chmendez,1714918586,1cks8x8,0,1,,The famous phrase from Cato the Elder.,/r/ancientrome/comments/1cko3yi/romans_quote_of_the_dayceterum_censeo_carthaginem/,2024-05-05 10:16:26
+82,JerkBezerberg,1714917206,1ckrrvp,0,1,"Hi there, Reddit scholars! 
+
+I need some help confirming the translation for my personal creed- ""words are important"". I have gotten multiple translations from online sources, but only one which comes out correctly when translated back from Latin to English is ""verba sunt magna"". Can someone confirm that this is correct? I would greatly appreciate the help. ","Translation help - ""Words are important"" ",https://www.reddit.com/r/latin/comments/1ckrrvp/translation_help_words_are_important/,2024-05-05 09:53:26
+83,Far_Satisfaction5776,1714916904,1ckro7o,0,1,"Found in a woodland in prestwich, Manchester
+
+The corroded part is two female names with born and death date early 1800’s. Google translate thinks it’s something along the lines of: 
+
+“TWENTIETH SISTERS
+EARLY FUNERAL
+Rescued
+THE SISTERS OF SUPERSTITIONS
+THEY WENT
+GOODBYE”
+
+Thought it was interesting 😊",Can anyone translate?,https://i.redd.it/x2n7j85f4myc1.jpeg,2024-05-05 09:48:24
+84,JerkBezerberg,1714914968,1ckr1nn,0,1,"I need the translation for the phrase ""words are important"" and I have gotten three different translations from online translators- ""verba momemnti"" ""verba sunt magna"" and "" verba sunt momenti""... Can anyone tell me which is correct? I am most grateful for any assistance. ","Translation help ""words are important"" ",https://www.reddit.com/r/latin/comments/1ckr1nn/translation_help_words_are_important/,2024-05-05 09:16:08
+85,[deleted],1714913421,1ckqjtf,9,22,[deleted],Strange Latin discovered in Uruguay,,2024-05-05 08:50:21
+86,SubsidisedMineOwner,1714913421,1ckqjtf,0,1,Any idea what any of this means? Was discovered in Uruguay hidden away,Strange Latin discovered in Uruguay,https://i.redd.it/7v135ge2ulyc1.jpeg,2024-05-05 08:50:21
+87,psugam,1714911810,1ckq2dl,0,1,"Salvete omnes. 
+
+I've been learning Latin a year and a half now and really wanted to start learning some prose composition. The following is a very loose retelling of the story of [Sibi](https://en.wikipedia.org/wiki/Sibi_Jataka). I'm just a beginner, so I suppose it's full of erros. I'd be very grateful for any corrections and feedback. Thank you. Multas ago vobis gratias. 
+
+Vulgata olim per orbem terrarum fama iustitiae clementiae eloquentiae aliarumque Sibinis Ausinari virtutum, dii immortales temptare eum conati erant an secundis tantummodo rebus virtutem coleret an periclis quoque firmum se ostenderet via virtutis. Quam ob rem rex deorum immortalium hominumque sator Indra Tonans se accipitris Ignisque deus columbi ad formam mutati terram egressi sunt cernendum de virtute Sibinis.
+
+Quondam iam die cum rex solio sedens iudicarat iustus accurit ei perterritus repenteque volans canus columbus. Ferens se sinu regis dixitque humana voce columbus: "" Quom constat Avum nostrum omnium creatorem primum ea ratione reges creasse ut conserverent omnes legeque tenerent res iusta, non iustitiorem cernere rem possis omni fere orbe terrarum quam tutela innocentis suppliciumque nocentum. me paviudm expertemque omnino criminis nunc interficere devorareque vult nulla de causa accipiter ille ferox. Serva me, rex iustissime, gnate Ausinari. Protege me. 
+
+Quom natura iustus firmusque rex lege tum facundia avis miratus respondit se,quo usque posset, servaturum.
+
+Dicto vix eo , accipiter cito volans columbum regis sinu sendentem lacessere coepit. Prohibitus rege regi dixit: ""Cur, o rex, cum vocaris, et velis vocari, iustus, prohibes me esse conantem.""
+
+Cui et rex ita fatus est :""  humana tu voce praeditus humanitate fortasse sentire posses.Quid, volucer, dein iustitior sit quam servare hydoneum protegereve innocuumque.""
+
+Accipiter: ""Quae si ita sint, quam ob rem meam celas escam. Cur ad famem me ducis.""
+
+Rex:""Quomodo prodere possem profugum acceptum. Diciturne donum vitae omnibus enim donis maiorem esse.""
+
+Accipiter:"" Dum multa enim animalia ederent alia alium uno quocumque die et non prohibes ea, qua de causa sum unus multorum prohibitus cibo natura dato.""
+
+Rex:"" Trementem pavidumque columbum mecum refuguium quaerentem quomodo relinquerem ? Non vivo me pereat.""
+
+Accipiter: ""sine eo cibo, quem sum multis periclis laboribusque assecutus, peream et pereant mei miselli pulli fame, me miserum, fataque plorantes mala. Idne tibi iustius videtur, o iustissime hominum ductor ?""
+
+Multa cum mente volvasset Sibi quidnam faciendum esset, sic locutus est :"" sermone tuo, o volucer insignis, rex volantium, ductus ad dubitatem sum quidni faciam, Quom neque columbum deserere neque negare te sine nece possem, una sola mihi visa est via salutis. carnem tibi meam dabo. Convenitne te ea ratio ?""
+
+Accipiter:""Convenit. Columbi eius tuaeque carnis modo pondus aequum sit.""
+
+Dum rege ""aequum erit"" dicto sica illi oblata ipse femore carnem secatam dedisset, uterque deus suam in formam mutatus divina quadam luce candidus visus erat. Mellea denique voce quom patefecissent consilium suum, femurque integrum redidissent, votum poposcerunt regi optatum.
+
+""perpetua"",respondit Sibi "" devotio religione sit firmusque tota mea vita iustusque regerem.""
+
+""Sic erit"", dicto veniunt dii unde venierant.",Latin Prose Composition Feedback,https://www.reddit.com/r/latin/comments/1ckq2dl/latin_prose_composition_feedback/,2024-05-05 08:23:30
+88,AutoModerator,1714910463,1ckpofe,0,1,"1. Ask and answer questions about mottos, tattoos, names, book titles, lines for your poem, slogans for your bowling club’s t-shirt, etc. in the comments of this thread. **Separate posts for these types of requests will be removed.**
+2. Here are some examples of what types of requests this thread is for: [Example #1](https://www.reddit.com/r/latin/comments/dyqs8p/would_the_correct_translation_of_satans_sister_be/?utm_source=share&amp;utm_medium=web2x), [Example #2](https://www.reddit.com/r/latin/comments/dyp18o/translation_from_english/?utm_source=share&amp;utm_medium=web2x), [Example #3](https://www.reddit.com/r/latin/comments/dy4o7b/i_need_help_in_translating_correctly_these_2_words/?utm_source=share&amp;utm_medium=web2x), [Example #4](https://www.reddit.com/r/latin/comments/dxdzpb/are_there_any_words_that_convey_the_idea_of_a/?utm_source=share&amp;utm_medium=web2x), [Example #5](https://www.reddit.com/r/latin/comments/dx5xzc/motto_in_latin/?utm_source=share&amp;utm_medium=web2x).
+3. This thread is **not for correcting longer translations and student assignments**. If you have some facility with the Latin language and have made an honest attempt to translate that is **NOT from Google Translate**, Yandex, or any other machine translator, create a separate thread requesting to check and correct your translation: [Separate thread example](https://www.reddit.com/r/latin/comments/dyjz4m/motto_idea_for_motorbike/). Make sure to take a look at Rule 4.
+4. [Previous iterations of this thread](https://www.reddit.com/r/latin/search/?q=%22Translation%20requests%22%20%22go%20here!%22&amp;restrict_sr=1&amp;sort=new).
+5. This is **not** a professional translation service. The answers you get might be incorrect.",Translation requests into Latin go here!,https://www.reddit.com/r/latin/comments/1ckpofe/translation_requests_into_latin_go_here/,2024-05-05 08:01:03
+89,Manu261201,1714901468,1ckngl5,0,1,"Etsi ars quidem cum ea non utare scientia tamen ipsa teneri potest...
+Hi guys. As you can See in the headline I need help with that ""cum"" because it has a weird placement in the sentence and idk if its Depending to potest teneri or to utare. And what Kind of cum is it? So an explicativum, inversum, iterativum and so on. 
+Would appreciate a Translation aswell. ",This cum is driving me crazy,https://www.reddit.com/r/latin/comments/1ckngl5/this_cum_is_driving_me_crazy/,2024-05-05 05:31:08
+90,Jazzlike-Armadillo63,1714877011,1ckhbbf,0,1,,How to translate dolor fidit and dolor fidit est into English?,https://www.reddit.com/r/latin/comments/1ckhbbf/how_to_translate_dolor_fidit_and_dolor_fidit_est/,2024-05-04 22:43:31
+91,sjgallagher2,1714876166,1ckh2ay,0,1,,"Today in a bookstore I found a volume of St. Augustine's letters, all in Latin!",https://www.reddit.com/gallery/1ckh2ay,2024-05-04 22:29:26
+92,helloimclever,1715036826,1clwyl7,0,1,"First of all, I tried googling this but couldn't figure out how to phrase it in a very searchable way, so sorry if this is obvious. 
+
+I finished the DuoLingo course on Latin, and started reading Familia Romana to really start getting things reinforced, but there is one aspect of the grammar that isn't clearly explained (to my knowledge) in the book, and that has to do with names. Like ""Marcus"" is sometimes ""Marci"" or ""Iulius"" as ""Iulii"" or ""Aemelia"" as ""Aemeliae"". 
+
+The only correlation I am seeing is this occurs when the name comes later in the sentence, as though it's possibly done if the person in question isn't the subject of the sentence. Or perhaps when there are two subjects in a sentence. 
+
+Can anyone explain if there's a hard rule to know when to use which form of someone's name? Thanks!",Question about grammar and names,https://www.reddit.com/r/latin/comments/1clwyl7/question_about_grammar_and_names/,2024-05-06 19:07:06
+93,PotatoBread03,1715036301,1clwrjh,0,1,"Hi! I have a summer reading class and we're translating the Aeneid. I am in line 5 of the first book and I am a little confused on how to translate *et.*
+
+So far what I have translated is:
+
+I sing of weapons and a man, Troy, who first from the mouth (shore?) of Italy, from from fate and come to the shore of Lavinia, he having been thrown much on the earth and on the deep from the strength of the gods, on account of the mindful wrath of Juno.... having suffered much even and war???  
+
+
+I looked at a translated version and it was, ""having suffered much even IN war."" Why is the et translated as in or am I missing something?",Translating the Aeneid - HELP!,https://www.reddit.com/r/latin/comments/1clwrjh/translating_the_aeneid_help/,2024-05-06 18:58:21
+94,AzerothSutekh,1715031361,1cluv2j,0,1,"(For the record, I'm asking about Classical Latin, not Ecclesiastical; just in case there's a difference there)
+
+So I'm already aware that if the latter half of the diphthong is in the ending of the word (e.g., cȳcnē|us and de|us), then you pronounce the two letters separately. However, I also ran across one source that stated if a letter in the diphthong is long, then you again pronounce the letters separately (e.g., po|ēta). Is this true? I haven't seen it mentioned in anything else, so I wanted to double-check.
+
+Also, how does it work with a work like āēr? Where both of the vowels in the diphthong are long? Would you simply pronounce it like a diphthong, but pronounce it with twice the length? Or would you again pronounce both vowels as separate?
+
+Any clarification on this would be appreciated.","If one (or both) of the vowels in a would-be diphthong is long, would it still be a diphthong?",https://www.reddit.com/r/latin/comments/1cluv2j/if_one_or_both_of_the_vowels_in_a_wouldbe/,2024-05-06 17:36:01
+95,Not-A-Monophysite,1715025604,1clsiz3,0,1,"I had a question about the following funerary inscription: 
+
+DECENTIVS IN PACEM
+QVI VIXIT · ANNIS · V · MENSES · VI · DEPOSITVS
+DIE · XIIII · KALendas · APRILES ·
+
+(4th century A.D.?
+narthex of S. Sabina, Rome)
+
+Sourced from [this](https://penelope.uchicago.edu/Thayer/E/Gazetteer/Places/Europe/Italy/Lazio/Roma/Rome/churches/S.Sabina/interior/narthex/inscriptions/Decentius.html) website.
+
+In the above link, the author points out how the inscription has ""IN PACEM"" instead of the expected ""IN PACE,"" which can only mean, according to the author, that it's ""an out right mistake"" or ""something more intriguing: that in the minds of the Christian parents who commissioned this stone or of the man who cut it, the peace of death is not a state, but a process towards which we move."" 
+
+So, onto my question: if the latter is true, should the inscription be read as saying that peace is at the end of the process of whatever is after death, or is it trying to suggest that the individual is already in peace after death, and 'going further in' in some sense? 
+
+I'm not sure if this makes any sense or not. I ask because there's an idea in Orthodox Christianity that theosis (process of becoming more like God) continues even after death, I wanted to see if this is an early reference to this. Thanks in advance.",Question about the Decentius funerary inscription ,https://www.reddit.com/r/latin/comments/1clsiz3/question_about_the_decentius_funerary_inscription/,2024-05-06 16:00:04
+96,KohaiThinker,1715018354,1clpkda,0,1,"Salvete! I just wanted to inform you that r/Locutorium is restored now. If you don't know, it's a sub entirely in Latin.",r/locutorium is restored,https://www.reddit.com/r/latin/comments/1clpkda/rlocutorium_is_restored/,2024-05-06 13:59:14
+97,chmendez,1715016795,1cloxj3,0,1,,Virgil,/r/ancientrome/comments/1clh55m/todays_roman_phrase_timeo_danaos_et_dona_ferentes/,2024-05-06 13:33:15
+98,jamiekrill_lover,1715015915,1clokjd,0,1,"I'm writing a paper about gender transformations in Ovid's Metamorphoses, and I'm currently focusing on the linguistic importance of patior (used for female suffering/submission) and potior (used for male dominance/power). Does anyone have any thoughts on the significance of both of these verbs being deponent, or even middle voice, and what that means thematically in terms of agency/autonomy? Any sources that discuss deponent verbs in this way would be welcome. Thank you!",Patior/Potior Deponent Middle Voice,https://www.reddit.com/r/latin/comments/1clokjd/patiorpotior_deponent_middle_voice/,2024-05-06 13:18:35
+99,Deep_Major9518,1715014192,1clnv38,0,1,"I’m currently preparing for my latin a level and I’m getting stressed because I don’t know why but I find it so hard to know where to start when translating a text. I’ve tried to do some past papers but have been finding it extremely hard to translate accurately- I know it’s bad because almost none of my sentences match the translations from the marks chemes- which has been really demoralising and the first unseen translation paper is in two weeks. I know I should have gotten some more help earlier in the year and I regret prioritising literature, but I want to try my hardest from now to work on this, I’m just not sure how. 
+
+I’m also really unsure of how to structure my prose 20 marker as this is something I haven’t practiced yet 
+
+I would be really grateful for any tips like for how to be able to translate a text accurately and how to learn the grammar and for any resources anyone would be willing to share 🙏🏽
+Thank you so much in advance ",Struggling with a level latin and the first exam is in two weeks,https://www.reddit.com/r/latin/comments/1clnv38/struggling_with_a_level_latin_and_the_first_exam/,2024-05-06 12:49:52
+100,adviceboy1983,1715005837,1clkgzh,0,1,"Salvete! 
+
+I was reading Livy I.18.6, when I came across “urbe condenda” in: 
+
+“Sicut Romulus augurato urbe condenda regnum adeptus est”
+
+The teacher translated this as follows: “Like Romulus obtained the kingdom through the augury, when the city was yet to be founded.” 
+
+I don’t get why it’s translated as an ablative absolute (‘when…’), as condenda definitely is not a participle but a gerundive. It’s most likely a gerundive constuction, but that can never be translated with an adverbial clause (but with “by/with…”). 
+
+I’m lost. 
+
+
+
+",“urbe condenda” ,https://www.reddit.com/r/latin/comments/1clkgzh/urbe_condenda/,2024-05-06 10:30:37
+101,Gold_Strength,1715001474,1clitw3,1,1,"I remember seeing a book a few years ago where the premise was a family living in ancient Rome. And it started out in English with the various family members being described, the rooms, what each member did etc. And with each sentence, a word would get replaced in Latin. So slowly you build up a Latin vocabulary. I'm looking for this book and was wondering if you guys could help.
+
+Thanks in advance",Looking for a particular book,https://www.reddit.com/r/latin/comments/1clitw3/looking_for_a_particular_book/,2024-05-06 09:17:54
+102,Ancient-Fail-801,1714995615,1clgwhj,0,1,"Ego habebam studiere dis scholarum Linguam Latinam in academia sed non loquebator neque scribebam Latinam. Nunc habeo ""De Viris Illustribus"" et ""Novum Testamentum Latine"". Estne bene si lego illos et scribo latine in discord? Estne necesse mihi primo lego LLPSI (legebam partis ab LLPSI). Est bene si corrigitis meum. ",De libris a tiro in lingua Latina ,https://www.reddit.com/r/latin/comments/1clgwhj/de_libris_a_tiro_in_lingua_latina/,2024-05-06 07:40:15
+103,Flacson8528,1714988043,1clexim,0,1,"Why isn't there a present active participle for sum? Though there happens to be *-sēns* in its derived terms: *absum*, *absēns*; *praesum*, *praesēns*. But yet again, exeptions for *adsum*, *dēsum*, *supersum*, etc.
+
+From what I know, the original present active participle from in PI derived a separate *sōns* with the sense of 'guilty', but wouldn't there be a suppletive form to substitute for its old use? Compare how *vīs* from another root supplied the 2sg pres. act. ind. of *volō*, where *vel* was derived from the original non-suppletive form. Is there a possible explanation to this?
+
+How are constructions supposedly with the present active participle be expressed otherwise? The use of *quī* may work in some scenarios, but not for some other uses of the English counterpart *being*.",Present participle of sum?,https://www.reddit.com/r/latin/comments/1clexim/present_participle_of_sum/,2024-05-06 05:34:03
+104,[deleted],1714987862,1clevzi,0,1,[deleted],Present participle of sum?,,2024-05-06 05:31:02
+105,Flacson8528,1714987862,1clevzi,0,1,"Why isn't there a present active participle for sum? Though there happens to be *-sēns* in its derived terms: *absum*, *absēns*; *praesum*, *praesēns*. But yet again, exeptions for *adsum*, *dēsum*, *supersum*, etc.
+
+From what I know, the original present active participle from in PI derived a separate *sōns* with the sense of 'guilty', but wouldn't there be a suppletive form to substitute for its old use? Compare how *vīs* from another root supplied the 2sg pres. act. ind. of *volō*, where *vel* was derived from the original non-suppletive form. Is there a possible explanation to this?
+
+How are constructions supposedly with the present active participle be expressed otherwise? Perhaps the use of *quī* may work in some scenarios, but not wouldn't work for some of the uses of the English counterpart *being*?",Present participle of sum?,https://www.reddit.com/r/latin/comments/1clevzi/present_participle_of_sum/,2024-05-06 05:31:02
+106,Manu261201,1714984593,1cle490,0,1,"Hey guys, 
+ 
+Im studying latin now for 2 years and had it in School for 8 years but even nowadays Im having my Problems with translating 100% accurate. I know its not always possible probably to Do this but I want to get as close as possible to the original texts. My problem is especially Prosa like Livius (my Translations are hella messed up in terms of livius), but I even have little Problems with Cicero. Im kinda good in poetry but yeah.
+Thanks for advices.",How did you get better,https://www.reddit.com/r/latin/comments/1cle490/how_did_you_get_better/,2024-05-06 04:36:33
+107,vonBartenbruch,1714982304,1cldkte,0,1,"Currently I’m learning the NCI and got stuck on this particular sentence, which i had to translate. I translated it to: “It seems to me that you’re writing differently, feeling differently.” but the suggested translation from my workbook is: “It seems like you’re writing something other than you’re  feeling.” 
+Basically I’m confused about the translation of “aliud” here - where does the comparison come from? Assuming, that there’s some kind of convention here, my workbook isn’t pointing out.  ",Aliud scribere aliud sentire mihi videris,https://www.reddit.com/r/latin/comments/1cldkte/aliud_scribere_aliud_sentire_mihi_videris/,2024-05-06 03:58:24
+108,Djungleskog_yrsvf,1714975368,1clbxxp,0,1,the title,What app should i use to learn latin (other than duolingo),https://www.reddit.com/r/latin/comments/1clbxxp/what_app_should_i_use_to_learn_latin_other_than/,2024-05-06 02:02:48
+109,gamergamer118,1714959473,1cl7a5m,0,1,"I’m knee-deep in chapter 41 of Roma Aeterna, and it’s becoming an massive slog.
+
+I started familia romana January and have been pretty consistent with studying and rereading earlier chapters, but now I need to at least 3 hours to understand a new chapter, another 3 to learn all the words, and then complete the exercises in the workbook. All in all, it’s very slow.
+
+I also find I am not understanding new concepts through context in the same way I did in familia romana. I could read a whole page of that with minimal reference to the marginal notes and do fine. Now I constantly look to the margins for help like a beached whale, and since I’ve gotten so good at using the notes, it feels like consulting an English dictionary rather than learning from context.
+
+Does Roman aeterna hit a peak in difficulty and become easily comprehensible at some point?
+
+",When does this get easier?,https://www.reddit.com/r/latin/comments/1cl7a5m/when_does_this_get_easier/,2024-05-05 21:37:53
+110,Even-Ad-3694,1715112574,1cmlbii,1,1,"Anyone know of some good commentaries on De Clementia apart from Braund and Calvin
+
+Also looking for books with good citations or close analysis of de clem 
+
+Anything! 
+
+  
+I have an exam coming up and am looking for resources to help my close reading / commentary analysis ",Commentaries on de clementia,https://www.reddit.com/r/latin/comments/1cmlbii/commentaries_on_de_clementia/,2024-05-07 16:09:34
+111,Captain_Grammaticus,1715104618,1cmi4rw,0,1,"I was shown this last Saturday at a course at my local educator's college. In the meantime, I found out that Birkenbihl also worked as esotericist and claimed to be able to find the best Hash Browns in Kansas City, even if she's never been there, relying on her psychic powers. I hope this doesn't discredit this method too much.
+
+The method is fairly consistent with  some ideas that I've seen when it comes to Comprehensible Input and Natural Methods. Why ""brain-friendly""? It taps into the brain's natural talent to associate, play, imitate, compare, categorise new information, such as vocabulary.
+
+It works in four phases:
+
+1) ""Decoding"": Students are given a short text in the target language with a very close interlineary gloss in their L1. They establish meaning, discuss new words etc.
+
+2) ""Active listening"": The students listen to a slow recording of the original text while following the gloss. They do this three or four times, until they are comfortable with only hearing the text and without relying on the gloss. Instead or additionally to a recording, a choral reading or similar activities are possible.
+
+3) ""Passive listening"": The students listen passively to a recording of the text while they are busy with other things.
+
+4) ""Learning activities"". More activities around vocabulary training, discussing the text, quizzes, etc. Most importantly, to arrange vocabulary items into categories, or associate them with overarching themes.
+
+My own impression from trying this out today with my students is that it really makes learning more fun and less of a chore, compared to Grammar-Translation. So, yay! Also, the colleague who showed us this method said, that she didn't really have to write preps at home anymore, now that she did all the recordings and glosses.
+
+However, when I compare this method with things I've seen elsewhere, I see this: This method seems closely related with what I've seen on Keith Toda's blog and elsewhere, where a lesson plan is divided into ""pre-reading activities"", where new vocabulary and structures are established and trained, a ""reading activity"", and ""post-reading activities"" that make students engage with the text from different angles. The listening and passive listening phases seem to be an Ersatz for contact with actual speaker of the target language; and with texts like those from LLPSI where every new word is well understandable from context and accompanying drawing alone, the Decoding phase, becomes almost trivial.
+
+My conclusion is that our Teacher Örberg and his LLPSI still reigns supreme in secula seculorum, but that this brain-friendly method makes working with more grammar-translation oriented textbooks a lot more rewarding.","A method for teaching (and learning) Latin that I was shown a few days ago: Vera Birkenbihl's ""Brain-friendly learning""",https://www.reddit.com/r/latin/comments/1cmi4rw/a_method_for_teaching_and_learning_latin_that_i/,2024-05-07 13:56:58
+112,-_Goron_-,1715104419,1cmi20a,0,1,Dose anyone know any good websites for translations??,Help🙏,https://www.reddit.com/r/latin/comments/1cmi20a/help/,2024-05-07 13:53:39
+113,matsnorberg,1715101448,1cmgwj7,0,1,"I know that Google Translate is not good at Latin but today I decided to test it on a text I had some problems with. It's a text from the 1700's by some Ludvig Hollberg. I took some paragraphs and entered them into Google Translate to see what would come out.
+
+It's not completely garbage but there are some nonsense. Let me say that Google Translate is my last resort when I'm unrelentlessly stuck and haven't a clue of how to proceed. The translator is no answer key but yet it may give me some clues that I can use to move on. I give the translation below so you can evaluate it.
+
+Do you guys sometimes use translators in your study work? It would be fine if you could comment on the quality of the translation.
+
+***Roterdami videbam circa vesperam pueros e ludis literariis dimissos lapides jaculari in statuam Erasmi Roterodamensis fallendi temporis gratia, solitum illis exercitium.***
+
+In Rotterdam, I saw about evening that the boys, released from the literary games, were throwing stones at the statue of Erasmus of Rotterdam, for the grace of time, the usual exercise for them.
+[I don't know how to translate fallendi temporis gratia]
+
+***Non tam miratus sum petulantiam puerorum quam incuriam eorum, quorum intererat licentiam ejusmodi refrenare.***
+
+I was not so much surprised at the impudence of the children as at the carelessness of those whose interest it was to restrain such a license.
+[I think ""of those who whwre at the pace to restrain those liberties"" is a better translation].
+
+***Indigna mihi prorsus videbatur monumenti istius profanatio, quod debuit esse sacrum non solum Roterodamensibus sed etiam toti literato orbi, ob meritum Viri, cuius cineres exosculari debet posteritas.***
+
+The desecration of that monument seemed to me utterly unworthy, which ought to have been sacred not only to the people of Rotterdam but also to the whole literate world, for the merit of a Man whose ashes posterity must exhume.
+[Does cineres refer to memories here; ashes doesn't really make sense literally]
+
+***Proficiscor Roterdamo Antverpiam, ubi divertebar apud virum Hamburgensem, quem Amstelodami noveram quique Nidrosiae aliquot annos habitaverat.***
+
+I set out from Rotterdam to Antwerp, where I spent time with a man from Hamburg whom I had known in Amsterdam and who had lived in Nidrosia for several years.
+[Nidrosia is Nidaros in Norway]
+
+***Naviculam ibi conscendi, qua Bruxellas vectus sum.***
+
+There I embarked on a boat, in which I went to Brussels.
+
+***modico tantum impendio steterat iter Amstelodamo Bruxellas, sed reliquum itineris, deficientibus aquaeductibus, altero tanto mihi constiturum verebar.***
+
+the journey from Amsterdam to Brussels had been made at a small expense, but I was afraid that the rest of the journey, owing to the failure of the aqueducts, would have to be arranged for me by another so much.
+[mini constiturum verebar is a bit cryptic]
+
+***Hinc aliquot dies Bruxellis manebam calculos positurus***
+
+From here I stayed a few days in Brussels to lay the stones
+[Making plans makes better sense]
+
+***imitamur nos stultitiam Gallorum, quidni etiam bona instituta amplectamur, qualia sunt frugi esse, cum frugalitatem suadeat paupertas, ac pedibus ire, cum nihil in arca sit, quo conducamus currus.***
+
+let us imitate the folly of the French, and do we not also embrace good institutions, such as being thrifty when poverty suggests frugality, and going on foot when there is nothing in the chest with which to hire a carriage.
+
+***His argumentis inductus pedestri itineri me accingo, sacinulas imponens rhedae.***
+
+Induced by these arguments, I set out on a pedestrian journey, imposing a sledgehammer on the coach.
+[Where did he get sledgehammer from??? Baggage makes sense here]",Is Google Translate of any help?,https://www.reddit.com/r/latin/comments/1cmgwj7/is_google_translate_of_any_help/,2024-05-07 13:04:08
+114,szqk,1715098857,1cmfvqa,0,1,"Whatever I can find it's always almost something with medieval feels and I wonder if there is something more modern, like this:
+
+  
+[https://www.youtube.com/watch?v=0Lr4z\_c5sm0](https://www.youtube.com/watch?v=0Lr4z_c5sm0)
+
+",Music in completely/or mostly latin?,https://www.reddit.com/r/latin/comments/1cmfvqa/music_in_completelyor_mostly_latin/,2024-05-07 12:20:57
+115,LupusAlatus,1715097848,1cmfhi4,1,1,,Cur porculus ossibus domum suam struxit? Why did the piglet build his home out of bones? ,https://i.redd.it/tap90dgf21zc1.png,2024-05-07 12:04:08
+116,ShinobiHanzo,1715081837,1cm9rl5,0,1,"**Gloria Fortuna Libertas**
+
+My first post and need help for my social club for small business owners out of New York. 
+
+Is the grammar correct or do I need to update?
+",Motto for social club for small business owners?,https://www.reddit.com/r/latin/comments/1cm9rl5/motto_for_social_club_for_small_business_owners/,2024-05-07 07:37:17
+117,lilspringcule,1715078448,1cm8tkl,1,1,"Transcribing this document from a premonstratensian order near Nijmegen, Netherlands, and I’m getting stuck on these two ligatures, circled in red. Does anyone know their meaning?
+
+The surrounding sentence of the first: Videtur ....... antea fuisse monialium [=monasterium] alterius ordinis vel religionis; p.1=p.174 l.6 
+
+Of the second: migravit ....... a saeculo in aeternum victura cum Christo anno 1398; p.1=p. 174 l. 11
+
+Any help is appreciated!",Trouble with ligatures in a 17th century document,https://www.reddit.com/gallery/1cm8tkl,2024-05-07 06:40:48
+118,cruelflesh,1715068925,1cm6k5e,0,1,"Hello, 
+
+I am trying to make myself a self-study plan to learn Latin but I am not quite sure how to go about it yet so I would like your thoughts on this. I do believe I have some advantages already that will make the learning easier: my native language is French, and I am fluent in Italian. 
+
+I've been told to firstly start with the grammar basics. For that I've been recommended *Wheelock's Latin*. 
+
+Then cement those basics with Ørberg's *Familia Romana* and *Ritchie's Fabulae Faciles* (and perhaps coupled with audio versions so I can familiarise myself with the sound of the language).
+
+And move to North &amp; Hillard *Latin Prose Composition* as well as *Bradley Arnold's Latin Prose Composition* all while continuing the readings above?
+
+I had some people recommend me Duolingo's Latin course, but I am not quite sure about the quality of it? I've heard mixed things about it so I am still unsure. 
+
+So far, would this be an effective study plan? ",On Making a Self-Study Plan,https://www.reddit.com/r/latin/comments/1cm6k5e/on_making_a_selfstudy_plan/,2024-05-07 04:02:05
+119,[deleted],1715050955,1cm1sv9,4,5,[removed],Can anyone translate this text?,,2024-05-06 23:02:35
+120,Segberd,1715050955,1cm1sv9,0,1,I found it in a manuscript from 1348 and am trying to figure out the context of what the image is representing. Its from France so I assume it’s in relation to the Hundred Years War. ,Can anyone translate this text?,https://i.redd.it/8dpg79w07xyc1.jpeg,2024-05-06 23:02:35
+121,[deleted],1715050850,1cm1rkc,0,1,[deleted],Can anyone translate this text?,,2024-05-06 23:00:50
+122,Segberd,1715050850,1cm1rkc,0,1,I found it in a manuscript from 1348 and am trying to figure out the context of what the image is representing. Its from France so I assume it’s in relation to the Hundred Years War. ,Can anyone translate this text?,https://www.reddit.com/r/latin/comments/1cm1rkc/can_anyone_translate_this_text/,2024-05-06 23:00:50
+123,cool_crackerjack,1715046263,1cm086q,0,1,"I want to make a flashcard deck of the 5,000 most common Latin words but am having trouble finding a source. There's the [Dickinson](https://dcc.dickinson.edu/vocab/core-vocabulary) list but that only has 1,000 words, or the [Perseus](http://www.perseus.tufts.edu/hopper/vocablist?lang=la) tool but that searches specific texts. I'm sure there are other candidates as well, but they might have other issues, like counting every inflected form as its own word and not just counting lemmas.
+
+I feel a little disheartened having not found this goldilocks list yet but considering Latin's status as one of the most studied languages in history I think there must be a source, even if from 300 years ago...
+
+Oh, also I'm shooting for 5,000 words cuz knowledge of ~10,000 words is reaching a fluent level of understanding in a language, so half of that sounds solid.","5,000+ word frequency list?",https://www.reddit.com/r/latin/comments/1cm086q/5000_word_frequency_list/,2024-05-06 21:44:23
+124,[deleted],1715042122,1clyu85,3,2,[removed],Translation Request,,2024-05-06 20:35:22
+125,Corbasm2,1715042122,1clyu85,0,1,"Hi, i'm writing a comic which involves a massive, totalitarian, orwellian government and I want their slogan to be in latin.
+
+What would the phrase ""Of Force and Federation"" be in latin? Thanks!",Translation Request,https://www.reddit.com/r/latin/comments/1clyu85/translation_request/,2024-05-06 20:35:22

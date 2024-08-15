@@ -72,6 +72,7 @@ html_theme_options = {
     "footer_start": ["copyright"],
     "header_links_before_dropdown": 8,
     "icon_links": icon_links,
+    "navigation_depth": 1, 
     "logo": {"text": project},
     "navbar_align": "content",
     "navigation_with_keys": False,
@@ -83,6 +84,8 @@ html_theme_options = {
         "sourcelink",
     ],
     "use_edit_page_button": True,
+    "show_nav_level": 0,
+    "collapse_navigation": True,
 }
 
 myst_enable_extensions = [
